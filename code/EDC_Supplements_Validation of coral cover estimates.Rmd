@@ -1,0 +1,67 @@
+---
+title: "Supplements: Validation of coral cover estimates"
+author: "Hannah Rempel"
+date: "2023-03-04"
+output: html_document
+---
+
+#Reading in and summarizing data
+```{r Setting R markdown options, echo=FALSE,message=FALSE,warning=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE)
+```
+
+```{r Setup, echo=FALSE, message=FALSE}
+packages <- c("tidyverse", "here")
+sapply(packages, require, character.only = T)
+```
+
+```{r Reading in coral cover data, message = FALSE}
+coral_scar_df <- read.csv(here("data/processed_coral_scar_data_colony_level.csv"), 
+                          fileEncoding = "UTF-8")
+benthic_cover_photoquad <- read_csv(here("data/supplements_coral_cover_photoquadrat_method.csv"))
+```
+
+```{r Summary of coral cover from coral-scar surveys, echo=FALSE, message=FALSE}
+# Transect-level summary of coral data
+coral_transect <- coral_scar_df %>% 
+  mutate(proportion_grazed=total_grazed_cm2/col_area_cm2) %>%
+  group_by(region, site, transect, depth_m) %>%
+  summarise(total_col_area_cm2=sum(col_area_cm2),
+            total_scar_area_cm2=sum(total_grazed_cm2),
+            total_n_scars=sum(n_new_scars),
+            mean_proportion_grazed=mean(proportion_grazed)) %>%
+  mutate(pct_coral_cover=(total_col_area_cm2/300000)*100,
+         scars_m2_coral=total_n_scars/(total_col_area_cm2/10000),
+         pct_coral_grazed=total_scar_area_cm2/total_col_area_cm2*100) %>%
+  ungroup()
+
+# Site-level summary of coral data
+coral_site <- coral_transect %>%
+  group_by(region, site) %>%
+  summarise(mean_pct_coral_cover=mean(pct_coral_cover),
+            sem_coral_cover=sem(pct_coral_cover),
+            mean_pct_coral_grazed=mean(pct_coral_grazed),
+            sem_pct_grazed=sem(pct_coral_grazed),
+            mean_scars_m2_coral= mean(scars_m2_coral),
+            sem_scar_density=sem(scars_m2_coral)) %>%
+  ungroup()
+```
+
+```{r Summary of coral cover from photoquadrats, echo=FALSE, message=FALSE}
+mean_pct_cover_photoquadrats <- benthic_cover_photoquad %>% 
+  group_by(region, site) %>%
+  summarise(pct_cover_photoquadrats = sum(mean_percent_cover))
+```
+
+```{r Merging data and testing correlation}
+merged_coral_cover_dat <- coral_site %>% 
+  filter(region %in% c("Bonaire", "St. Croix")) %>% 
+  select(region, site, mean_pct_coral_cover) %>% 
+  left_join(mean_pct_cover_photoquadrats, by = join_by(region, site)) %>%
+  mutate(difference=abs(mean_pct_coral_cover-pct_cover_photoquadrats))
+
+cor.test(merged_coral_cover_dat$mean_pct_coral_cover, merged_coral_cover_dat$pct_cover_photoquadrats)
+```
+To test the validity of this method, we compared estimates of average coral cover per site based on the total estimate of coral from photoquadrat surveys in St. Croix and Bonaire (Supplements, Benthic survey methodology). The two methods yielded estimates of coral cover with an 91% Pearson’s correlation (r=0.91, t = 6.8445, df = 10, p-value < 0.001).

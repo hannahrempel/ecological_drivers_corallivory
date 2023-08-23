@@ -1,0 +1,200 @@
+---
+title: "Data processing: Estimating coral size class"
+author: "Hannah Rempel"
+date: "7/2/2020"
+output: html_document
+---
+
+```{r Setup}
+if (!require(here)) install.packages("here") 
+if (!require(tidyverse)) install.packages("tidyverse")
+
+packages <- c("here", "tidyverse")
+sapply(packages, require, character.only = T)
+```
+
+```{r Reading in coral and scar data}
+coral_scar_df <- read.csv(here("data/regional_coral_scar_data.csv"), fileEncoding = "UTF-8")
+bootstrapped_scar_df <- read.csv(here("data/bootstrapped_new_scar_data.csv"), fileEncoding = "UTF-8")
+```
+
+```{r Summary of scar observations by coral colony size category}
+#subsetting df to only include colonies with new scars
+scar_df <- coral_scar_df %>% 
+  filter(n_scars>0 & percent_new>0)
+
+#alphabetical list of all grazed coral species (including those with <3 recently predated colonies across the dataset)
+scar_df %>% 
+  distinct(coral_species) %>% 
+  arrange(coral_species)
+
+#total observations of colonies with recent scars
+total_observations<- scar_df %>% 
+  filter(coral_species != "No bite scars") %>%
+  nrow()
+  
+total_observations
+
+#summary of the observed number of colonies with scars by coral size class
+scar_observations_by_dim <- scar_df %>%
+  select(coral_species, col_size, l_cm, w_cm) %>% 
+  group_by(col_size) %>% 
+   dplyr::reframe(n_observations=n(), 
+                  pct_of_observations=round(n()/total_observations*100,1))
+
+scar_observations_by_dim
+
+#summary of the observed number of colonies with scars by coral species
+scar_observations_by_sp <- scar_df %>%
+  group_by(coral_species) %>% 
+  dplyr::reframe(n_observations=n(),
+          pct_of_observations=round(n()/total_observations*100,1)) %>%
+  arrange(-n_observations)
+
+scar_observations_by_sp 
+
+sp_with_3plus_scars <- scar_observations_by_sp %>%
+  filter(n_observations>=3 | coral_species=="Agaricia spp.") %>% #including Agaricia spp. because >3 Agaricia spp. were observed, but only 2 were not identified to species-level
+  arrange(coral_species)
+
+#number of colonies where there were ≥3 colonies of a given species with recent predation scars across all observations
+sp_with_3plus_scars %>% 
+  tally(n_observations)
+
+write_csv(scar_observations_by_sp, here("supplements/table_s2_predation_by_coral_taxa.csv"))
+```
+
+```{r Seperating colonies with and without measurements}
+#separating data into colonies measured in situ and those binned by colony size only
+measured_colonies <- coral_scar_df %>% drop_na(l_cm)
+unmeasured_colonies <- coral_scar_df %>% filter(is.na(l_cm)) %>% filter(coral_species %in% sp_with_3plus_scars$coral_species)
+```
+
+Creating an index of mean colony length and width by species and size bin for all corals for which we have direct measurements of colony diameter and perpendicular width of species or genera for which we observed predation scars, then joining with unmeasured colonies.
+```{r Matching colonies at species level}
+#index of mean colony length and width by species and size class
+coral_dim_index_species <- measured_colonies %>% 
+  group_by(coral_species, col_size) %>%
+  dplyr::reframe(mean_l_cm=mean(l_cm), mean_w_cm=mean(w_cm), n=n()) 
+
+#joining index to unmeasured colonies by species and colony size
+match_by_species_temp <- unmeasured_colonies %>%
+  left_join(coral_dim_index_species, by = c("coral_species", "col_size")) %>%
+  mutate(l_cm=mean_l_cm, w_cm=mean_w_cm) %>%
+  select(-mean_l_cm, -mean_w_cm, -n) 
+
+#filter to only include colonies WITH match at species-level
+match_by_species <- match_by_species_temp %>% drop_na(l_cm)
+```
+
+```{r Matching colonies at genus level}
+#index of mean colony length and width at the genus level
+coral_dim_index_genus <- measured_colonies %>%
+  mutate(coral_genus=gsub("\\s.*", "", coral_species)) %>%
+  filter(coral_genus %in% c("Agaricia", "Orbicella", "Madracis", "Siderastrea")) %>%
+  group_by(coral_genus, col_size) %>%
+  dplyr::reframe(mean_l_cm = mean(l_cm),
+            mean_w_cm = mean(w_cm),
+            n=n()) 
+
+#joining index to unmeasured colonies by genus and colony size
+match_by_genus_temp <- match_by_species_temp %>%
+  #filter to only include colonies WITHOUT match at species-level
+  filter(is.na(l_cm)) %>%
+  mutate(coral_genus=gsub("\\s.*", "", coral_species))%>%
+  left_join(coral_dim_index_genus, by = c("coral_genus", "col_size")) %>%
+  mutate(l_cm=mean_l_cm, w_cm=mean_w_cm) %>%
+  select(-mean_l_cm, -mean_w_cm, -n) 
+
+#filter to only include colonies WITH match at genus-level
+match_by_genus <- match_by_genus_temp %>% drop_na(l_cm) %>% select(-coral_genus)
+```
+
+```{r Matching colonies at family level (Agaricidae)}
+coral_dim_index_family <- measured_colonies %>% 
+  mutate(coral_genus=gsub("\\s.*", "", coral_species)) %>%
+  filter(coral_genus %in% c("Agaricia", "Helioseris")) %>%
+  mutate(family="Agariciidae") %>%
+  group_by(family, col_size) %>%
+  dplyr::reframe(mean_l_cm = mean(l_cm),
+            mean_w_cm = mean(w_cm),
+            n=n())
+
+#species or genera with no match thus far
+match_by_genus_temp %>%
+  filter(is.na(l_cm)) %>%
+  distinct(coral_species)
+
+match_by_family_temp <- match_by_genus_temp %>%
+  #filter to only include colonies WITHOUT match at species-level
+  filter(is.na(l_cm)) %>%
+  mutate(family=case_when(coral_genus %in% c("Agaricia", "Helioseris")~"Agariciidae",
+                              TRUE~as.character("Other"))) %>%
+  left_join(coral_dim_index_family, by = c("col_size", "family"))%>%
+  mutate(l_cm=mean_l_cm, w_cm=mean_w_cm) %>%
+  select(-mean_l_cm, -mean_w_cm, -n, -coral_genus, -family) 
+
+match_by_family <- match_by_family_temp %>% drop_na(l_cm)
+```
+
+```{r Matching species by size class (SSID <5cm)}
+#checking corals with no match
+match_by_family_temp %>% 
+  filter(is.na(l_cm)) %>% 
+  distinct(coral_species, col_size)
+
+#measurements for colonies <5cm with no other match
+cols_no_match <- measured_colonies %>% 
+  group_by(col_size) %>% 
+  dplyr::reframe(mean_l_cm=mean(l_cm), mean_w_cm=mean(w_cm))
+
+match_by_size <- match_by_family_temp %>% 
+  filter(is.na(l_cm)) %>%
+  left_join(cols_no_match, by = c("col_size"))%>%
+  mutate(l_cm=mean_l_cm, w_cm=mean_w_cm) %>%
+  select(-mean_l_cm, -mean_w_cm) 
+
+#quick check
+match_by_size %>% filter(is.na(l_cm))
+```
+
+```{r Merging all data together}
+estimated_col_sizes <- match_by_species %>%
+  bind_rows(match_by_genus, match_by_family, match_by_size, measured_colonies) %>% 
+  filter(coral_species %in% sp_with_3plus_scars$coral_species) %>% 
+  #calculating colony are based on SA of a hemisphere
+  mutate(col_area_cm2 = (pi * (l_cm/2) * (w_cm/2) * (percent_live/100)*(percent_col_inside/100)),
+         percent_new=replace_na(percent_new, 0),
+         n_new_scars=ceiling(n_scars*(percent_new/100))) %>%
+  select(region:col_size, col_area_cm2, n_new_scars, scar_min_mm2, scar_med_mm2, scar_max_mm2)
+```
+
+```{r Summarizing the mean total area grazed per colony}
+area_grazed_by_col <-bootstrapped_scar_df %>%
+  group_by(region, site, transect, coral_species, l_cm, w_cm, percent_live, n_new_scars, colony_id, iteration_n) %>%
+  dplyr::reframe(sum_grazed_cm2=sum(scar_area_cm_sq),
+            mean_scar=mean(scar_area_cm_sq)) %>%
+  group_by(region, site, transect, coral_species, l_cm, w_cm, percent_live, n_new_scars, colony_id) %>%
+  dplyr::reframe(total_grazed_cm2 = mean(sum_grazed_cm2),
+            mean_scar_area_cm2=mean(mean_scar))
+```
+
+```{r Merging total area grazed per colony with other colony data and cleaning}
+coral_scar_df_cleaned <- estimated_col_sizes %>% 
+  left_join(area_grazed_by_col) %>%
+  mutate(scar_min_cm2=scar_min_mm2/100,
+       scar_med_cm2=scar_med_mm2/100,
+       scar_max_cm2=scar_max_mm2/100) %>%
+  select(region:col_size, col_area_cm2, n_new_scars, scar_min_cm2:scar_max_cm2, mean_scar_area_cm2, total_grazed_cm2) %>%
+  mutate(total_grazed_cm2=replace_na(total_grazed_cm2,0))
+
+coral_scar_df_cleaned %>% distinct(coral_species)
+
+#the 6 instances where coral_species had <3 observed recent grazing scars were excluded due to limited data
+area_grazed_by_col %>% 
+  filter(!colony_id %in% c(estimated_col_sizes$colony_id))
+```
+
+```{r Writing colony-level data to csv}
+write.csv(coral_scar_df_cleaned, here("data/processed_coral_scar_data_colony_level.csv"), fileEncoding = "UTF-8", row.names =FALSE)
+```

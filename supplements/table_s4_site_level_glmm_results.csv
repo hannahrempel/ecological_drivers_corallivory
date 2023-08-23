@@ -1,0 +1,7 @@
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5,estimate_backtransformed
+Scar density,(Intercept),0.707,0.479,0.801,-1.419,3.02,2.227
+Scar density,mean_density_major_corallivores,0.93,0.353,0.141,-0.156,0.438,15.144
+Scar density,mean_pct_coral_cover,-0.904,0.366,-0.025,-0.078,0.029,-2.429
+Percent grazed,(Intercept),-4.614,0,-5.551,-7.91,-3.193,0.004
+Percent grazed,mean_density_major_corallivores,2.301,0.021,0.37,0.055,0.685,1.447
+Percent grazed,mean_pct_coral_cover,0.012,0.99,0,-0.057,0.058,1

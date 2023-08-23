@@ -1,0 +1,126 @@
+---
+title: "Data processing: Cleaning and merging fish survery data"
+author: "Hannah Rempel"
+date: "2023-01-10"
+output: html_document
+---
+Cleans fish data from Panama 2013, Florida 2013, St. Croix 2018, and Bonaire 2018 then merges data together for ecological drivers of corallivory analysis
+
+#Setup 
+```{r Setup}
+if (!require(here)) install.packages("here")
+if (!require(purrr)) install.packages("purrr")
+if (!require(tidyverse)) install.packages("tidyverse")
+
+packages <- c("here", "purrr", "tidyverse")
+sapply(packages, require, character.only = T)
+```
+
+fix date
+```{r Reading in data}
+stx18_bon19 <- read_csv(here("data/stx18_bon19_fish_data.csv")) %>% 
+  mutate(date=as.Date(date, "%m/%d/%y"))
+
+fla13_pan13 <- read.csv(here("data/fla13_pan13_fish_data.csv"), fileEncoding = "UTF-8") %>% #so accents are read in correctly
+  mutate(date=as.Date(date))
+```
+#Cleaning St. Croix and Bonaire data
+Checking the average length of survey segments to decide which interval both is most comparable with other surveys (25x4m in length, 100m2) and still maintains a sufficient number of replicates per site. Based on this, the interval of 16x5 (75m2) to 20x5 (100m2) segments both are fairly comparable to other surveys and maximize the number of replicates
+```{r Subsetting STX 18 and BON 19 fish surveys to 15-20m segments}
+checking_average_segment_length <- stx18_bon19 %>% 
+  mutate(dist_m_rnd =round(dist_m, 0)) %>%
+  select(site, transect, min, dist_m_rnd) %>%
+  distinct() %>% 
+  filter(dist_m_rnd >=15 & dist_m_rnd <=25)
+  
+hist(checking_average_segment_length$dist_m_rnd)
+
+#subsetting data to only include surveys between 16 to 20m
+fish_df_16_to_20 <- stx18_bon19 %>%   
+  filter(dist_m >=16 & dist_m <=20) %>%
+  mutate(dist_m =round(dist_m, 0)) %>%
+  select(region, date, site, transect, species, stage, fl_cm, n_pf, dist_m, min, depth_m)
+```
+
+The following chunk filters the data so that fish survey segments are not collected in back-to-back minutes, ensuring that there is at least 16m between every survey. Here is a description of the process:
+
+(1) Filters the data to only include distinct region, date, site, transect, minute combinations
+(2) Within cumsum, the first logical statement returns TRUE (1) if the min for a given row is equal to the min +1 of the previous row, or FALSE (0) if not
+The second logical statement within cumsum returns TRUE if the value is NA (which it is for the first row in the dataset only)
+The cumsum component takes the cumulative sum of the TRUE (1) and FALSE (0) rowwise, so segments that are in non-consecutive minutes will have distinctive segment_id values, while those in consecutive minutes will not
+(3) Splits the singular dataframe into many dataframes grouped by their segment ID and within each group assigns a row number (seq(1:n())), then creates a row_to_keep variable is TRUE for odd rows, and FALSE for even rows. The split dataframes are then bound together back into one dataframe
+(4) The rows with 'FALSE' are filtered out, which keeps the first segment in any consecutive minute, removes the next, keeps the next, so on and so forth for 1:n() back to back minutes of surveys. This ensures that there is a gap of at least 16m between each survey segment.
+
+In the second part of the chunk, the filter index is  
+```{r Filtering every other consecutive minutes}
+segment_filter_df <- fish_df_16_to_20 %>% 
+  select(region, date, site, transect, min) %>% 
+  distinct() %>%
+  mutate(segment_id=cumsum(distinct_segment= min != lag(min) + 1 | is.na(min != lag(min) + 1))) %>%
+  group_split(segment_id) %>% 
+  map(~.x %>% mutate(row_num=row_number(), row_to_keep=row_num %%2==1)) %>%
+  bind_rows() %>%
+  select(-segment_id, -row_num)
+
+fish_df_filtered <- fish_df_16_to_20 %>% 
+  dplyr::left_join(segment_filter_df) %>%
+  filter(row_to_keep==TRUE) 
+
+fish_replicate_check <- fish_df_filtered %>%
+  select(region, date, site, transect, min, dist_m) %>%
+  distinct() %>%
+  group_by(region, site) %>%
+  dplyr::reframe(n=n())
+```
+
+Data were originally collected in 20-25 min swims with a GPS tow, with a 5m wide suvey swath. To integrate these data with Florida and Panama data (collected in 25x4m transects), we selected segments from the surveys that were between 15-20m length (so surveys are 15x5 to 20x5m). If any surveys were in back to back minutes, one of these was swapped so there was at least 15m between each survey segment. 
+
+In the following chunk, these segments are now assigned a unique transect number by region and site for each of the 15-20m segments.
+```{r Final clean of BON and STX data}
+stx_bon19_transect_temp <- fish_df_filtered %>% 
+  select(region, site, date, transect_old=transect, min, dist_m, depth_m) %>% 
+  distinct() %>%
+  group_by(region, site) %>%
+  mutate(transect=1:n())
+
+stx_bon19_metadata <- stx_bon19_transect_temp %>% 
+  mutate(survey_w_m=5) %>%
+  select(region, site, date, transect, depth_m, survey_l_m= dist_m, survey_w_m) %>%
+  mutate(depth_m=round(depth_m, 1)) %>%
+  distinct()
+
+stx18_bon19_clean <- fish_df_filtered %>% 
+  rename(transect_old=transect, number=n_pf, phase=stage, size_cm=fl_cm) %>%
+  dplyr::left_join(stx_bon19_transect_temp, by = c("region", "date", "site", "min", "transect_old", "depth_m")) %>%
+  select(region, site, date, transect, depth_m, species,phase, size_cm, number) %>%
+  mutate(depth_m=round(depth_m, 1),
+         size_cm=as.character(size_cm)) 
+```
+
+#Merging data from all regions
+```{r merging data from all regions}
+fish_survey_metadata <- fla13_pan13 %>% 
+  mutate(survey_l_m=25, survey_w_m=4) %>%
+  select(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>% 
+  distinct() %>%
+  bind_rows(stx_bon19_metadata)
+
+merged_fish_surveys <- fla13_pan13 %>% 
+  filter(number>0) %>% #filtering to only include observations with fish
+  uncount(number) %>%
+  bind_rows(stx18_bon19_clean) %>%
+  select(-number)%>%
+  mutate(count=1)
+
+full_fish_survey_df <- merged_fish_surveys %>% 
+  dplyr::full_join(fish_survey_metadata) %>%
+  mutate(species=replace_na(species, "No parrotfishes"),
+         count=replace_na(count, 0))
+```
+
+```{r writing data to csv}
+write.csv(full_fish_survey_df, 
+          here("data/regional_fish_data.csv"), 
+          fileEncoding = "UTF-8",
+          row.names = FALSE)
+```

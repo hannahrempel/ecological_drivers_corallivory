@@ -1,0 +1,53 @@
+---
+title: "Map_of_parrotfish_corallivory_sites"
+author: "Hannah Rempel"
+date: "4/18/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#installs packages if not on the users computer
+if (!require(here)) install.packages("here") 
+if (!require(ggmap)) install.packages("ggmap") 
+if (!require(ggrepel)) install.packages("ggrepel")
+if (!require(ggspatial)) install.packages("ggspatial")
+if (!require(sf)) install.packages("sf") 
+if (!require(tidyverse)) install.packages("tidyverse") 
+
+packages <- c("here", "ggmap", "ggrepel", "ggspatial", "sf", "tidyverse") #list of packages needed
+sapply(packages, require, character.only = T) #loading packages in list
+
+```
+
+```{r Reading in basemap and making tibble of regional lat long}
+#static caribbean basemap in high resolution
+carib_basemap <- st_read(here("data/Caribbean_shapefiles_mapping/Carib5.shp"))
+
+region_data <- tibble(region = c("Florida (n=4)", "St. Croix (n=8)", "Bonaire (n=4)", "Panamá (n=10)"),
+                      latitude = c(24.9822685, 17.7362838, 12.1841076, 9.351736),
+                      longitude = c(-80.3889687, -64.7626946, -68.2668218, -82.257520))
+```
+
+```{r Creating and saving site map}
+Caribbean_site_map <- ggplot(data = carib_basemap) +
+  geom_sf() + #adding basemap
+  coord_sf(xlim = c(-99, -58), ylim = c(8, 32), expand = FALSE) + #setting basemap dimensions
+  labs(x="", y="")+
+  theme_linedraw()+
+  theme(panel.border = element_rect(colour = "black",  size = 1, linetype = "solid"),
+        panel.background = element_rect(fill = "#83D2EB", colour = "black",  size = 0.5, linetype = "solid"), 
+        panel.grid.major = element_blank())+
+  annotate(geom = "text", x = -90, y = 25, label = "Gulf of Mexico", fontface = "italic", color = "black", size = 5) +
+  annotate(geom = "text", x = -77, y = 15, label = "Caribbean Sea", fontface = "italic", color = "black", size = 5) +
+  geom_point(data = region_data, aes(x = longitude, y = latitude), size = 2,  shape = 16, color = "black") +
+  ggrepel::geom_label_repel(data = region_data, aes(x = longitude, y = latitude, label = region), #jittering label up and right
+                            fontface = "bold", 
+                            nudge_x = c(1, 1, 1, 1), 
+                            nudge_y = c(2, 2, 2, 2), 
+                            size = 5) +
+  ggspatial::annotation_scale(line_width = 0.5, width_hint=0.2, pad_x = unit(0.3, "cm")) #adds scale bar
+
+Caribbean_site_map
+
+ggsave(plot=Caribbean_site_map, filename=here("figures_tables/fig1_map/Caribbean_site_map.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
+```
