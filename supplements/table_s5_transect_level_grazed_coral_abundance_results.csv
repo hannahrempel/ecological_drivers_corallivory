@@ -1,0 +1,14 @@
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5,estimate_backtransformed
+Colonies grazed,(Intercept),-1.002,0.316,-0.775,-2.289,0.74,0.461
+Colonies grazed,coral_diversity,2.956,0.003,1.471,0.496,2.447,4.356
+Colonies grazed,Orbicella annularis,-1.29,0.197,-0.728,-1.834,0.378,0.483
+Colonies grazed,Porites astreoides,-2.12,0.034,-1.167,-2.246,-0.088,0.311
+Colonies grazed,Siderastrea siderea,-2.87,0.004,-1.424,-2.396,-0.451,0.241
+Colonies grazed,depth_m,0.464,0.643,0.021,-0.067,0.108,1.021
+Colonies grazed,Florida,5.491,0,2.22,1.428,3.013,9.209
+Colonies grazed,St. Croix,-2.761,0.006,-1.066,-1.823,-0.309,0.344
+Colonies grazed,Bonaire,0.897,0.37,0.391,-0.463,1.244,1.478
+Colonies grazed,Branching Porites spp.:log(proportional_cover),5.7,0,0.744,0.488,1,2.105
+Colonies grazed,Orbicella annularis:log(proportional_cover),4.843,0,1.489,0.887,2.092,4.435
+Colonies grazed,Porites astreoides:log(proportional_cover),3.746,0,0.584,0.278,0.889,1.793
+Colonies grazed,Siderastrea siderea:log(proportional_cover),5.47,0,0.941,0.604,1.279,2.564
