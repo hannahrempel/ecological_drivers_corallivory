@@ -336,8 +336,7 @@ corallivory_icon <- orbicella_image <- magick::image_read(path=here("figures_tab
 major_corallivore_icon <- magick::image_read(path=here("figures_tables/reef_images", "Major_corallivores.png"), density = NULL, depth = NULL, strip = TRUE)
 
 #Combining individual graph into one: top panel (a-b)
-fig2a_b <- ggpubr::ggarrange(fig2a_parrotfish_density,  
-                                                      fig2b_coral_cover,
+fig2a_b <- ggpubr::ggarrange(fig2a_parrotfish_density, fig2b_coral_cover,
                                                       ncol=2,
                                                       widths=c(1.48, 1), #so graph widths are same size
                                                       align = "h")
@@ -880,7 +879,7 @@ ggsave(plot=site_level_corallivory_patterns_with_images,
 ```{r Data analysis: Scar density by major corallivore density + coral cover, warning=FALSE, message=FALSE}
 set.seed(1945) #for reproducible results from random simulations of residuals
 
-#Random-slope and intercept model with interaction
+#random-slope and intercept model with interaction
 scar_density_m1_randslope_interaction <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ mean_density_major_corallivores*mean_pct_coral_cover + (mean_density_major_corallivores + mean_pct_coral_cover | region), #transects nested within sites within regions
                               data = fish_corals_site_level,
                               family=gaussian)
@@ -888,17 +887,8 @@ scar_density_m1_randslope_interaction <- glmmTMB::glmmTMB(log(mean_scars_m2_cora
 #high correlation of random slopes, using random-intercept only model
 scar_density_m1_randslope_interaction %>% summary() 
 
-#Random-intercept model with interaction
-scar_density_m1_interaction <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ mean_density_major_corallivores*mean_pct_coral_cover +
-                              (1 | region), #transects nested within sites within regions
-                              data = fish_corals_site_level,
-                              family=gaussian)
-
-#interaction NS, dropping interaction term and rerunning model without
-scar_density_m1_interaction %>% summary() 
-
-#Random-intercept model without interaction
-scar_density_m1 <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ mean_density_major_corallivores+mean_pct_coral_cover +
+#random-intercept model 
+scar_density_m1 <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ mean_density_major_corallivores*mean_pct_coral_cover +
                               (1 | region), #transects nested within sites within regions
                               data = fish_corals_site_level,
                               family=gaussian)
@@ -912,7 +902,7 @@ hist(fish_corals_site_level$mean_density_major_corallivores) #skewness may be in
 hist(sqrt(fish_corals_site_level$mean_density_major_corallivores)) #not perfect, but less skewness with sqrt transformation
 
 #rerunning model with square-root tranformation of corallivore density to attempt to address KS test issues
-scar_density_m2 <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ sqrt(mean_density_major_corallivores)+(mean_pct_coral_cover) +
+scar_density_m2 <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ sqrt(mean_density_major_corallivores)*(mean_pct_coral_cover) +
                               (1 | region), #transects nested within sites within regions
                               data = fish_corals_site_level,
                               family=gaussian)
@@ -966,32 +956,24 @@ proportion_grazed_m1_randslope_interaction <- glmmTMB::glmmTMB(log(mean_pct_cora
 proportion_grazed_m1_randslope_interaction %>% summary() #high correlation of random slopes and intercepts for mean_density_major_corallivores causing issue, using random-intercept only model
 
 #Random-slope model with interaction
-proportion_grazed_m1_interaction <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~ mean_density_major_corallivores*mean_pct_coral_cover +
-                              (1 | region), #transects nested within sites within regions
-                              data = fish_corals_site_level,
-                              family=gaussian)
-
-proportion_grazed_m1_interaction %>% summary() #interaction NS, dropping interaction term
-
-#Random-slope model without interaction
-proportion_grazed_m1 <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~ mean_density_major_corallivores + mean_pct_coral_cover +
+proportion_grazed_m1 <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~ mean_density_major_corallivores*mean_pct_coral_cover +
                               (1 | region), #transects nested within sites within regions
                               data = fish_corals_site_level,
                               family=gaussian)
 
 proportion_grazed_m1_residuals <- DHARMa::simulateResiduals(proportion_grazed_m1, n = 10000, use.u = T) 
 DHARMa::testDispersion(proportion_grazed_m1_residuals, plot=F) #no significant overdispersion
-plot(proportion_grazed_m1_residuals) #sig quantile deviations
+plot(proportion_grazed_m1_residuals) #no sig quantile deviations, but compare with transformation of corallivore density as with prior model
 
 #Significant quantile deviations in previous model, using transformation of predictor to address this
-proportion_grazed_m2 <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~ sqrt(mean_density_major_corallivores) + mean_pct_coral_cover +
+proportion_grazed_m2 <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~ sqrt(mean_density_major_corallivores)*mean_pct_coral_cover +
                               (1 | region), #transects nested within sites within regions
                               data = fish_corals_site_level,
                               family=gaussian)
 
 proportion_grazed_m2_residuals <- DHARMa::simulateResiduals(proportion_grazed_m2, n = 10000, use.u = T) 
 DHARMa::testDispersion(proportion_grazed_m2_residuals, plot=F) #no significant overdispersion
-plot(proportion_grazed_m2_residuals) #no sig deviations and residual vs predicted plot look much better post transformation
+plot(proportion_grazed_m2_residuals) #no sig deviations and residual vs predicted plot look  better post transformation
 
 #viewing model results
 proportion_grazed_m2 %>% summary()
@@ -1306,6 +1288,11 @@ outlier_nums <-outliers(mean_scar_size_residuals)
 predated_colonies_no_outliers <- predated_colonies_subset %>% 
   mutate(index=row_number()) %>% 
   filter(!index %in% outlier_nums)
+
+df_outliers <- predated_colonies_subset %>% 
+  mutate(index=row_number()) %>% 
+  filter(index %in% outlier_nums)
+
 
 mean_scar_size_no_outliers <- glmmTMB::glmmTMB(log(mean_scar_area_cm2) ~ log(col_area_cm2) + coral_species + region+
                               (1 | site/transect), #transects nested within sites within regions

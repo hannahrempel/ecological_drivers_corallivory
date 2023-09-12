@@ -1,7 +1,9 @@
 model,term,statistic,p_value,estimate,ci_2.5,ci_97.5,estimate_backtransformed
-Scar density,(Intercept),0.748,0.454,0.844,-1.367,3.054,2.325
-Scar density,mean_density_major_corallivores,0.909,0.364,0.138,-0.16,0.437,14.832
-Scar density,mean_pct_coral_cover,-0.978,0.328,-0.027,-0.08,0.027,-2.639
-Percent grazed,(Intercept),-4.598,0,-5.488,-7.827,-3.149,0.004
-Percent grazed,mean_density_major_corallivores,2.262,0.024,0.365,0.049,0.681,1.441
-Percent grazed,mean_pct_coral_cover,-0.093,0.926,-0.003,-0.061,0.056,0.997
+Scar density,(Intercept),0.76,0.447,0.821,-1.295,2.937,2.272
+Scar density,mean_density_major_corallivores,1.199,0.23,0.211,-0.134,0.556,23.484
+Scar density,mean_pct_coral_cover,-0.363,0.716,-0.012,-0.075,0.052,-1.168
+Scar density,mean_density_major_corallivores:mean_pct_coral_cover,-0.848,0.397,-0.009,-0.029,0.011,-0.865
+Percent grazed,(Intercept),-4.859,0,-5.488,-7.703,-3.274,0.004
+Percent grazed,mean_density_major_corallivores,2.216,0.027,0.417,0.048,0.785,1.517
+Percent grazed,mean_pct_coral_cover,0.199,0.842,0.007,-0.061,0.075,1.007
+Percent grazed,mean_density_major_corallivores:mean_pct_coral_cover,-0.547,0.584,-0.006,-0.029,0.016,0.994
