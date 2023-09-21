@@ -1289,11 +1289,16 @@ predated_colonies_no_outliers <- predated_colonies_subset %>%
   mutate(index=row_number()) %>% 
   filter(!index %in% outlier_nums)
 
+#comparing outliers to the size distribution of scars across the dataset
 df_outliers <- predated_colonies_subset %>% 
   mutate(index=row_number()) %>% 
   filter(index %in% outlier_nums)
 
+df_outliers #two extremely small scars, and one extremely large
 
+fivenum(predated_colonies_subset$mean_scar_area_cm2) #two of the outliers are the min/max scars
+
+#rerunning model without outliers
 mean_scar_size_no_outliers <- glmmTMB::glmmTMB(log(mean_scar_area_cm2) ~ log(col_area_cm2) + coral_species + region+
                               (1 | site/transect), #transects nested within sites within regions
                               family=gaussian,
