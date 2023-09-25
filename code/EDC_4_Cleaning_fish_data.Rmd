@@ -16,7 +16,6 @@ packages <- c("here", "purrr", "tidyverse")
 sapply(packages, require, character.only = T)
 ```
 
-fix date
 ```{r Reading in data}
 stx18_bon19 <- read_csv(here("data/stx18_bon19_fish_data.csv")) %>% 
   mutate(date=as.Date(date, "%m/%d/%y"))

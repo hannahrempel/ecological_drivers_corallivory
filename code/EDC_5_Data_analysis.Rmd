@@ -7,6 +7,7 @@ output:
   word_document: default
   html_document: default
 ---
+
 # ___________________________________________________________________________________
 
 #Setup: reading in and summarizing data
@@ -54,12 +55,12 @@ site_coordinates <- read.csv(here("data/site_coordinates.csv"),
 n_coral_surveys <- coral_scar_df %>% 
   group_by(region, site) %>% 
   distinct(transect) %>% 
-   dplyr::reframe(n_coral_surveys=n())
+  dplyr::reframe(n_coral_surveys=n())
 
 n_surveys <- fish_df %>% 
   group_by(region, site) %>% 
   distinct(transect) %>% 
-   dplyr::reframe(n_fish_surveys=n()) %>%
+  dplyr::reframe(n_fish_surveys=n()) %>%
   left_join(n_coral_surveys, by = join_by(region, site))
 
 table_s1 <- site_coordinates %>% 
@@ -73,12 +74,12 @@ write.csv(table_s1,
 
 ## Summarising parrotfish density data
 
-Parrotfish density estimates are for parrotfishes that were at least 15cm fork length. We classified major corallivores as *Sc. guacamaia, Sc. taeniopterus, Sc. vetula, Sp. viride*, see manuscript for details. 
+Parrotfish density estimates are for parrotfishes that were at least 15cm fork length. We classified major corallivores as species that, on average, take at least 1% of their foraging bites on coral: *Sc. taeniopterus, Sc. vetula, Sp. viride*. See manuscript for details. 
 
 ```{r Summary of parrotfish density data}
 # Transect-level summary of fish density
 major_corallivores_df <- fish_df %>% 
-  filter(species %in% c("Scarus guacamaia", "Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>%
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>%
   group_by(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>%
    dplyr::reframe(n_major_corallivores=n()) 
 
@@ -95,7 +96,7 @@ pf_density_transect <- fish_df %>%
 # Site-level summary of fish density
 pf_density_site<- pf_density_transect %>% 
   group_by(region, site) %>%
-   dplyr::reframe(mean_density_major_corallivores=mean(density_major_corallivores)) %>%
+  dplyr::reframe(mean_density_major_corallivores=mean(density_major_corallivores)) %>%
   ungroup()
 
 #function to calculate the standard error of the mean
@@ -108,6 +109,66 @@ regional_parrotfish_density <- pf_density_site %>%
   group_by(region) %>%
    dplyr::reframe(mean_density_major=mean(mean_density_major_corallivores),
             sem_major=sem(mean_density_major_corallivores))
+```
+
+```{r Summary of parrotfish size distributions}
+#creating  df for Panamá data only (b/c in this region fish size was recorded in 5cm bins)
+PAN_fish_df <- fish_df %>% 
+  filter(region=="Panamá")
+PAN_fish_df %>% 
+  distinct(size_cm) #checking distinct of size distributions bins
+
+#creating seperate df for all other regions, where fish size was recorded to the nearest cm
+OTHER_fish_df <- fish_df %>% 
+  filter(region %in% c("Florida", "St. Croix", "Bonaire")) %>%
+  mutate(size_cm=as.double(size_cm))
+range(OTHER_fish_df$size_cm) #checking range of size distributions
+
+# creating a combined df of fish surveys with size in 5cm bins to compare across regions
+binned_fish_sizes <- OTHER_fish_df %>% #binning fish sizes to pair with Panamá data
+  mutate(size_cm=case_when(size_cm>=15 & size_cm<20 ~ "15 to 20",
+                           size_cm>=20 & size_cm<25 ~ "20 to 25",
+                           size_cm>=25 & size_cm<30 ~ "25 to 30",
+                           size_cm>=30 & size_cm<35 ~ "30 to 35",
+                           size_cm>=35 & size_cm<40 ~ "35 to 40")) %>%
+  bind_rows(PAN_fish_df) %>% #adding panama data
+  filter(species!="No parrotfishes") %>% #removing transects with no parrotfishes observed
+  mutate(size_cm= factor(size_cm, levels = c("15 to 20", "20 to 25", "25 to 30", "30 to 35", "35 to 40"))) %>%
+  mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) %>%
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) #major corallivores
+
+# First step of transect-level summary of fish density by species and size bin 
+#This df doesn't account for 0 observations, that's done in the next section
+pf_by_size_species_df_temp <- binned_fish_sizes %>% 
+  group_by(region, site, date, transect, depth_m, species, size_cm) %>%
+   dplyr::reframe(n=n()) 
+
+# transect-level summary of fish density by species and size bin
+size_cm <- c("15 to 20", "20 to 25", "25 to 30", "30 to 35", "35 to 40")
+species <- c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")
+
+pf_by_transect_size_species_df <- fish_df %>% 
+  mutate(survey_area_m2=survey_l_m*survey_w_m) %>% #summarizing transect metadata
+  select(region, site, date, transect, depth_m, survey_area_m2) %>%
+  distinct() %>% #filtering to only keep distinct transect metadata
+  tidyr::crossing(species, size_cm) %>% #adding all unique combos of transects, species, and size bins
+  left_join(pf_by_size_species_df_temp) %>% #adding in all observations of species abundance by size bins
+  mutate(n=replace_na(n, 0)) #adding 0s for instances where a given species and size was not observed in a transect 
+
+# site-level summary of fish density by size bin (does not include species)
+pf_by_site_size_df <- pf_by_transect_size_species_df %>% 
+  dplyr::mutate(pf_density_100m2 = n/survey_area_m2*100) %>% #summarizing density (n/100 m2) 
+  group_by(region, site, size_cm) %>%
+  dplyr::reframe(mean_pf_density_100m2=mean(pf_density_100m2)) %>%
+  ungroup() %>%
+  mutate(size_cm= factor(size_cm, levels = c("15 to 20", "20 to 25", "25 to 30", "30 to 35", "35 to 40")))
+
+# region-level summary of fish density by species and size bin
+pf_by_region_size_species_df <- pf_by_transect_size_species_df %>% 
+  dplyr::mutate(pf_density_100m2 = n/survey_area_m2*100) %>% #summarizing density (n/100 m2) 
+  group_by(region, species, size_cm) %>%
+  dplyr::reframe(mean_pf_density_100m2=mean(pf_density_100m2)) %>%
+  ungroup()
 ```
 
 ## Summarising coral and scar data
@@ -214,8 +275,6 @@ regional_vars_graph_df <- pf_density_transect %>%
   left_join(coral_site, by = join_by(region, site)) 
 ```
 
-**Fig. 2.** Site-level means (points with black outlines) ± S.E. of the (a) density of major corallivorous parrotfishes, (b) cover of coral species targeted by parrotfishes, (c) density of parrotfish predation scars, and (d) coral area predated. Raw data points are shown transparently in the background.
-
 ```{r Fig 2: parrotfish + coral + corallivory patterns across sites and regions, echo=FALSE, message=FALSE}
 #summarizing data for visualization
 regional_vars_graph_df <- pf_density_transect %>%
@@ -276,17 +335,23 @@ fig2b_coral_cover <- ggplot() +
         axis.text.x = element_text(size = 10),
         legend.position = "none")
 
-#Fig 2c) scar density patterns
-fig2c_scar_density <- ggplot() +
-  geom_point(data=coral_transect, aes(y=fct_rev(site), x=scars_m2_coral, color=region), alpha=0.5)+
-  geom_pointrange(data=regional_vars_graph_df,
-                  aes(y = fct_rev(site),
-                      x=mean_scars_m2_coral,
-                      xmin=mean_scars_m2_coral-sem_scar_density, 
-                      xmax=mean_scars_m2_coral+sem_scar_density,
-                      fill=region),
-                  color="black", pch=21, size=0.5)+
-  scale_x_continuous(limits = c(0, 268), expand = c(0.025, 0)) +
+# Fig 2c) scar density patterns w/ log transformation 
+# log transformed +0.1 to visualize patterns across regions better given extremely high corallivory intensity in Florida
+fig2c_scar_density_transformed <- ggplot() +
+  #transect-level data contain 0's. To visualize with a log-transformed scale, 0.1 is added
+geom_point(data=coral_transect, aes(y=fct_rev(site), x=(scars_m2_coral+0.1), color=region), alpha=0.5)+
+  #adding 0.1 to site means to transform in the same way as the transect-level data and b/c there are two sites w/ >0 but <1 densities and when the SEM is subtracted these values become negative. The transfomation sets the bounds of the SEM at 0 for visualization purposes.
+ geom_pointrange(data=regional_vars_graph_df,
+                 aes(y = fct_rev(site),
+                     x=(mean_scars_m2_coral+0.1),
+                     xmin=(mean_scars_m2_coral+0.1)-sem_scar_density,
+                     xmax=(mean_scars_m2_coral+0.1)+sem_scar_density,
+                     fill=region),
+                 color="black", pch=21, size=0.5)+
+  scale_x_continuous(trans = scales::log_trans(),
+                     breaks= c(0.1, 1, 5, 25, 100, 250),
+                     labels= c("0", 1, 5, 25, 100, 250)
+                     )+
   scale_fill_manual(values = coral_palette) + #specified hex codes for plot colors
   scale_color_manual(values = coral_palette) + #specified hex codes for plot colors
   facet_grid(rows = vars(region), scales = "free_y", switch = "y", space = "free") +
@@ -301,17 +366,47 @@ fig2c_scar_density <- ggplot() +
         axis.text = element_text(size = 10),
         legend.position = "none")
 
+##Fig 2c) scar density patterns (not on a log transformed scale)
+# fig2c_scar_density <- ggplot() +
+#   geom_point(data=coral_transect, aes(y=fct_rev(site), x=scars_m2_coral, color=region), alpha=0.5)+
+#   geom_pointrange(data=regional_vars_graph_df,
+#                   aes(y = fct_rev(site),
+#                       x=mean_scars_m2_coral,
+#                       xmin=mean_scars_m2_coral-sem_scar_density, 
+#                       xmax=mean_scars_m2_coral+sem_scar_density,
+#                       fill=region),
+#                   color="black", pch=21, size=0.5)+
+#   scale_x_continuous(limits = c(0, 268), expand = c(0.025, 0)) +
+#   scale_fill_manual(values = coral_palette) + #specified hex codes for plot colors
+#   scale_color_manual(values = coral_palette) + #specified hex codes for plot colors
+#   facet_grid(rows = vars(region), scales = "free_y", switch = "y", space = "free") +
+#   labs(title = "c", x = expression(paste("Scar density (n ", m^-2, " coral)")))+
+#   theme_bw()+
+#   theme(axis.title.x = element_text(margin = margin(t = 1.1, r = 0, b = 0, l = 0, unit = "mm")),
+#         plot.title = element_text(size = 12, face = "bold"),
+#         strip.text.y = element_text(angle = 270, face = "bold"),
+#         strip.placement = "outside",
+#         axis.title.y = element_blank(),
+#         strip.text = element_text(size = 10, margin = margin(t = 1.5, r = 1.5, b = 1.5, l = 1.5, unit = "mm")),
+#         axis.text = element_text(size = 10),
+#         legend.position = "none")
+
 #Fig 2d) percent coral grazed patterns
-fig2d_percent_scar_area <- ggplot() +
-  geom_point(data=coral_transect, aes(y=fct_rev(site), x=pct_coral_grazed, color=region), alpha=0.5)+
+# log transformed +0.01 to visualize patterns across regions better given extremely high corallivory intensity in Florida
+#used log +0.01 instead of 0.1 because the percent predated had a far smaller range of values (up to ~1.5%) compared to density (up to ~250)
+fig2d_percent_scar_area_transformed <- ggplot() +
+  geom_point(data=coral_transect, aes(y=fct_rev(site), x=(pct_coral_grazed+0.01), color=region), alpha=0.5)+
   geom_pointrange(data=regional_vars_graph_df,
                   aes(y = fct_rev(site),
-                      x=mean_pct_coral_grazed,
-                      xmin=mean_pct_coral_grazed-sem_pct_grazed, 
-                      xmax=mean_pct_coral_grazed+sem_pct_grazed,
+                      x=(mean_pct_coral_grazed+0.01),
+                      xmin=(mean_pct_coral_grazed+0.01)-sem_pct_grazed, 
+                      xmax=(mean_pct_coral_grazed+0.01)+sem_pct_grazed,
                       fill=region),
                   color="black", pch=21, size=0.5)+
-  scale_x_continuous(limits = c(0, 1.5), expand = c(0.025, 0)) +
+  scale_x_continuous(trans = scales::log_trans(),
+                     breaks= c(0.01, 0.05, 0.1, 0.25, 0.5, 1),
+                     labels= c("0", 0.05, 0.1, 0.25, 0.5, 1)
+                     )+
   scale_fill_manual(values = coral_palette) +
   scale_color_manual(values = coral_palette) + 
   facet_grid(rows = vars(region), scales = "free_y", switch = "y", space = "free") +
@@ -327,6 +422,33 @@ fig2d_percent_scar_area <- ggplot() +
         axis.ticks.y=element_blank(),
         axis.text.x = element_text(size = 10),
         legend.position = "none")
+
+##Fig 2d) percent coral grazed patterns (not on a log transformed scale)
+# fig2d_percent_scar_area <- ggplot() +
+#   geom_point(data=coral_transect, aes(y=fct_rev(site), x=pct_coral_grazed, color=region), alpha=0.5)+
+#   geom_pointrange(data=regional_vars_graph_df,
+#                   aes(y = fct_rev(site),
+#                       x=mean_pct_coral_grazed,
+#                       xmin=mean_pct_coral_grazed-sem_pct_grazed, 
+#                       xmax=mean_pct_coral_grazed+sem_pct_grazed,
+#                       fill=region),
+#                   color="black", pch=21, size=0.5)+
+#   scale_x_continuous(limits = c(0, 1.5), expand = c(0.025, 0)) +
+#   scale_fill_manual(values = coral_palette) +
+#   scale_color_manual(values = coral_palette) + 
+#   facet_grid(rows = vars(region), scales = "free_y", switch = "y", space = "free") +
+#   labs(title = "d", x = "Coral area predated (%)") +
+#   theme_bw()+
+#   theme(axis.title.x = element_text(margin = margin(t = 2.2, r = 0, b = 0.8, l = 0, unit = "mm")),
+#         plot.title = element_text(size = 12, face = "bold"),
+#         plot.margin = margin(0.2, 0.2, 0.2, 0.2, unit = "cm"),
+#         strip.background = element_blank(),
+#         strip.text.y = element_blank(),
+#         axis.title.y = element_blank(),
+#         axis.text.y=element_blank(),
+#         axis.ticks.y=element_blank(),
+#         axis.text.x = element_text(size = 10),
+#         legend.position = "none")
 
 #reading in coral and parrotfish icon for figure graphics
 coral_icon <- orbicella_image <- magick::image_read(path=here("figures_tables/reef_images", "Orbicella_annularis.png"), density = NULL, depth = NULL, strip = TRUE)
@@ -348,8 +470,8 @@ fig2a_b_with_graphics <- cowplot::ggdraw() +
   draw_image(coral_icon, x = 0.45, y = 0.379, scale=0.08) #adds the coral
 
 #bottom panel (c-d)
-fig2c_d <- ggpubr::ggarrange(fig2c_scar_density, 
-                                            fig2d_percent_scar_area,
+fig2c_d <- ggpubr::ggarrange(fig2c_scar_density_transformed, 
+                                            fig2d_percent_scar_area_transformed,
                                             ncol=2,
                                             widths=c(1.48, 1), #adjusting graph widths to be the same size
                                             align = "h")
@@ -371,6 +493,27 @@ ggsave(plot=fig2_final,
        width = 215, height = 250, dpi = 600, units = "mm") 
 ```
 
+**Fig. 2.** Site-level means (points with black outlines) ± S.E. of the (a) density of major corallivorous parrotfishes, (b) cover of coral species targeted by parrotfishes, (c) density of parrotfish predation scars, and (d) coral area predated. Raw data points are shown transparently in the background.
+
+```{r Fig. SX: parrotfish density by size range and species}
+figsx_pf_size_dist <- pf_by_region_size_species_df %>% 
+  ggplot()+
+  geom_bar(aes(x=size_cm, y=mean_pf_density_100m2, fill=species), position="stack", stat="identity")+
+  facet_wrap(~region, nrow=4)+
+  scale_fill_manual(values = parrotfish_palette)+
+  labs(x="Size (cm)", y = expression(paste("Major corallivores (n 100 ", m^-2, ")")), fill="Species") +
+  ylim(0,3)+
+  theme_bw()+
+  theme(strip.text.x = element_text(face = "bold", size = 10),
+        legend.text = element_text(face = "italic", size = 10),
+        axis.text = element_text(size = 10),
+        legend.position = "right")
+
+ggsave(plot=figsx_pf_size_dist, 
+       filename=here("supplements/fig_sx_parrotfish_density_by_size_species.jpg"), 
+       width = 215, height = 200, dpi = 600, units = "mm") 
+```
+        
 ##Analysis of regional trends
 
 Kruskal-Wallis tests of the density of major corallivores and  target coral cover (%), with post-hoc Dunn’s tests of pairwise comparisons among regions using the Benjamini-Hochberg correction for multiple comparisons.
