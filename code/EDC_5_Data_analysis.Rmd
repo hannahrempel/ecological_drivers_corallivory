@@ -491,12 +491,14 @@ fig2_final <- ggpubr::ggarrange(fig2a_b_with_graphics,
 ggsave(plot=fig2_final, 
        filename=here("figures_tables/fig2_site_level_patterns.jpg"), 
        width = 215, height = 250, dpi = 600, units = "mm") 
+
+fig2_final
 ```
 
 **Fig. 2.** Site-level means (points with black outlines) ± S.E. of the (a) density of major corallivorous parrotfishes, (b) cover of coral species targeted by parrotfishes, (c) density of parrotfish predation scars, and (d) coral area predated. Raw data points are shown transparently in the background.
 
-```{r Fig. SX: parrotfish density by size range and species}
-figsx_pf_size_dist <- pf_by_region_size_species_df %>% 
+```{r Fig. S1: parrotfish density by size range and species}
+figs1_pf_size_dist <- pf_by_region_size_species_df %>% 
   ggplot()+
   geom_bar(aes(x=size_cm, y=mean_pf_density_100m2, fill=species), position="stack", stat="identity")+
   facet_wrap(~region, nrow=4)+
@@ -509,10 +511,13 @@ figsx_pf_size_dist <- pf_by_region_size_species_df %>%
         axis.text = element_text(size = 10),
         legend.position = "right")
 
-ggsave(plot=figsx_pf_size_dist, 
-       filename=here("supplements/fig_sx_parrotfish_density_by_size_species.jpg"), 
+ggsave(plot=figs1_pf_size_dist, 
+       filename=here("supplements/fig_s1_parrotfish_density_by_size_species.jpg"), 
        width = 215, height = 200, dpi = 600, units = "mm") 
+
+figs1_pf_size_dist
 ```
+**Fig. S1.** Regional mean density of major corallivirous parrotfishes by species and body size in 5 cm bins for individuals ≥15 cm fork length. We conducted 2 to 32 fish density surveys per site stratified across depths ranging from ~1.5 to 18 m (Table S1), then averaged site-level data to calculate regional mean densities.
         
 ##Analysis of regional trends
 
@@ -691,8 +696,6 @@ selectivity_raw_genus <- selectivity_df_genus %>%
   select(-index) 
 ```
 
-**Fig. 3.** Mean Vanderploeg and Scavia’s relativized electivity by region (point with black outline) ± 95% C.I. for genera of targeted corals across Panamá, Florida, St. Croix, and Bonaire. Electivity was calculated based on scar abundance relative to coral abundance (top panel) and scar area relative to coral area (bottom panel). Site-level values are shown transparently in the background. Positive values indicate a preference, values crossing 0 indicate random feeding, and negative values indicate avoidance. 
-
 ```{r Fig 3: Coral genera selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
 #creating preliminary figure
 selectivity_genus_temp <- ggplot()+
@@ -727,14 +730,13 @@ selectivity_genus_final <- cowplot::ggdraw() +
   draw_image(siderastrea_image, x = 0.28, y = 0.387, scale=0.049)+
   draw_image(stephanocinea_image, x = 0.429, y = 0.387, scale=0.059)
 
-selectivity_genus_final
-
  #saving figure
 ggsave(plot=selectivity_genus_final, filename=here("figures_tables/fig3_selectivity_by_genera.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
 
-selectivity_summary_stats_genus %>% 
-  select(region, coral_genus, abundance_selectivity_sig, area_selectivity_sig)
+selectivity_genus_final
 ```
+
+**Fig. 3.** Mean Vanderploeg and Scavia’s relativized electivity by region (point with black outline) ± 95% C.I. for genera of targeted corals across Panamá, Florida, St. Croix, and Bonaire. Electivity was calculated based on scar abundance relative to coral abundance (top panel) and scar area relative to coral area (bottom panel). Site-level values are shown transparently in the background. Positive values indicate a preference, values crossing 0 indicate random feeding, and negative values indicate avoidance. 
 
 ```{r Summarizing predation intensity by coral species}
 #Total number of colonies grazed (for coral taxa with 3+ predated cols across observations)
@@ -838,9 +840,7 @@ selectivity_raw <- selectivity_df_species %>%
   select(-index) 
 ```
 
-**Fig. S1.** Mean Vanderploeg and Scavia’s relativized electivity by region (point with black outline) ± 95% C.I. for four frequently targeted coral taxa across Panamá, Florida, St. Croix, and Bonaire. Electivity was calculated based on scar abundance relative to coral abundance (top panel) and scar area relative to coral area (bottom panel). Site-level values are shown transparently in the background. Positive values indicate a preference, values crossing 0 indicate random feeding, and negative values indicate avoidance. >80% of all observed recent predation scars were found on *Orbicella annularis*, Branching *Porites* spp., *Porites astreoides*, and *Siderastrea siderea*.
-
-```{r Fig. S1: Coral taxa selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
+```{r Fig. S2: Coral taxa selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
 #creating preliminary figure
 selectivity_combo_fig <- ggplot()+
   geom_point(data=selectivity_raw, aes(y=region_short, x=electivity, color=region_short), alpha=0.5, position=position_jitter(height=0.1))+ #raw data points
@@ -870,19 +870,19 @@ selectivity_combo_final <- cowplot::ggdraw() +
   draw_image(porites_astreoides_image, x = 0.205, y = 0.38, scale=0.07)+
   draw_image(siderastrea_image, x = 0.43, y = 0.38, scale=0.06)
 
-selectivity_combo_final
-
 #saving figure
-ggsave(plot=selectivity_combo_final, filename=here("supplements/fig_s1_selectivity_by_species.png"), width = 215, height = 110, dpi = 600, units = "mm")
+ggsave(plot=selectivity_combo_final, filename=here("supplements/fig_s2_selectivity_by_species.png"), width = 215, height = 110, dpi = 600, units = "mm")
+
+selectivity_combo_final
 ```
+
+**Fig. S2.** Mean Vanderploeg and Scavia’s relativized electivity by region (point with black outline) ± 95% C.I. for four frequently targeted coral taxa across Panamá, Florida, St. Croix, and Bonaire. Electivity was calculated based on scar abundance relative to coral abundance (top panel) and scar area relative to coral area (bottom panel). Site-level values are shown transparently in the background. Positive values indicate a preference, values crossing 0 indicate random feeding, and negative values indicate avoidance. >80% of all observed recent predation scars were found on *Orbicella annularis*, Branching *Porites* spp., *Porites astreoides*, and *Siderastrea siderea*.
 
 # ___________________________________________________________________________________
 
 #Variation in corallivory intensity within and among reefs
 
 ##Visualizing patterns across reefs
-
-**Fig. 4.** (a & b) Site-level predation scar density and (c & d) percent coral area predated in response to major corallivorous parrotfish density (a & c) and the percent cover of target coral species (b & d). Relative scar density and percent coral area predated are shown on a log-transformed scale. The line of best fit by region and 95% confidence intervals are included.
 
 ```{r Fig 4: Corallivory intensity by parrotfish density and coral cover, message=FALSE, echo=FALSE}
 #scar density ~ corallivore density
@@ -995,8 +995,6 @@ site_level_corallivory_patterns <- ggpubr::ggarrange(common_legend,
                                                      ncol=1,
                                                      heights = c(1,10))
 
-site_level_corallivory_patterns
-
 site_level_corallivory_patterns_with_images <- cowplot::ggdraw() +
   draw_plot(site_level_corallivory_patterns)+ 
   draw_image(major_corallivore_icon,  x = -0.38, y = -0.47, scale=0.08) + #adds the major pf icon
@@ -1006,8 +1004,12 @@ site_level_corallivory_patterns_with_images <- cowplot::ggdraw() +
 
 ggsave(plot=site_level_corallivory_patterns_with_images, 
        filename=here("figures_tables/fig4_corallivory_by_coral_and_fish.jpg"), 
-       width = 215, height = 160, dpi = 600, units = "mm") 
+       width = 215, height = 160, dpi = 600, units = "mm")
+
+site_level_corallivory_patterns_with_images
 ```
+
+**Fig. 4.** (a & b) Site-level predation scar density and (c & d) percent coral area predated in response to major corallivorous parrotfish density (a & c) and the percent cover of target coral species (b & d). Relative scar density and percent coral area predated are shown on a log-transformed scale. The line of best fit by region and 95% confidence intervals are included.
 
 ##Analysis of patterns across reefs
 
@@ -1272,11 +1274,7 @@ transect_level_model_output <- n_grazed_diversity_nbinom %>%
   mutate(term=str_replace(term, "region", ""))
 
 write_csv(transect_level_model_output, here("supplements/table_s5_transect_level_grazed_coral_abundance_results.csv"))
-
-transect_level_model_output %>% filter(p_value<0.05)
 ```
-
-**Fig. S2.** Abundance of *Orbicella annularis*, Branching *Porites* spp., *Porites astreoides*, and *Siderastrea siderea* coral colonies with recent parrotfish predation scars per 30 m2 reef area in response to the diversity of target coral taxa within the area. We calculated diversity using the Shannon Diversity Index (H’) based on the richness and evenness of the number of target coral colonies within a given transect. We focused on evaluated the abundance of corals grazed these four taxa as they accounted for >80% of observed colonies with recent predation scars. 
 
 ```{r Fig S2: Abundance corals grazed by coral diversity, fig.height = 3.15, fig.width = 8.46}
 corallivory_by_diversity_fig <- transect_corallivory_diversity_df %>%
@@ -1312,11 +1310,13 @@ corallivory_by_diversity_fig_final <- cowplot::ggdraw() +
   draw_image(porites_astreoides_image, x = -0.385, y = -0.113, scale=0.062)+
   draw_image(siderastrea_image, x = 0.08, y = -0.11, scale=0.063)
 
-corallivory_by_diversity_fig_final
-
 #saving figure
-ggsave(plot=corallivory_by_diversity_fig_final, filename=here("supplements/fig_s2_corallivory_by_coral_diversity.png"), width = 190, height = 140, dpi = 600, units = "mm")
+ggsave(plot=corallivory_by_diversity_fig_final, filename=here("supplements/fig_s3_corallivory_by_coral_diversity.png"), width = 190, height = 140, dpi = 600, units = "mm")
+
+corallivory_by_diversity_fig_final
 ```
+
+**Fig. S3.** Abundance of *Orbicella annularis*, Branching *Porites* spp., *Porites astreoides*, and *Siderastrea siderea* coral colonies with recent parrotfish predation scars per 30 m2 reef area in response to the diversity of target coral taxa within the area. We calculated diversity using the Shannon Diversity Index (H’) based on the richness and evenness of the number of target coral colonies within a given transect. We focused on evaluated the abundance of corals grazed these four taxa as they accounted for >80% of observed colonies with recent predation scars. 
 
 # ___________________________________________________________________________________
 
@@ -1395,8 +1395,6 @@ n_scars_col_level_model_output <- n_scars_col_level_nbinom %>%
 n_scars_col_level_model_output
 
 write_csv(n_scars_col_level_model_output, here("supplements/table_s6_colony_level_scar_abundance_results.csv"))
-
-n_scars_col_level_model_output %>% filter(p_value<0.05)
 ```
 
 ```{r Data processing: Filtering data to only include colonies with predation scars}
@@ -1476,8 +1474,6 @@ mean_scar_size_col_level_model_output <- mean_scar_size_no_outliers %>%
   mutate(term=str_replace(term, "coral_species", ""))
 
 write_csv(mean_scar_size_col_level_model_output, here("supplements/table_s7_colony_level_mean_scar_size_results.csv"))
-
-mean_scar_size_col_level_model_output %>% filter(p_value<0.05)
 ```
 
 **Model:** GLMM of natural-log transformed percent area grazed per predated colony in response to colony size, species, and region with the random nested effects of transect within site.
@@ -1520,11 +1516,7 @@ pct_grazed_col_level_model_output <- pct_grazed %>%
   mutate(term=str_replace(term, "coral_species", ""))
 
 write_csv(pct_grazed_col_level_model_output,  here("supplements/table_s8_colony_level_percent_coral_grazed_results.csv"))
-
-pct_grazed_col_level_model_output %>% filter(p_value<0.05)
 ```
-
-**Fig. 5.** Distributions of the natural-log transformed (a) mean predation scar surface area and (b) colony area predated for all target coral taxa. Coral taxa are arranged by the number of observed colonies with recent scars from the highest to lowest. (c) Coral colony area predated (%) in response to colony surface area on a natural-log transformed scale, with the line of best fit by region and 95% confidence interval. Raw data points are shown transparently in the background. 
 
 ```{r Fig 5 (a) Scar area and (b) percent colony grazed by taxa + region, predated_coral_patterns, fig.height = 3.15, fig.width = 8.46}
 #list of coral species arranged by the total number of colonies with scars
@@ -1634,10 +1626,10 @@ predated_coral_patterns <- ggpubr::ggarrange(fig_mean_scar_taxa,
                                              widths=c(1.5,1,1.2), 
                                              legend="top")
 
-predated_coral_patterns
-
 #saving figure
 ggsave(plot=predated_coral_patterns, filename=here("figures_tables/fig5_predated_coral_patterns.jpg"), width = 215, height = 80, dpi = 600, units = "mm")
+
+predated_coral_patterns
 ```
 
-
+**Fig. 5.** Distributions of the natural-log transformed (a) mean predation scar surface area and (b) colony area predated for all target coral taxa. Coral taxa are arranged by the number of observed colonies with recent scars from the highest to lowest. (c) Coral colony area predated (%) in response to colony surface area on a natural-log transformed scale, with the line of best fit by region and 95% confidence interval. Raw data points are shown transparently in the background. 
