@@ -1,14 +1,14 @@
 model,term,statistic,p_value,estimate,ci_2.5,ci_97.5,estimate_backtransformed
-Colonies grazed,(Intercept),-1.002,0.316,-0.775,-2.289,0.74,0.461
-Colonies grazed,coral_diversity,2.956,0.003,1.471,0.496,2.447,4.356
-Colonies grazed,Orbicella annularis,-1.29,0.197,-0.728,-1.834,0.378,0.483
-Colonies grazed,Porites astreoides,-2.12,0.034,-1.167,-2.246,-0.088,0.311
-Colonies grazed,Siderastrea siderea,-2.87,0.004,-1.424,-2.396,-0.451,0.241
-Colonies grazed,depth_m,0.464,0.643,0.021,-0.067,0.108,1.021
-Colonies grazed,Florida,5.491,0,2.22,1.428,3.013,9.209
-Colonies grazed,St. Croix,-2.761,0.006,-1.066,-1.823,-0.309,0.344
-Colonies grazed,Bonaire,0.897,0.37,0.391,-0.463,1.244,1.478
-Colonies grazed,Branching Porites spp.:log(proportional_cover),5.7,0,0.744,0.488,1,2.105
-Colonies grazed,Orbicella annularis:log(proportional_cover),4.843,0,1.489,0.887,2.092,4.435
-Colonies grazed,Porites astreoides:log(proportional_cover),3.746,0,0.584,0.278,0.889,1.793
-Colonies grazed,Siderastrea siderea:log(proportional_cover),5.47,0,0.941,0.604,1.279,2.564
+Colonies grazed,(Intercept),-0.988,0.323,-0.764,-2.278,0.751,0.466
+Colonies grazed,coral_diversity,2.951,0.003,1.468,0.493,2.443,4.339
+Colonies grazed,Orbicella annularis,-1.307,0.191,-0.737,-1.841,0.368,0.479
+Colonies grazed,Porites astreoides,-2.147,0.032,-1.181,-2.26,-0.103,0.307
+Colonies grazed,Siderastrea siderea,-2.894,0.004,-1.434,-2.405,-0.463,0.238
+Colonies grazed,depth_m,0.473,0.636,0.021,-0.066,0.108,1.021
+Colonies grazed,Florida,5.495,0,2.222,1.43,3.015,9.229
+Colonies grazed,St. Croix,-2.757,0.006,-1.064,-1.821,-0.308,0.345
+Colonies grazed,Bonaire,0.896,0.37,0.39,-0.464,1.244,1.477
+Colonies grazed,Branching Porites spp.:log(proportional_cover),5.722,0,0.748,0.492,1.005,2.114
+Colonies grazed,Orbicella annularis:log(proportional_cover),4.85,0,1.491,0.888,2.093,4.44
+Colonies grazed,Porites astreoides:log(proportional_cover),3.744,0,0.582,0.277,0.887,1.79
+Colonies grazed,Siderastrea siderea:log(proportional_cover),5.48,0,0.941,0.604,1.278,2.563

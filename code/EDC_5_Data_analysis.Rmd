@@ -1243,15 +1243,17 @@ anova(n_grazed_diversity_poisson, n_grazed_diversity_nbinom)
 n_grazed_diversity_poisson_residuals <- DHARMa::simulateResiduals(n_grazed_diversity_poisson, n = 10000, use.u = T)
 n_grazed_diversity_nbinom_residuals <- DHARMa::simulateResiduals(n_grazed_diversity_nbinom, n = 10000, use.u = T)
 
-plot(n_grazed_diversity_poisson_residuals) #diagnostic plot indicates problems
-plot(n_grazed_diversity_nbinom_residuals) #diagnostic plot indicate no sig problems... n binomial is better fit
+plot(n_grazed_diversity_poisson_residuals) #diagnostic plot indicates no sign problems
+plot(n_grazed_diversity_nbinom_residuals) #diagnostic plot also indicate no sig problems... both models fine
 
 #testing for overdispersion, zero inflation, and outliers
-DHARMa::testDispersion(n_grazed_diversity_nbinom, plot=FALSE) #no significant overdispersion
-DHARMa::testZeroInflation(n_grazed_diversity_nbinom) #NS zero inflation
+DHARMa::testDispersion(n_grazed_diversity_poisson_residuals, plot=FALSE) #no significant overdispersion
+DHARMa::testZeroInflation(n_grazed_diversity_poisson) #NS zero inflation
 DHARMa::testOutliers(n_grazed_diversity_nbinom, type = "bootstrap", nBoot = 1000) #NS outliers
+DHARMa::testOutliers(n_grazed_diversity_poisson)
 
 n_grazed_diversity_nbinom %>% summary()
+n_grazed_diversity_poisson %>% summary()
 ```
 
 ```{r Table S5: Summary of transect-level GLMM results}
