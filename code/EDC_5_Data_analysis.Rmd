@@ -256,15 +256,15 @@ region_palette <- c("#00B1EA", "#FE4248", "#8266FF", "#520E44")
 
 ##Summarizing and visualizing regional trends
 
-**Table 1.** Regional means ± S.E. of major corallivore density, cover of coral species targeted by parrotfishes (%), scar density, mean scar area on predated corals, and mean coral colony area predated (%). 
-```{r Table 1: Regional patterns in parrotfish density + coral cover + corallivory intensity}
+**Table 2.** Regional means ± S.E. of major corallivore density, cover of coral species targeted by parrotfishes (%), scar density, mean scar area on predated corals, and mean coral colony area predated (%). 
+```{r Table 2: Regional patterns in parrotfish density + coral cover + corallivory intensity}
 regional_parrotfish_coral_scar_summary <- regional_parrotfish_density %>% 
   left_join(regional_coral_scar_patterns, by = join_by(region)) %>% 
   left_join(mean_scar_size_by_region, by = join_by(region)) %>%
   mutate_at(2:7, round, 1) %>% 
   mutate_at(8:11, round, 3)
 
-write.csv(regional_parrotfish_coral_scar_summary, here("figures_tables/table1_regional_patterns.csv"),
+write.csv(regional_parrotfish_coral_scar_summary, here("figures_tables/table2_regional_patterns.csv"),
           fileEncoding = "UTF-8", 
           row.names=FALSE)
 ```
