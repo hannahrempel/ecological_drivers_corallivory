@@ -1439,6 +1439,9 @@ predated_colonies_subset <- coral_scar_df %>%
   #organizing as factor so the Branching Porites spp. cat is grouped with P. astreoides
   mutate(coral_species=factor(coral_species, levels = c("Agaricia agaricites", "Agaricia humilis", "Agaricia tenuifolia", "Agaricia spp.", "Madracis auretenra", "Madracis decactis", "Orbicella annularis", "Orbicella faveolata", "Branching Porites spp.", "Porites astreoides", "Siderastrea siderea", "Stephanocoenia intersepta"))) %>%
   mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) 
+
+coral_scar_df %>% 
+  filter(n_new_scars>0)
 ```
 
 **Model:** GLMM of natural-log transformed mean scar area per predated colony in response to colony size, species, and region with the random nested effects of transect within site.
