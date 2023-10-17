@@ -1,17 +1,17 @@
-model,term,statistic,p_value,estimate,ci_2.5,ci_97.5,estimate_backtransformed
-Colony-level percent coral grazed,(Intercept),2.458,0.014,1.149,0.233,2.066,3.156
-Colony-level percent coral grazed,log(col_area_cm2),-15.835,0,-0.735,-0.826,-0.644,-0.735
-Colony-level percent coral grazed,Agaricia humilis,-0.802,0.423,-0.398,-1.372,0.575,0.672
-Colony-level percent coral grazed,Agaricia tenuifolia,3.022,0.003,1.531,0.538,2.524,4.624
-Colony-level percent coral grazed,Agaricia spp.,2.759,0.006,1.989,0.576,3.401,7.305
-Colony-level percent coral grazed,Madracis auretenra,0.44,0.66,0.262,-0.905,1.429,1.3
-Colony-level percent coral grazed,Madracis decactis,0.33,0.741,0.167,-0.824,1.158,1.182
-Colony-level percent coral grazed,Orbicella annularis,1.998,0.046,0.796,0.015,1.576,2.216
-Colony-level percent coral grazed,Orbicella faveolata,1.021,0.307,0.514,-0.473,1.501,1.672
-Colony-level percent coral grazed,Branching Porites spp.,3.181,0.001,1.096,0.421,1.772,2.992
-Colony-level percent coral grazed,Porites astreoides,2.121,0.034,0.76,0.058,1.463,2.139
-Colony-level percent coral grazed,Siderastrea siderea,0.743,0.458,0.259,-0.424,0.942,1.296
-Colony-level percent coral grazed,Stephanocoenia intersepta,1.542,0.123,1.114,-0.302,2.53,3.046
-Colony-level percent coral grazed,regionFlorida,6.349,0,1.661,1.148,2.174,5.265
-Colony-level percent coral grazed,regionSt. Croix,4.244,0,1.246,0.67,1.821,3.475
-Colony-level percent coral grazed,regionBonaire,5.877,0,1.75,1.166,2.333,5.753
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5
+Colony-level percent coral grazed,(Intercept),2.458,0.014,1.149,0.233,2.066
+Colony-level percent coral grazed,log(col_area_cm2),-15.835,0,-0.735,-0.826,-0.644
+Colony-level percent coral grazed,Agaricia humilis,-0.802,0.423,-0.398,-1.372,0.575
+Colony-level percent coral grazed,Agaricia tenuifolia,3.022,0.003,1.531,0.538,2.524
+Colony-level percent coral grazed,Agaricia spp.,2.759,0.006,1.989,0.576,3.401
+Colony-level percent coral grazed,Madracis auretenra,0.44,0.66,0.262,-0.905,1.429
+Colony-level percent coral grazed,Madracis decactis,0.33,0.741,0.167,-0.824,1.158
+Colony-level percent coral grazed,Orbicella annularis,1.998,0.046,0.796,0.015,1.576
+Colony-level percent coral grazed,Orbicella faveolata,1.021,0.307,0.514,-0.473,1.501
+Colony-level percent coral grazed,Branching Porites spp.,3.181,0.001,1.096,0.421,1.772
+Colony-level percent coral grazed,Porites astreoides,2.121,0.034,0.76,0.058,1.463
+Colony-level percent coral grazed,Siderastrea siderea,0.743,0.458,0.259,-0.424,0.942
+Colony-level percent coral grazed,Stephanocoenia intersepta,1.542,0.123,1.114,-0.302,2.53
+Colony-level percent coral grazed,regionFlorida,6.349,0,1.661,1.148,2.174
+Colony-level percent coral grazed,regionSt. Croix,4.244,0,1.246,0.67,1.821
+Colony-level percent coral grazed,regionBonaire,5.877,0,1.75,1.166,2.333

@@ -277,7 +277,7 @@ regional_vars_graph_df <- pf_density_transect %>%
   left_join(coral_site, by = join_by(region, site)) 
 ```
 
-```{r Fig 2: parrotfish + coral + corallivory patterns across sites and regions, echo=FALSE, message=FALSE}
+```{r Fig. 2: parrotfish + coral + corallivory patterns across sites and regions, echo=FALSE, message=FALSE}
 #summarizing data for visualization
 regional_vars_graph_df <- pf_density_transect %>%
   group_by(region, site) %>%
@@ -731,7 +731,7 @@ selectivity_raw_genus <- selectivity_df_genus %>%
   select(-index) 
 ```
 
-```{r Fig 3: Coral genera selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
+```{r Fig. 3: Coral genera selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
 #creating preliminary figure
 selectivity_genus_temp <- ggplot()+
   geom_point(data=selectivity_raw_genus, aes(y=region_short, x=electivity, color=region_short), alpha=0.5, position=position_jitter(height=0.1))+ #raw data points
@@ -918,7 +918,7 @@ selectivity_combo_final
 
 ##Visualizing patterns across reefs
 
-```{r Fig 4: Corallivory intensity by parrotfish density and coral cover, message=FALSE, echo=FALSE}
+```{r Fig. 4: Corallivory intensity by parrotfish density and coral cover, message=FALSE, echo=FALSE}
 #scar density ~ corallivore density
 site_level_scar_density_by_corallivore_density <- fish_corals_site_level %>%
   ggplot()+
@@ -1106,10 +1106,8 @@ scar_density_model_output <- scar_density_m1 %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
-  mutate(estimate_backtransformed = case_when(term=="(Intercept)"~exp(estimate),
-                                            TRUE~as.double(100*(exp(estimate)-1)))) %>%  
   mutate(model="Scar density") %>%
-  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5, estimate_backtransformed) %>%
+  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5) %>%
   mutate(across(where(is.double), ~round(.x, 3)))
 
 scar_density_model_output
@@ -1169,12 +1167,8 @@ proportion_grazed_model_output <- proportion_grazed_m1 %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
-  mutate(estimate_backtransformed = case_when(
-    term=="(Intercept)"~exp(estimate),
-    TRUE~as.double(exp(estimate)) #not multiplying the following by 100 b/c y is already a %
-    )) %>% 
   mutate(model="Percent grazed") %>%
-  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5, estimate_backtransformed) %>%
+  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5) %>%
   mutate(across(where(is.double), ~round(.x, 3)))
 ```
 
@@ -1299,17 +1293,23 @@ transect_level_model_output <- n_grazed_diversity_nbinom %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
-  mutate(estimate_backtransformed = exp(estimate)) %>%  
   mutate(model="Colonies grazed") %>%
-  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5, estimate_backtransformed) %>%
+  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5) %>%
   mutate(across(where(is.double), ~round(.x, 3))) %>%
   mutate(term=str_replace(term, "coral_species", "")) %>%
   mutate(term=str_replace(term, "region", ""))
 
+#back transforming estimated effect sizes (see paper supplements for description)
+transect_level_model_output %>%
+  #exponentiating all independent variables except proportional cover, which was log transformed
+    mutate(estimate_backtransformed = case_when(term!="Branching Porites spp.:log(proportional_cover)"~exp(estimate),
+                                                TRUE~as.double(estimate))) %>%
+  mutate(across(where(is.double), ~round(.x, 3)))
+
 write_csv(transect_level_model_output, here("supplements/table_s5_transect_level_grazed_coral_abundance_results.csv"))
 ```
 
-```{r Fig S4: Abundance corals grazed by coral diversity, fig.height = 3.15, fig.width = 8.46}
+```{r Fig. S4: Abundance corals grazed by coral diversity, fig.height = 3.15, fig.width = 8.46}
 corallivory_by_diversity_fig <- transect_corallivory_diversity_df %>%
   mutate(coral_species=factor(coral_species, levels = c("Orbicella annularis", "Branching Porites spp.", "Porites astreoides", "Siderastrea siderea"))) %>% 
   mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) %>%
@@ -1323,7 +1323,7 @@ corallivory_by_diversity_fig <- transect_corallivory_diversity_df %>%
   scale_fill_manual(values=region_palette)+
   facet_wrap(~coral_species)+
   labs(x = "Coral diversity (H')",
-       y = expression(paste("Colonies grazed per 30 m" ^2)),
+       y = expression(paste("Colonies predated per 30 m" ^2)),
        color="Region",
        fill="Region")+
   theme_bw()+
@@ -1349,7 +1349,7 @@ ggsave(plot=corallivory_by_diversity_fig_final, filename=here("supplements/fig_s
 corallivory_by_diversity_fig_final
 ```
 
-**Fig. S3.** Abundance of *Orbicella annularis*, Branching *Porites* spp., *Porites astreoides*, and *Siderastrea siderea* coral colonies with recent parrotfish predation scars per 30 m2 reef area in response to the diversity of target coral taxa within the area. We calculated diversity using the Shannon Diversity Index (H’) based on the richness and evenness of the number of target coral colonies within a given transect. We focused on evaluated the abundance of corals grazed these four taxa as they accounted for >80% of observed colonies with recent predation scars. 
+**Fig. S4.** Number of Orbicella annularis, Branching Porites spp., Porites astreoides, and Siderastrea siderea coral colonies predated per 30 m^2 reef area in response to the diversity of target coral taxa within the area (n=441 total colonies of these species present within transects). We calculated diversity using the Shannon Diversity Index (H’) based on the richness and evenness of the number of target coral colonies within a given transect. We focused on evaluated the abundance of corals predated for these four taxa as they accounted for >80% of observed colonies with recent predation scars. 
 
 # ___________________________________________________________________________________
 
@@ -1416,11 +1416,16 @@ n_scars_col_level_model_output <- n_scars_col_level_nbinom %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
-  mutate(estimate_backtransformed = exp(estimate)) %>%  
   mutate(model="Scar abundance") %>%
-  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5, estimate_backtransformed) %>%
+  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5) %>%
   mutate(across(where(is.double), ~round(.x, 3))) %>%
   mutate(term=str_replace(term, "coral_species", ""))
+
+#back transforming estimated effect sizes (see paper supplements for description)
+n_scars_col_level_model_output %>%
+  #exponentiating all independent variables
+  mutate(estimate_backtransformed = exp(estimate)) %>%
+  mutate(across(where(is.double), ~round(.x, 3)))
 
 n_scars_col_level_model_output
 
@@ -1456,25 +1461,29 @@ mean_scar_size %>% summary()
 ```
 
 ```{r Table S7: Colony-level mean scar size model output}
-mean_scar_size_col_level_ci <- confint(mean_scar_size_no_outliers) %>% 
+mean_scar_size_col_level_ci <- confint(mean_scar_size) %>% 
   as_tibble() %>%
   select(-Estimate)
 
-mean_scar_size_col_level_model_output <- mean_scar_size_no_outliers %>% 
+mean_scar_size_col_level_model_output <- mean_scar_size %>% 
   tidy() %>% 
   filter(term != "sd__Observation") %>%
   bind_cols(mean_scar_size_col_level_ci) %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
-  mutate(estimate_backtransformed = case_when(term=="(Intercept)"~exp(estimate),
-                                              term=="log(col_area_cm2)"~(estimate),
-                                            TRUE~as.double((exp(estimate))))) %>%  
   mutate(model="Colony-level mean scar size") %>%
-  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5, estimate_backtransformed) %>%
+  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5) %>%
   mutate(across(where(is.double), ~round(.x, 3))) %>%
   mutate(term=str_replace(term, "coral_species", ""))
 
+#back transforming estimated effect sizes (see paper supplements for description)
+mean_scar_size_col_level_model_output %>%
+  #exponentiating all independent variables except coral area, which was log transformed
+    mutate(estimate_backtransformed = case_when(term!="log(col_area_cm2)"~exp(estimate),
+                                                TRUE~as.double(estimate))) %>%
+   mutate(across(where(is.double), ~round(.x, 3)))
+  
 write_csv(mean_scar_size_col_level_model_output, here("supplements/table_s7_colony_level_mean_scar_size_results.csv"))
 ```
 
@@ -1509,18 +1518,22 @@ pct_grazed_col_level_model_output <- pct_grazed %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
-  mutate(estimate_backtransformed = case_when(term=="(Intercept)"~exp(estimate),
-                                              term=="log(col_area_cm2)"~(estimate),
-                                            TRUE~as.double((exp(estimate))))) %>%  
   mutate(model="Colony-level percent coral grazed") %>%
-  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5, estimate_backtransformed) %>%
+  select(model, term, statistic, p_value, estimate, ci_2.5, ci_97.5) %>%
   mutate(across(where(is.double), ~round(.x, 3))) %>%
   mutate(term=str_replace(term, "coral_species", ""))
+
+#back transforming estimated effect sizes (see paper supplements for description)
+pct_grazed_col_level_model_output %>%
+  #exponentiating all independent variables except coral area, which was log transformed
+    mutate(estimate_backtransformed = case_when(term!="log(col_area_cm2)"~exp(estimate),
+                                                TRUE~as.double(estimate))) %>%
+   mutate(across(where(is.double), ~round(.x, 3)))
 
 write_csv(pct_grazed_col_level_model_output,  here("supplements/table_s8_colony_level_percent_coral_grazed_results.csv"))
 ```
 
-```{r Fig 5 (a) Scar area and (b) percent colony grazed by taxa + region, predated_coral_patterns, fig.height = 3.15, fig.width = 8.46}
+```{r Fig. 5 (a) Scar area and (b) percent colony grazed by taxa + region, predated_coral_patterns, fig.height = 3.15, fig.width = 8.46}
 #list of coral species arranged by the total number of colonies with scars
 coral_species_arranged_by_n_grazed <- predated_colonies_subset %>% 
   group_by(coral_species) %>% 

@@ -63,7 +63,7 @@
 "Panamá","Crawl Cay",2013-07-10,10,1,62,"Madracis auretenra","80+",90,39,90,100,3,100,7.069,12.566,9.425
 "Panamá","Crawl Cay",2013-07-10,10,1,63,"Madracis auretenra","20 to 40",20,14,100,100,3,100,9.425,16.493,15.708
 "Panamá","Crawl Cay",2013-07-10,10,1,64,"Agaricia tenuifolia","20 to 40",21,21,100,100,3,100,15.708,169.646,56.549
-"Panamá","Crawl Cay",2013-07-10,10,1,65,"Helioceris cucullata","<5",2.5,2,100,100,1,0,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,65,"Helioseris cucullata","<5",2.5,2,100,100,1,0,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,10,1,66,"Siderastrea siderea","20 to 40",21,19,100,100,13,8,31.416,49.48,47.124
 "Panamá","Crawl Cay",2013-07-10,5,2,67,"Porites astreoides","10 to 20",11,8,100,100,3,67,7.069,23.562,18.85
 "Panamá","Crawl Cay",2013-07-10,5,2,68,"Siderastrea siderea","40 to 80",61,41,20,100,0,0,NA,NA,NA
@@ -92,7 +92,7 @@
 "Panamá","Finca",2013-07-11,5,2,91,"Branching Porites spp.","80+",170,50,100,100,60,5,18.85,28.274,27.489
 "Panamá","Finca",2013-07-11,5,2,92,"Branching Porites spp.","80+",136,42,100,100,52,4,7.069,32.987,12.566
 "Panamá","Finca",2013-07-11,5,2,93,"Branching Porites spp.","40 to 80",55,22,75,100,15,0,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,94,"Helioceris cucullata","5 to 10",7,4,100,100,1,0,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,94,"Helioseris cucullata","5 to 10",7,4,100,100,1,0,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,95,"Branching Porites spp.","10 to 20",15,8,80,100,3,0,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,96,"Branching Porites spp.","80+",84,43,90,100,12,16,12.566,518.363,15.708
 "Panamá","Finca",2013-07-11,5,2,97,"Branching Porites spp.","80+",136,93,80,100,14,21,7.069,23.562,15.708
@@ -166,8 +166,8 @@
 "Panamá","Arcoiris Reef",2013-08-20,10,1,165,"Siderastrea siderea","10 to 20",17,9,80,100,0,0,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,166,"Branching Porites spp.","20 to 40",35,24,100,100,10,20,7.069,15.708,12.566
 "Panamá","Arcoiris Reef",2013-08-20,5,2,167,"Agaricia agaricites","20 to 40",22,12,100,100,2,50,35.343,47.124,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,168,"Helioceris cucullata","5 to 10",8,6,100,100,1,100,NA,NA,34.558
-"Panamá","Arcoiris Reef",2013-08-20,5,2,169,"Helioceris cucullata","5 to 10",6,5,100,100,1,0,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,168,"Helioseris cucullata","5 to 10",8,6,100,100,1,100,NA,NA,34.558
+"Panamá","Arcoiris Reef",2013-08-20,5,2,169,"Helioseris cucullata","5 to 10",6,5,100,100,1,0,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,170,"Branching Porites spp.","20 to 40",35,27,100,100,16,0,NA,NA,NA
 "Panamá","Casa Blanca",2013-07-08,10,1,171,"Siderastrea siderea","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Casa Blanca",2013-07-08,10,1,172,"Siderastrea siderea","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
@@ -331,7 +331,7 @@
 "Panamá","Mystery Spot",2013-07-09,10,1,330,"Agaricia tenuifolia","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,10,1,331,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,10,1,332,"Colpophyllia natans","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Mystery Spot",2013-07-09,10,1,333,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Mystery Spot",2013-07-09,10,1,333,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,10,1,334,"Madracis decactis","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,10,1,335,"Madracis decactis","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,10,1,336,"Madracis decactis","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
@@ -658,7 +658,7 @@
 "Panamá","Mystery Spot",2013-07-09,5,2,657,"Colpophyllia natans","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,5,2,658,"Colpophyllia natans","80+",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,5,2,659,"Colpophyllia natans","80+",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Mystery Spot",2013-07-09,5,2,660,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Mystery Spot",2013-07-09,5,2,660,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,5,2,661,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,5,2,662,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Mystery Spot",2013-07-09,5,2,663,"Madracis auretenra","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
@@ -835,19 +835,19 @@
 "Panamá","Seagal",2013-07-09,10,1,834,"Colpophyllia natans","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,10,1,835,"Colpophyllia natans","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,10,1,836,"Colpophyllia natans","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,837,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,838,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,839,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,840,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,841,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,842,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,843,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,844,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,845,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,846,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,847,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,848,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,10,1,849,"Helioceris cucullata","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,837,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,838,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,839,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,840,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,841,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,842,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,843,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,844,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,845,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,846,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,847,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,848,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,10,1,849,"Helioseris cucullata","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,10,1,850,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,10,1,851,"Madracis auretenra","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,10,1,852,"Madracis auretenra","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
@@ -1110,16 +1110,16 @@
 "Panamá","Seagal",2013-07-09,5,2,1109,"Agaricia tenuifolia","80+",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,5,2,1110,"Agaricia tenuifolia","80+",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,5,2,1111,"Agaricia tenuifolia","80+",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1112,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1113,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1114,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1115,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1116,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1117,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1118,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1119,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1120,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Seagal",2013-07-09,5,2,1121,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1112,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1113,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1114,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1115,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1116,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1117,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1118,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1119,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1120,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Seagal",2013-07-09,5,2,1121,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,5,2,1122,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,5,2,1123,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Seagal",2013-07-09,5,2,1124,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
@@ -1295,23 +1295,23 @@
 "Panamá","Crawl Cay",2013-07-10,10,1,1294,"Colpophyllia natans","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,10,1,1295,"Colpophyllia natans","80+",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,10,1,1296,"Diploria strigosa","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1297,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1298,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1299,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1300,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1301,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1302,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1303,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1304,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1305,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1306,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1307,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1308,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1309,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1310,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1311,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1312,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,10,1,1313,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1297,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1298,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1299,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1300,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1301,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1302,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1303,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1304,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1305,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1306,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1307,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1308,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1309,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1310,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1311,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1312,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,10,1,1313,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,10,1,1314,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,10,1,1315,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,10,1,1316,"Madracis auretenra","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
@@ -1453,9 +1453,9 @@
 "Panamá","Crawl Cay",2013-07-10,5,2,1452,"Isophyllia spp.","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,5,2,1453,"Isophyllia spp.","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,5,2,1454,"Isophyllia spp.","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,5,2,1455,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,5,2,1456,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Crawl Cay",2013-07-10,5,2,1457,"Helioceris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,5,2,1455,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,5,2,1456,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Crawl Cay",2013-07-10,5,2,1457,"Helioseris cucullata","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,5,2,1458,"Montastrea cavernosa","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,5,2,1459,"Montastrea cavernosa","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Crawl Cay",2013-07-10,5,2,1460,"Montastrea cavernosa","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
@@ -1792,23 +1792,23 @@
 "Panamá","Finca",2013-07-11,5,2,1791,"Colpophyllia natans","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,1792,"Colpophyllia natans","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,1793,"Colpophyllia natans","80+",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1794,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1795,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1796,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1797,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1798,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1799,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1800,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1801,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1802,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1803,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1804,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1805,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1806,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1807,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1808,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1809,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Finca",2013-07-11,5,2,1810,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1794,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1795,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1796,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1797,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1798,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1799,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1800,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1801,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1802,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1803,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1804,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1805,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1806,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1807,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1808,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1809,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Finca",2013-07-11,5,2,1810,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,1811,"Porites astreoides","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,1812,"Porites astreoides","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Finca",2013-07-11,5,2,1813,"Porites astreoides","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
@@ -2067,7 +2067,7 @@
 "Panamá","Punta STRI",2013-07-11,5,2,2066,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Punta STRI",2013-07-11,5,2,2067,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Punta STRI",2013-07-11,5,2,2068,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Punta STRI",2013-07-11,5,2,2069,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Punta STRI",2013-07-11,5,2,2069,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Punta STRI",2013-07-11,5,2,2070,"Agaricia lamarcki","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Punta STRI",2013-07-11,5,2,2071,"Agaricia lamarcki","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Punta STRI",2013-07-11,5,2,2072,"Agaricia lamarcki","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
@@ -2367,17 +2367,17 @@
 "Panamá","Isla Pastores Outside",2013-08-20,10,1,2366,"Colpophyllia natans","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,10,1,2367,"Colpophyllia natans","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,10,1,2368,"Colpophyllia natans","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2369,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2370,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2371,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2372,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2373,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2374,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2375,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2376,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2377,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2378,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,10,1,2379,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2369,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2370,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2371,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2372,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2373,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2374,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2375,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2376,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2377,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2378,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,10,1,2379,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,10,1,2380,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,10,1,2381,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,10,1,2382,"Madracis auretenra","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
@@ -2484,9 +2484,9 @@
 "Panamá","Isla Pastores Outside",2013-08-20,5,2,2483,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,5,2,2484,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,5,2,2485,"Agaricia spp.","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,5,2,2486,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,5,2,2487,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Isla Pastores Outside",2013-08-20,5,2,2488,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,5,2,2486,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,5,2,2487,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Isla Pastores Outside",2013-08-20,5,2,2488,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,5,2,2489,"Madracis auretenra","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,5,2,2490,"Montastrea cavernosa","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Isla Pastores Outside",2013-08-20,5,2,2491,"Montastrea cavernosa","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
@@ -2687,12 +2687,12 @@
 "Panamá","Arcoiris Reef",2013-08-20,5,2,2686,"Colpophyllia natans","20 to 40",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,2687,"Colpophyllia natans","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,2688,"Colpophyllia natans","40 to 80",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,2689,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,2690,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,2691,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,2692,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,2693,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
-"Panamá","Arcoiris Reef",2013-08-20,5,2,2694,"Helioceris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,2689,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,2690,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,2691,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,2692,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,2693,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
+"Panamá","Arcoiris Reef",2013-08-20,5,2,2694,"Helioseris cucullata","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,2695,"Porites astreoides","5 to 10",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,2696,"Porites astreoides","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA
 "Panamá","Arcoiris Reef",2013-08-20,5,2,2697,"Porites astreoides","10 to 20",NA,NA,100,100,0,NA,NA,NA,NA

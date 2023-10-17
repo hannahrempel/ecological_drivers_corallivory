@@ -1,17 +1,17 @@
-model,term,statistic,p_value,estimate,ci_2.5,ci_97.5,estimate_backtransformed
-Scar abundance,(Intercept),-7.444,0,-6.137,-7.752,-4.521,0.002
-Scar abundance,col_area_cm2,6.612,0,0.001,0,0.001,1.001
-Scar abundance,Agaricia humilis,0.729,0.466,0.84,-1.418,3.098,2.317
-Scar abundance,Agaricia spp.,1.512,0.131,1.231,-0.365,2.827,3.424
-Scar abundance,Agaricia tenuifolia,1.592,0.111,1.42,-0.328,3.167,4.136
-Scar abundance,Branching Porites spp.,5.71,0,4.523,2.97,6.076,92.115
-Scar abundance,Madracis auretenra,1.523,0.128,1.391,-0.399,3.181,4.018
-Scar abundance,Madracis decactis,3.37,0.001,2.788,1.167,4.41,16.256
-Scar abundance,Orbicella annularis,5.355,0,4.228,2.681,5.776,68.595
-Scar abundance,Orbicella faveolata,0.747,0.455,0.696,-1.13,2.523,2.007
-Scar abundance,Porites astreoides,5.415,0,4.172,2.662,5.682,64.83
-Scar abundance,Siderastrea siderea,1.466,0.143,1.017,-0.342,2.376,2.764
-Scar abundance,Stephanocoenia intersepta,0.665,0.506,0.655,-1.276,2.586,1.926
-Scar abundance,regionFlorida,5.444,0,4.471,2.861,6.08,87.438
-Scar abundance,regionSt. Croix,-4.96,0,-3.161,-4.41,-1.912,0.042
-Scar abundance,regionBonaire,-1.776,0.076,-1.201,-2.527,0.125,0.301
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5
+Scar abundance,(Intercept),-7.444,0,-6.137,-7.752,-4.521
+Scar abundance,col_area_cm2,6.612,0,0.001,0,0.001
+Scar abundance,Agaricia humilis,0.729,0.466,0.84,-1.418,3.098
+Scar abundance,Agaricia spp.,1.512,0.131,1.231,-0.365,2.827
+Scar abundance,Agaricia tenuifolia,1.592,0.111,1.42,-0.328,3.167
+Scar abundance,Branching Porites spp.,5.71,0,4.523,2.97,6.076
+Scar abundance,Madracis auretenra,1.523,0.128,1.391,-0.399,3.181
+Scar abundance,Madracis decactis,3.37,0.001,2.788,1.167,4.41
+Scar abundance,Orbicella annularis,5.355,0,4.228,2.681,5.776
+Scar abundance,Orbicella faveolata,0.747,0.455,0.696,-1.13,2.523
+Scar abundance,Porites astreoides,5.415,0,4.172,2.662,5.682
+Scar abundance,Siderastrea siderea,1.466,0.143,1.017,-0.342,2.376
+Scar abundance,Stephanocoenia intersepta,0.665,0.506,0.655,-1.276,2.586
+Scar abundance,regionFlorida,5.444,0,4.471,2.861,6.08
+Scar abundance,regionSt. Croix,-4.96,0,-3.161,-4.41,-1.912
+Scar abundance,regionBonaire,-1.776,0.076,-1.201,-2.527,0.125
