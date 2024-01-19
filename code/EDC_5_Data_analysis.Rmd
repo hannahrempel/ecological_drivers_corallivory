@@ -52,19 +52,38 @@ site_coordinates <- read.csv(here("data/site_coordinates.csv"),
 ```
 
 ```{r Table S1: Site coordinates and sampling effort}
-n_coral_surveys <- coral_scar_df %>% 
-  group_by(region, site) %>% 
-  distinct(transect) %>% 
-  dplyr::reframe(n_coral_surveys=n())
+#depth of each fish survey transect
+depth_fish_surveys <- fish_df  %>% 
+  group_by(region, site, transect) %>% 
+  distinct(depth_m)%>%
+  rename(fish_survey_depth_m=depth_m)
 
-n_surveys <- fish_df %>% 
-  group_by(region, site) %>% 
-  distinct(transect) %>% 
-  dplyr::reframe(n_fish_surveys=n()) %>%
-  left_join(n_coral_surveys, by = join_by(region, site))
+#summary of the number of transects and depth range by site
+summarized_n_depth_fish_surveys<-depth_fish_surveys %>% 
+  group_by(region, site) %>%
+  dplyr::reframe(n_fish_surveys=n(),
+                 min_fish_survey_depth_m =min(fish_survey_depth_m),
+                 med_fish_survey_depth_m =round(median(fish_survey_depth_m), 1),
+                 max_fish_survey_depth_m =max(fish_survey_depth_m))
 
-table_s1 <- site_coordinates %>% 
-  left_join(n_surveys)
+#depth of each coral and scar survey 
+depth_coral_surveys <- coral_scar_df %>% 
+  group_by(region, site, transect) %>% 
+  distinct(depth_m) %>%
+  rename(coral_survey_depth_m=depth_m)
+
+#summary of the number of surveys and depth range by site
+summarized_n_depth_coral_surveys<-depth_coral_surveys %>% 
+  group_by(region, site) %>%
+  dplyr::reframe(n_coral_surveys=n(),
+                 min_coral_survey_depth_m =min(coral_survey_depth_m),
+                 med_coral_survey_depth_m =round(median(coral_survey_depth_m), 1),
+                 max_coral_survey_depth_m =max(coral_survey_depth_m))
+
+#joining site-level sampling effort summary with site coordinates
+table_s1 <- site_coordinates %>%
+  left_join(summarized_n_depth_fish_surveys) %>% 
+  left_join(summarized_n_depth_coral_surveys)
 
 write.csv(table_s1, 
           here("supplements/table_s1_site_coordinates_sample_size.csv"),  
@@ -656,119 +675,119 @@ Dunn_test_pct_coral_grazed
 We calculated genus-based elecitivity across regions using Vanderploeg and Scavia's E * index. We compared both abundance-based elecitity (scar abundance to coral abundance) and area-based elecitivty (scar area to coral area).
 
 ```{r Summarizing coral genera selectivity by region}
-#raw selectivity data
-selectivity_df_genus <- coral_scar_df %>%
-  mutate(coral_genus=gsub("\\s.*", "", coral_species),
-         coral_genus=case_when(coral_genus=="Branching"~"Porites",
-                               TRUE~as.character(coral_genus))) %>%
-  group_by(region, site, coral_genus) %>%
-   dplyr::reframe(total_n_scars=sum(n_new_scars),
-                  total_n_colonies=n(),
-                  total_scar_area=sum(total_grazed_cm2),
-                  total_colony_area=sum(col_area_cm2)) %>%
-  #Vanderploeg and Scavia’s relativised electivity, E*
-  mutate(n_elect_vs= electivity::vs_electivity(total_n_scars, total_n_colonies),
-         area_elect_vs= electivity::vs_electivity(total_scar_area, total_colony_area),
-         percent_cover=(total_colony_area/300000)*100) %>%
-  mutate(region_short=case_when(region=="Panamá"~"PAN",
-                                region=="St. Croix"~"STX",
-                                region=="Florida"~"FLA",
-                                region=="Bonaire"~"BON",
-                                TRUE~as.character(region)),
-         region_short=factor(region_short, levels = c("PAN", "FLA", "STX", "BON")))
-
-#mean selectivity and 95% confidence intervals
-selectivity_summary_stats_genus <- selectivity_df_genus %>%
-  group_by(region, region_short, coral_genus) %>%
-   dplyr::reframe(mean_n_elect_vs=mean(n_elect_vs),
-                  sd_n_elect_vs= sd(n_elect_vs), 
-                  mean_area_elect_vs=mean(area_elect_vs),
-                  sd_area_elect_vs= sd(area_elect_vs),
-                  n=n()) %>%
-  #calculating mean and 95% CI
-  mutate(ci_lower_n_elect=mean_n_elect_vs-(qnorm(0.975)*sd_n_elect_vs/sqrt(n)),
-         ci_upper_n_elect=mean_n_elect_vs+(qnorm(0.975)*sd_n_elect_vs/sqrt(n)),
-         ci_lower_area_elect=mean_area_elect_vs-(qnorm(0.975)*sd_area_elect_vs/sqrt(n)),
-         ci_upper_area_elect=mean_area_elect_vs+(qnorm(0.975)*sd_area_elect_vs/sqrt(n))) %>%
-  #limiting bounds to between -1 and 1 (as values beyond this have no meanining in the electivity index)
-  mutate(ci_lower_n_elect=case_when(ci_lower_n_elect < -1 ~ -1,
-                                    TRUE~as.double(ci_lower_n_elect)),
-         ci_upper_n_elect=case_when(ci_upper_n_elect > 1 ~ 1,
-                                    TRUE~as.double(ci_upper_n_elect)),
-         ci_lower_area_elect=case_when(ci_lower_area_elect < -1 ~ -1,
-                                    TRUE~as.double(ci_lower_area_elect)),
-         ci_upper_area_elect=case_when(ci_upper_area_elect > 1 ~ 1,
-                                    TRUE~as.double(ci_upper_area_elect))) %>%
-  #determing significance (sig. avoidance if 95% CIs are <0, sig. preference if >0, neutral if the 95% CI crosses 0)
-  mutate(abundance_selectivity_sig=case_when(ci_lower_n_elect <0 & ci_upper_n_elect>0~"NS",
-                                   ci_lower_n_elect <0 & ci_upper_n_elect<0~"Avoidance",
-                                   ci_lower_n_elect >0 & ci_upper_n_elect>0~"Preference"),
-         area_selectivity_sig=case_when(ci_lower_area_elect <0 & ci_upper_area_elect>0~"NS",
-                                   ci_lower_area_elect <0 & ci_upper_area_elect<0~"Avoidance",
-                                   ci_lower_area_elect >0 & ci_upper_area_elect>0~"Preference")) 
-
-#creating longer form selectivity summary stats and raw data
-abundance_subset_genus <- selectivity_summary_stats_genus %>%
-  select(region_short, coral_genus, mean_electivity=mean_n_elect_vs, ci_lower=ci_lower_n_elect, ci_upper=ci_upper_n_elect) %>%
-  mutate(metric="Abundance-based")
-
-area_subset_genus <-selectivity_summary_stats_genus %>%
-  select(region_short, coral_genus, mean_electivity=mean_area_elect_vs, ci_lower=ci_lower_area_elect, ci_upper=ci_upper_area_elect) %>%
-  mutate(metric="Area-based")
- 
-combined_selectivity_summary_genus <- bind_rows(abundance_subset_genus, area_subset_genus) %>%
-  mutate(interpretation=case_when(ci_lower<0 & ci_upper<0~"Avoidance",
-                                  ci_lower>0 & ci_upper>0~"Preference",
-                                  ci_lower>0 & ci_upper<0 ~"NS",
-                                  ci_lower<0 & ci_upper>0 ~"NS"))
-
-selectivity_raw_genus <- selectivity_df_genus %>%
-  ungroup() %>%
-  select(region_short, site, coral_genus, n_elect_vs, area_elect_vs) %>%
-  pivot_longer(n_elect_vs:area_elect_vs, names_to = "index", values_to="electivity") %>%
-  mutate(metric=case_when(grepl("n_elect", index)~"Abundance-based",
-                          grepl("area_elect", index)~"Area-based")) %>%
-  select(-index) 
+# #raw selectivity data
+# selectivity_df_genus <- coral_scar_df %>%
+#   mutate(coral_genus=gsub("\\s.*", "", coral_species),
+#          coral_genus=case_when(coral_genus=="Branching"~"Porites",
+#                                TRUE~as.character(coral_genus))) %>%
+#   group_by(region, site, coral_genus) %>%
+#    dplyr::reframe(total_n_scars=sum(n_new_scars),
+#                   total_n_colonies=n(),
+#                   total_scar_area=sum(total_grazed_cm2),
+#                   total_colony_area=sum(col_area_cm2)) %>%
+#   #Vanderploeg and Scavia’s relativised electivity, E*
+#   mutate(n_elect_vs= electivity::vs_electivity(total_n_scars, total_n_colonies),
+#          area_elect_vs= electivity::vs_electivity(total_scar_area, total_colony_area),
+#          percent_cover=(total_colony_area/300000)*100) %>%
+#   mutate(region_short=case_when(region=="Panamá"~"PAN",
+#                                 region=="St. Croix"~"STX",
+#                                 region=="Florida"~"FLA",
+#                                 region=="Bonaire"~"BON",
+#                                 TRUE~as.character(region)),
+#          region_short=factor(region_short, levels = c("PAN", "FLA", "STX", "BON")))
+# 
+# #mean selectivity and 95% confidence intervals
+# selectivity_summary_stats_genus <- selectivity_df_genus %>%
+#   group_by(region, region_short, coral_genus) %>%
+#    dplyr::reframe(mean_n_elect_vs=mean(n_elect_vs),
+#                   sd_n_elect_vs= sd(n_elect_vs), 
+#                   mean_area_elect_vs=mean(area_elect_vs),
+#                   sd_area_elect_vs= sd(area_elect_vs),
+#                   n=n()) %>%
+#   #calculating mean and 95% CI
+#   mutate(ci_lower_n_elect=mean_n_elect_vs-(qnorm(0.975)*sd_n_elect_vs/sqrt(n)),
+#          ci_upper_n_elect=mean_n_elect_vs+(qnorm(0.975)*sd_n_elect_vs/sqrt(n)),
+#          ci_lower_area_elect=mean_area_elect_vs-(qnorm(0.975)*sd_area_elect_vs/sqrt(n)),
+#          ci_upper_area_elect=mean_area_elect_vs+(qnorm(0.975)*sd_area_elect_vs/sqrt(n))) %>%
+#   #limiting bounds to between -1 and 1 (as values beyond this have no meanining in the electivity index)
+#   mutate(ci_lower_n_elect=case_when(ci_lower_n_elect < -1 ~ -1,
+#                                     TRUE~as.double(ci_lower_n_elect)),
+#          ci_upper_n_elect=case_when(ci_upper_n_elect > 1 ~ 1,
+#                                     TRUE~as.double(ci_upper_n_elect)),
+#          ci_lower_area_elect=case_when(ci_lower_area_elect < -1 ~ -1,
+#                                     TRUE~as.double(ci_lower_area_elect)),
+#          ci_upper_area_elect=case_when(ci_upper_area_elect > 1 ~ 1,
+#                                     TRUE~as.double(ci_upper_area_elect))) %>%
+#   #determing significance (sig. avoidance if 95% CIs are <0, sig. preference if >0, neutral if the 95% CI crosses 0)
+#   mutate(abundance_selectivity_sig=case_when(ci_lower_n_elect <0 & ci_upper_n_elect>0~"NS",
+#                                    ci_lower_n_elect <0 & ci_upper_n_elect<0~"Avoidance",
+#                                    ci_lower_n_elect >0 & ci_upper_n_elect>0~"Preference"),
+#          area_selectivity_sig=case_when(ci_lower_area_elect <0 & ci_upper_area_elect>0~"NS",
+#                                    ci_lower_area_elect <0 & ci_upper_area_elect<0~"Avoidance",
+#                                    ci_lower_area_elect >0 & ci_upper_area_elect>0~"Preference")) 
+# 
+# #creating longer form selectivity summary stats and raw data
+# abundance_subset_genus <- selectivity_summary_stats_genus %>%
+#   select(region_short, coral_genus, mean_electivity=mean_n_elect_vs, ci_lower=ci_lower_n_elect, ci_upper=ci_upper_n_elect) %>%
+#   mutate(metric="Abundance-based")
+# 
+# area_subset_genus <-selectivity_summary_stats_genus %>%
+#   select(region_short, coral_genus, mean_electivity=mean_area_elect_vs, ci_lower=ci_lower_area_elect, ci_upper=ci_upper_area_elect) %>%
+#   mutate(metric="Area-based")
+#  
+# combined_selectivity_summary_genus <- bind_rows(abundance_subset_genus, area_subset_genus) %>%
+#   mutate(interpretation=case_when(ci_lower<0 & ci_upper<0~"Avoidance",
+#                                   ci_lower>0 & ci_upper>0~"Preference",
+#                                   ci_lower>0 & ci_upper<0 ~"NS",
+#                                   ci_lower<0 & ci_upper>0 ~"NS"))
+# 
+# selectivity_raw_genus <- selectivity_df_genus %>%
+#   ungroup() %>%
+#   select(region_short, site, coral_genus, n_elect_vs, area_elect_vs) %>%
+#   pivot_longer(n_elect_vs:area_elect_vs, names_to = "index", values_to="electivity") %>%
+#   mutate(metric=case_when(grepl("n_elect", index)~"Abundance-based",
+#                           grepl("area_elect", index)~"Area-based")) %>%
+#   select(-index) 
 ```
 
 ```{r Fig. 3: Coral genera selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
-#creating preliminary figure
-selectivity_genus_temp <- ggplot()+
-  geom_point(data=selectivity_raw_genus, aes(y=region_short, x=electivity, color=region_short), alpha=0.5, position=position_jitter(height=0.1))+ #raw data points
-    geom_pointrange(data=combined_selectivity_summary_genus, aes(y=region_short, x=mean_electivity, xmin=ci_lower, xmax=ci_upper, fill=region_short), color="black", pch=21, size=0.5)+ #mean and 95% CI
-  scale_x_discrete(limits = rev)+ #so regions are in same order as in previous figs
-  scale_colour_manual(values=region_palette)+
-  scale_fill_manual(values=region_palette)+
-  xlim(-1.1,1.1)+ #slightly larger than -1 and 1 so that jitter isn't out of bounds
-  geom_vline(xintercept=0,linetype=2)+ #dashed line at 0 (no electivity)
-  theme_bw()+
-  labs(x="V.S. relativized electivity (E*)", y="Region")+
-  facet_grid(metric~coral_genus)+ 
-  coord_flip()+ 
-  theme(legend.position = "none")
-
-#reading in coral genus icons
-agaricia_image <- magick::image_read(path=here("figures_tables/reef_images", "Agaricia_tenuifolia.png"), density = NULL, depth = NULL, strip = TRUE)
-madracis_image <- magick::image_read(path=here("figures_tables/reef_images", "Madracis_decactis.png"), density = NULL, depth = NULL, strip = TRUE)
-orbicella_image <- magick::image_read(path=here("figures_tables/reef_images", "Orbicella_annularis.png"), density = NULL, depth = NULL, strip = TRUE)
-porites_image <- magick::image_read(path=here("figures_tables/reef_images", "Porites_astreoides.png"), density = NULL, depth = NULL, strip = TRUE)
-siderastrea_image <- magick::image_read(path=here("figures_tables/reef_images", "Siderastrea_siderea.png"), density = NULL, depth = NULL, strip = TRUE)
-stephanocinea_image <- magick::image_read(path=here("figures_tables/reef_images", "Stephanocoenia_intersepta.png"), density = NULL, depth = NULL, strip = TRUE)
-
-#adding coral images to figure (image placement is off in R, but good in ggsave generated png)
-selectivity_genus_final <- cowplot::ggdraw() +
-  draw_plot(selectivity_genus_temp)+ #adds the plot (order matters to overlay the layers correctly)
-  draw_image(agaricia_image, x = -0.32, y = 0.385, scale=0.11)+
-  draw_image(madracis_image, x = -0.17, y = 0.385, scale=0.082)+
-  draw_image(orbicella_image, x = -0.02, y = 0.38, scale=0.064)+
-  draw_image(porites_image, x = 0.13, y = 0.386, scale=0.059)+
-  draw_image(siderastrea_image, x = 0.28, y = 0.387, scale=0.049)+
-  draw_image(stephanocinea_image, x = 0.429, y = 0.387, scale=0.059)
-
- #saving figure
-ggsave(plot=selectivity_genus_final, filename=here("figures_tables/fig3_selectivity_by_genera.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
-
-selectivity_genus_final
+# #creating preliminary figure
+# selectivity_genus_temp <- ggplot()+
+#   geom_point(data=selectivity_raw_genus, aes(y=region_short, x=electivity, color=region_short), alpha=0.5, position=position_jitter(height=0.1))+ #raw data points
+#     geom_pointrange(data=combined_selectivity_summary_genus, aes(y=region_short, x=mean_electivity, xmin=ci_lower, xmax=ci_upper, fill=region_short), color="black", pch=21, size=0.5)+ #mean and 95% CI
+#   scale_x_discrete(limits = rev)+ #so regions are in same order as in previous figs
+#   scale_colour_manual(values=region_palette)+
+#   scale_fill_manual(values=region_palette)+
+#   xlim(-1.1,1.1)+ #slightly larger than -1 and 1 so that jitter isn't out of bounds
+#   geom_vline(xintercept=0,linetype=2)+ #dashed line at 0 (no electivity)
+#   theme_bw()+
+#   labs(x="V.S. relativized electivity (E*)", y="Region")+
+#   facet_grid(metric~coral_genus)+ 
+#   coord_flip()+ 
+#   theme(legend.position = "none")
+# 
+# #reading in coral genus icons
+# agaricia_image <- magick::image_read(path=here("figures_tables/reef_images", "Agaricia_tenuifolia.png"), density = NULL, depth = NULL, strip = TRUE)
+# madracis_image <- magick::image_read(path=here("figures_tables/reef_images", "Madracis_decactis.png"), density = NULL, depth = NULL, strip = TRUE)
+# orbicella_image <- magick::image_read(path=here("figures_tables/reef_images", "Orbicella_annularis.png"), density = NULL, depth = NULL, strip = TRUE)
+# porites_image <- magick::image_read(path=here("figures_tables/reef_images", "Porites_astreoides.png"), density = NULL, depth = NULL, strip = TRUE)
+# siderastrea_image <- magick::image_read(path=here("figures_tables/reef_images", "Siderastrea_siderea.png"), density = NULL, depth = NULL, strip = TRUE)
+# stephanocinea_image <- magick::image_read(path=here("figures_tables/reef_images", "Stephanocoenia_intersepta.png"), density = NULL, depth = NULL, strip = TRUE)
+# 
+# #adding coral images to figure (image placement is off in R, but good in ggsave generated png)
+# selectivity_genus_final <- cowplot::ggdraw() +
+#   draw_plot(selectivity_genus_temp)+ #adds the plot (order matters to overlay the layers correctly)
+#   draw_image(agaricia_image, x = -0.32, y = 0.385, scale=0.11)+
+#   draw_image(madracis_image, x = -0.17, y = 0.385, scale=0.082)+
+#   draw_image(orbicella_image, x = -0.02, y = 0.38, scale=0.064)+
+#   draw_image(porites_image, x = 0.13, y = 0.386, scale=0.059)+
+#   draw_image(siderastrea_image, x = 0.28, y = 0.387, scale=0.049)+
+#   draw_image(stephanocinea_image, x = 0.429, y = 0.387, scale=0.059)
+# 
+#  #saving figure
+# ggsave(plot=selectivity_genus_final, filename=here("figures_tables/fig3_selectivity_by_genera.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
+# 
+# selectivity_genus_final
 ```
 
 **Fig. 3.** Mean Vanderploeg and Scavia’s relativized electivity by region (point with black outline) ± 95% C.I. for genera of targeted corals across Panamá, Florida, St. Croix, and Bonaire. Electivity was calculated based on scar abundance relative to coral abundance (top panel) and scar area relative to coral area (bottom panel). Site-level values are shown transparently in the background. Positive values indicate a preference, values crossing 0 indicate random feeding, and negative values indicate avoidance. 
@@ -797,121 +816,222 @@ n_top_4_grazed <- coral_scar_df %>%
 #>80% of observed predation was on these four coral species
 n_top_4_grazed/n_grazed_cols*100
 ```
-```{r Summarizing coral species selectivity by region for heavily targeted taxa}
-#raw selectivity data
-selectivity_df_species <- coral_scar_df %>%
-  filter(coral_species %in% c("Orbicella annularis", "Branching Porites spp.", "Porites astreoides", "Siderastrea siderea")) %>%
-  mutate(coral_species=factor(coral_species, levels = c("Orbicella annularis", "Branching Porites spp.", "Porites astreoides", "Siderastrea siderea"))) %>% 
-    group_by(region, site, coral_species) %>%
-   dplyr::reframe(total_n_scars=sum(n_new_scars),
-                  total_n_colonies=n(),
-                  total_scar_area=sum(total_grazed_cm2),
-                  total_colony_area=sum(col_area_cm2)) %>%
-  #Vanderploeg and Scavia’s relativised electivity, E*
-  mutate(n_elect_vs= electivity::vs_electivity(total_n_scars, total_n_colonies),
-         area_elect_vs= electivity::vs_electivity(total_scar_area, total_colony_area),
-         percent_cover=(total_colony_area/300000)*100) %>%
+To enable the reader to better understand what is driving these patterns I suggest including plots of the abundance of each coral taxa, and the frequency of scars on each coral genera for each region
+
+```{r Calculating scar density and area grazed by genus for supp figs 3-4}
+#summarizing coral density and cover by transect for  predated coral genera
+coral_genus_count_and_area_by_transect <- coral_scar_df %>% 
+  mutate(coral_genus=gsub("\\s.*", "", coral_species),
+         coral_genus=case_when(coral_genus=="Branching"~"Porites",
+                               TRUE~as.character(coral_genus))) %>%
+  group_by(region, site, transect, coral_genus) %>%
+  dplyr::reframe(n_colonies_per_30m2=n(), total_coral_area_m2=sum(col_area_cm2)/10000) %>%
+  mutate(percent_coral_cover=total_coral_area_m2/30*100)
+
+#sample size summary
+transects_per_region <- coral_scar_df %>%
+  group_by(region) %>%
+  dplyr::reframe(n_transects_per_region=n_distinct(site, transect))
+         
+#creating a template dataframe with all unique combinations of region, site, transect, and coral genus (to later account for any 0's in coral observations in a transect)
+coral_genera_list <- coral_genus_count_and_area_by_transect %>% 
+  distinct(coral_genus)
+
+regions_sites_transects_combos <- coral_genus_count_and_area_by_transect %>% 
+  left_join(transects_per_region) %>%
   mutate(region_short=case_when(region=="Panamá"~"PAN",
                                 region=="St. Croix"~"STX",
                                 region=="Florida"~"FLA",
                                 region=="Bonaire"~"BON",
                                 TRUE~as.character(region)),
-         region_short=factor(region_short, levels = c("PAN", "FLA", "STX", "BON"))) %>%
-  mutate(n_elect_vs=case_when(n_elect_vs=="NaN"~-1,
-                   TRUE~as.double(n_elect_vs)),
-         area_elect_vs=case_when(area_elect_vs=="NaN"~-1,
-                   TRUE~as.double(area_elect_vs))) %>%
-  ungroup()
+           region_short=factor(region_short, levels = c("PAN", "FLA", "STX", "BON"))) %>%
+  distinct(region, region_short, site, n_transects_per_region, transect)
+
+unique_combos_coral_site_transect <- tidyr::crossing(regions_sites_transects_combos, coral_genera_list)
+
+#using unique combos df to add zeros back into dataframe for instances where a coral genera was not observed in a trasect
+coral_genus_count_and_area_with_zeros <- unique_combos_coral_site_transect %>% 
+  left_join(coral_genus_count_and_area_by_transect) %>%
+  mutate_at(c("n_colonies_per_30m2","total_coral_area_m2", "percent_coral_cover"), ~replace_na(.,0))
   
-#mean selectivity and 95% confidence intervals
-species_selectivity_summary_stats <- selectivity_df_species %>%
-  group_by(region, region_short, coral_species) %>%
-   dplyr::reframe(mean_n_elect_vs=mean(n_elect_vs),
-                  sd_n_elect_vs= sd(n_elect_vs),
-                  mean_area_elect_vs=mean(area_elect_vs),
-                  sd_area_elect_vs= sd(area_elect_vs),
-                  n=n()) %>%
-  #calculating mean and 95% CI
-  mutate(ci_lower_n_elect=mean_n_elect_vs-(qnorm(0.975)*sd_n_elect_vs/sqrt(n)),
-         ci_upper_n_elect=mean_n_elect_vs+(qnorm(0.975)*sd_n_elect_vs/sqrt(n)),
-         ci_lower_area_elect=mean_area_elect_vs-(qnorm(0.975)*sd_area_elect_vs/sqrt(n)),
-         ci_upper_area_elect=mean_area_elect_vs+(qnorm(0.975)*sd_area_elect_vs/sqrt(n))) %>%
-  #limiting bounds to between -1 and 1 (as values beyond this have no meanining in the electivity index)
-  mutate(ci_lower_n_elect=case_when(ci_lower_n_elect < -1 ~ -1,
-                                    TRUE~as.double(ci_lower_n_elect)),
-         ci_upper_n_elect=case_when(ci_upper_n_elect > 1 ~ 1,
-                                    TRUE~as.double(ci_upper_n_elect)),
-         ci_lower_area_elect=case_when(ci_lower_area_elect < -1 ~ -1,
-                                    TRUE~as.double(ci_lower_area_elect)),
-         ci_upper_area_elect=case_when(ci_upper_area_elect > 1 ~ 1,
-                                    TRUE~as.double(ci_upper_area_elect))) %>%
-  #determing significance (sig. avoidance if 95% CIs are <0, sig. preference if >0, neutral if the 95% CI crosses 0)
-  mutate(abundance_selectivity_sig=case_when(ci_lower_n_elect <0 & ci_upper_n_elect>0~"NS",
-                                   ci_lower_n_elect <0 & ci_upper_n_elect<0~"Avoidance",
-                                   ci_lower_n_elect >0 & ci_upper_n_elect>0~"Preference"),
-         area_selectivity_sig=case_when(ci_lower_area_elect <0 & ci_upper_area_elect>0~"NS",
-                                   ci_lower_area_elect <0 & ci_upper_area_elect<0~"Avoidance",
-                                   ci_lower_area_elect >0 & ci_upper_area_elect>0~"Preference")) %>%
-  ungroup()
+#summary of scar density and area per transect
+coral_scar_count_and_area_by_transect_temp <- coral_scar_df %>% 
+  mutate(coral_genus=gsub("\\s.*", "", coral_species),
+         coral_genus=case_when(coral_genus=="Branching"~"Porites",
+                               TRUE~as.character(coral_genus))) %>%
+  group_by(region, site, transect, coral_genus) %>%
+  filter(n_new_scars>0) %>%
+  dplyr::reframe(n_predated_colonies=n(), n_total_scars=sum(n_new_scars), total_scar_area_m2=sum(total_grazed_cm2)/10000) 
 
-#creating longer form selectivity summary stats and raw data
-abundance_subset <- species_selectivity_summary_stats %>%
-  select(region_short, coral_species, mean_electivity=mean_n_elect_vs, ci_lower=ci_lower_n_elect, ci_upper=ci_upper_n_elect) %>%
-  mutate(metric="Abundance-based")
-
-area_subset <-species_selectivity_summary_stats %>%
-  select(region_short, coral_species, mean_electivity=mean_area_elect_vs, ci_lower=ci_lower_area_elect, ci_upper=ci_upper_area_elect) %>%
-  mutate(metric="Area-based")
- 
-combined_selectivity_summary <- bind_rows(abundance_subset, area_subset) 
-
-selectivity_raw <- selectivity_df_species %>%
-  ungroup() %>%
-  select(region_short, site, coral_species, n_elect_vs, area_elect_vs) %>%
-  pivot_longer(n_elect_vs:area_elect_vs, names_to = "index", values_to="electivity") %>%
-  mutate(metric=case_when(grepl("n_elect", index)~"Abundance-based",
-                          grepl("area_elect", index)~"Area-based")) %>%
-  select(-index) 
+coral_scar_count_and_area_by_transect <- coral_genus_count_and_area_with_zeros %>% 
+  left_join(coral_scar_count_and_area_by_transect_temp) %>%
+  mutate(percent_coral_area_grazed=total_scar_area_m2/total_coral_area_m2*100,
+         scars_per_m2_coral=n_total_scars/total_coral_area_m2) %>%
+  mutate_at(c("n_predated_colonies","n_total_scars", "total_scar_area_m2", "percent_coral_area_grazed", "scars_per_m2_coral"), ~replace_na(.,0))
 ```
 
-```{r Fig. S3: Coral taxa selectivity by site and region, fig.height = 4.33, fig.width = 8.46}
+```{r Fig. S3: Density of corals and predation scars, fig.height = 4.33, fig.width = 8.46}
 #creating preliminary figure
-selectivity_combo_fig <- ggplot()+
-  geom_point(data=selectivity_raw, aes(y=region_short, x=electivity, color=region_short), alpha=0.5, position=position_jitter(height=0.1))+ #raw data points
-  geom_pointrange(data=combined_selectivity_summary, aes(y=region_short, x=mean_electivity, xmin=ci_lower, xmax=ci_upper, fill=region_short), color="black", pch=21, size=0.5)+ #mean and 95% CI
-  scale_x_discrete(limits = rev)+ #so regions are in same order as in previous figs
+
+##fig s3a: coral density per m2 coral
+fig_corals_per_m2_reef <- ggplot()+
+  geom_point(data=coral_scar_count_and_area_by_transect, 
+             aes(y=region_short, x=n_colonies_per_30m2, color=region_short), 
+             alpha=0.5, position=position_jitter(height=0.25, width=0))+  #raw data, adj. jitter height not width bc coord flip
+    geom_boxplot(data=coral_scar_count_and_area_by_transect, 
+                 aes(y=region_short, x=n_colonies_per_30m2, fill=region_short), 
+                 alpha=0.5, color="black", pch=21, size=0.5,outlier.shape = NA)+ 
+    #removed outlier points from boxplot in line above bc raw data points are plotted and they overlap
   scale_colour_manual(values=region_palette)+
   scale_fill_manual(values=region_palette)+
-  xlim(-1.1,1.1)+ #slightly larger than -1 and 1 so that jitter isn't out of bounds
-  geom_vline(xintercept=0,linetype=2)+ #dashed line at 0 (no electivity)
   theme_bw()+
-  labs(x="V.S. relativized electivity (E*)", y="Region")+
-  facet_grid(metric~coral_species)+ 
-  coord_flip()+ 
+  labs(x=expression(paste("Corals per m" ^2, " reef")), y="Region")+
+  facet_grid(~coral_genus)+
+  coord_flip()+
   theme(legend.position = "none")
 
-#reading in coral genus icons
-branching_porties_image <- magick::image_read(path=here("figures_tables/reef_images", "Branching_porties.png"), density = NULL, depth = NULL, strip = TRUE)
-orbicella_image <- magick::image_read(path=here("figures_tables/reef_images", "Orbicella_annularis.png"), density = NULL, depth = NULL, strip = TRUE)
-porites_astreoides_image <- magick::image_read(path=here("figures_tables/reef_images", "Porites_astreoides.png"), density = NULL, depth = NULL, strip = TRUE)
-siderastrea_image <- magick::image_read(path=here("figures_tables/reef_images", "Siderastrea_siderea.png"), density = NULL, depth = NULL, strip = TRUE)
+##fig s3b: scar density per m2 coral
+fig_scars_per_m2_coral <- ggplot()+
+  geom_point(data=coral_scar_count_and_area_by_transect, 
+             aes(y=region_short, x=scars_per_m2_coral, color=region_short), 
+             alpha=0.5, position=position_jitter(height=0.25))+  #raw data, adj. jitter height not width bc coord flip
+    geom_boxplot(data=coral_scar_count_and_area_by_transect, 
+                 aes(y=region_short, x=scars_per_m2_coral, fill=region_short), 
+                 alpha=0.5, color="black", pch=21, size=0.5,outlier.shape = NA)+ 
+    #removed outlier points from boxplot in line above bc raw data points are plotted and they overlap
+  scale_colour_manual(values=region_palette)+
+  scale_fill_manual(values=region_palette)+
+  theme_bw()+
+  labs(x=expression(paste("Scars per m" ^2, " coral       ")), y="Region")+ #spacing after coral intentional
+  facet_grid(~coral_genus)+
+  coord_flip()+
+  theme(legend.position = "none")
 
-#adding coral images to figure (image placement is off in R, but good in ggsave generated png)
-selectivity_combo_final <- cowplot::ggdraw() +
-  draw_plot(selectivity_combo_fig)+ #adds the plot (order matters to overlay the layers correctly)
-  draw_image(orbicella_image, x = -0.245, y = 0.377, scale=0.07)+
-  draw_image(branching_porties_image, x = -0.019, y = 0.375, scale=0.09)+
-  draw_image(porites_astreoides_image, x = 0.205, y = 0.38, scale=0.07)+
-  draw_image(siderastrea_image, x = 0.43, y = 0.38, scale=0.06)
+#Making a combo figure
+
+##removing redundant x-axis title from top figure before combing figures
+fig_coral_density <-fig_corals_per_m2_reef  +
+  theme(strip.text.x = element_text( margin=margin(0.25,0,1,0, "cm")),
+        strip.text.y = element_text(angle = 0, hjust = 0),
+        axis.title.x=element_blank(),
+        axis.ticks.x=element_blank())
+    
+##removing redundant facet ribbon from bottom figure before combing figures
+fig_scar_density <- fig_scars_per_m2_coral+
+  theme(strip.background = element_blank(),
+        strip.text.x = element_blank())
+
+##combining coral density and scar density figures into one plot
+fig_coral_scar_density_combo <- ggpubr::ggarrange(fig_coral_density, 
+                                                  fig_scar_density,
+                          align = c("v"),
+                          labels=c("a", "b"),
+                          heights = c(1.2, 1), #so graphs are same height despite ribbon on top panel
+                          nrow=2, ncol=1)
+
+#Adding coral icons to figure
+
+##reading in coral genus icons to add to figure
+agaricia_image <- magick::image_read(path=here("figures_tables/reef_images", "Agaricia_tenuifolia.png"), density = NULL, depth = NULL, strip = TRUE)
+madracis_image <- magick::image_read(path=here("figures_tables/reef_images", "Madracis_decactis.png"), density = NULL, depth = NULL, strip = TRUE)
+orbicella_image <- magick::image_read(path=here("figures_tables/reef_images", "Orbicella_annularis.png"), density = NULL, depth = NULL, strip = TRUE)
+porites_image <- magick::image_read(path=here("figures_tables/reef_images", "Porites_astreoides.png"), density = NULL, depth = NULL, strip = TRUE)
+siderastrea_image <- magick::image_read(path=here("figures_tables/reef_images", "Siderastrea_siderea.png"), density = NULL, depth = NULL, strip = TRUE)
+stephanocinea_image <- magick::image_read(path=here("figures_tables/reef_images", "Stephanocoenia_intersepta.png"), density = NULL, depth = NULL, strip = TRUE)
+
+##adding icons to figure
+fig_coral_scar_density_final <- cowplot::ggdraw() +
+  draw_plot(fig_coral_scar_density_combo)+
+  draw_image(agaricia_image, x = -0.345, y = 0.385, scale=0.11)+
+  draw_image(madracis_image, x = -0.19, y = 0.385, scale=0.082)+
+  draw_image(orbicella_image, x = -0.04, y = 0.385, scale=0.064)+
+  draw_image(porites_image, x = 0.11, y = 0.385, scale=0.059)+
+  draw_image(siderastrea_image, x = 0.265, y = 0.385, scale=0.049)+
+  draw_image(stephanocinea_image, x = 0.415, y = 0.385, scale=0.059)
 
 #saving figure
-ggsave(plot=selectivity_combo_final, filename=here("supplements/fig_s3_selectivity_by_species.png"), width = 215, height = 110, dpi = 600, units = "mm")
+ggsave(plot=fig_coral_scar_density_final, filename=here("supplements/figs3_coral_scar_density.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
+```
+**Fig. S3.** Add text...
 
-selectivity_combo_final
+
+```{r Fig. S4: Percent cover of corals and predation scars, fig.height = 4.33, fig.width = 8.46}
+#creating preliminary figures
+
+##fig s4a: coral cover by genera and region
+fig_coral_cover <- ggplot()+
+  geom_point(data=coral_scar_count_and_area_by_transect, 
+             aes(y=region_short, x=percent_coral_cover, color=region_short), 
+             alpha=0.5, position=position_jitter(height=0.25, width=0))+ #raw data, adj. jitter height not width bc coord flip
+    geom_boxplot(data=coral_scar_count_and_area_by_transect, 
+                 aes(y=region_short, x=percent_coral_cover, fill=region_short), 
+                 alpha=0.5, color="black", pch=21, size=0.5, outlier.shape = NA)+ 
+  #removed outlier points from boxplot in line above bc raw data points are plotted and they overlap
+  scale_colour_manual(values=region_palette)+
+  scale_fill_manual(values=region_palette)+
+  theme_bw()+
+  labs(x=expression(paste("Coral cover (%)"), y="Region"))+
+  facet_grid(~coral_genus)+
+  coord_flip()+
+  theme(legend.position = "none")
+
+##fig b: scar area by genera and region
+fig_pct_coral_predated <- ggplot()+
+  geom_point(data=coral_scar_count_and_area_by_transect, 
+             aes(y=region_short, x=percent_coral_area_grazed, color=region_short), 
+             alpha=0.5, position=position_jitter(height=0.25))+ #raw data, adj. jitter height not width bc coord flip
+    geom_boxplot(data=coral_scar_count_and_area_by_transect, 
+                 aes(y=region_short, x=percent_coral_area_grazed, fill=region_short), 
+                 alpha=0.5, color="black", pch=21, size=0.5,outlier.shape = NA)+ 
+    #removed outlier points from boxplot in line above bc raw data points are plotted and they overlap
+  scale_colour_manual(values=region_palette)+
+  scale_fill_manual(values=region_palette)+
+  theme_bw()+
+  labs(x="Area preyed upon (%)         ", y="Region")+ #spacing after (%) intentional
+  facet_grid(~coral_genus)+
+  coord_flip()+
+  theme(legend.position = "none")
+
+#Making a combo figure
+
+##removing redundant x-axis title from top figure before combing figures
+fig_relative_coral_area_grazed_a <-fig_coral_cover  +
+  theme(strip.text.x = element_text( margin=margin(0.25,0,1,0, "cm")),
+        strip.text.y = element_text(angle = 0, hjust = 0),
+        axis.title.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+##removing redundant facet ribbon from bottom figure before combing figures
+fig_relative_coral_area_grazed_b <- fig_pct_coral_predated+
+  theme(strip.background = element_blank(),
+        strip.text.x = element_blank())
+
+##combining coral cover and percent area grazed in one plot
+fig_relative_coral_area_grazed_combo <- ggpubr::ggarrange(fig_relative_coral_area_grazed_a, 
+                                                          fig_relative_coral_area_grazed_b,
+                          align = c("v"),
+                          labels=c("a", "b"),
+                          heights = c(1.2, 1), #so graphs are same height despite ribbon on top panel
+                          nrow=2, ncol=1)
+           
+#Adding coral icons to figure
+                
+##adding icons to figure (from images read in above, in prior chunk)
+fig_relative_coral_area_grazed_final <- cowplot::ggdraw() +
+  draw_plot(fig_relative_coral_area_grazed_combo)+ 
+  draw_image(agaricia_image, x = -0.36, y = 0.385, scale=0.11)+
+  draw_image(madracis_image, x = -0.21, y = 0.385, scale=0.082)+
+  draw_image(orbicella_image, x = -0.05, y = 0.385, scale=0.064)+
+  draw_image(porites_image, x = 0.105, y = 0.385, scale=0.059)+
+  draw_image(siderastrea_image, x = 0.264, y = 0.385, scale=0.049)+
+  draw_image(stephanocinea_image, x = 0.417, y = 0.385, scale=0.059)
+fig_relative_coral_area_grazed_final
+
+#saving figure
+ggsave(plot=fig_relative_coral_area_grazed_final, filename=here("supplements/figs4_coral_area_grazed.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
 ```
 
-**Fig. S3.** Mean Vanderploeg and Scavia’s relativized electivity by region (point with black outline) ± 95% C.I. for four frequently targeted coral taxa across Panamá, Florida, St. Croix, and Bonaire. Electivity was calculated based on scar abundance relative to coral abundance (top panel) and scar area relative to coral area (bottom panel). Site-level values are shown transparently in the background. Positive values indicate a preference, values crossing 0 indicate random feeding, and negative values indicate avoidance. >80% of all observed recent predation scars were found on *Orbicella annularis*, Branching *Porites* spp., *Porites astreoides*, and *Siderastrea siderea*.
-
+**Fig. S4.** Add text...
 # ___________________________________________________________________________________
 
 #Variation in corallivory intensity within and among reefs
@@ -1309,7 +1429,7 @@ transect_level_model_output %>%
 write_csv(transect_level_model_output, here("supplements/table_s5_transect_level_grazed_coral_abundance_results.csv"))
 ```
 
-```{r Fig. S4: Abundance corals grazed by coral diversity, fig.height = 3.15, fig.width = 8.46}
+```{r Fig. S5: Abundance corals grazed by coral diversity, fig.height = 3.15, fig.width = 8.46}
 corallivory_by_diversity_fig <- transect_corallivory_diversity_df %>%
   mutate(coral_species=factor(coral_species, levels = c("Orbicella annularis", "Branching Porites spp.", "Porites astreoides", "Siderastrea siderea"))) %>% 
   mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) %>%
@@ -1344,12 +1464,12 @@ corallivory_by_diversity_fig_final <- cowplot::ggdraw() +
   draw_image(siderastrea_image, x = 0.08, y = -0.11, scale=0.063)
 
 #saving figure
-ggsave(plot=corallivory_by_diversity_fig_final, filename=here("supplements/fig_s4_corallivory_by_coral_diversity.png"), width = 190, height = 140, dpi = 600, units = "mm")
+ggsave(plot=corallivory_by_diversity_fig_final, filename=here("supplements/fig_s5_corallivory_by_coral_diversity.png"), width = 190, height = 140, dpi = 600, units = "mm")
 
 corallivory_by_diversity_fig_final
 ```
 
-**Fig. S4.** Number of Orbicella annularis, Branching Porites spp., Porites astreoides, and Siderastrea siderea coral colonies predated per 30 m^2 reef area in response to the diversity of target coral taxa within the area (n=441 total colonies of these species present within transects). We calculated diversity using the Shannon Diversity Index (H’) based on the richness and evenness of the number of target coral colonies within a given transect. We focused on evaluated the abundance of corals predated for these four taxa as they accounted for >80% of observed colonies with recent predation scars. 
+**Fig. S5.** Number of Orbicella annularis, Branching Porites spp., Porites astreoides, and Siderastrea siderea coral colonies predated per 30 m^2 reef area in response to the diversity of target coral taxa within the area (n=441 total colonies of these species present within transects). We calculated diversity using the Shannon Diversity Index (H’) based on the richness and evenness of the number of target coral colonies within a given transect. We focused on evaluated the abundance of corals predated for these four taxa as they accounted for >80% of observed colonies with recent predation scars. 
 
 # ___________________________________________________________________________________
 

@@ -1,10 +1,22 @@
+
 #Ignoring large file that exceeds size limits
 
-/data/bootstrapped_new_scar_data.csv
+/data/bootstrapped_new_scar_data.csv 
 
-#Ignore all word documents
+#Ignoring manuscript folder
 
-*.docx
+/manuscript_drafts/
+
+#Ignore all word documents, pdfs, icon files (icon=Mac thing), and DS_Store files (Mac thing)
+
+*.docx 
+
+*.pdf 
+
+*Icon 
+
+*.DS_Store 
+
+#ignoring Rproject user folder not needed
+
 .Rproj.user
-
-*Icon
