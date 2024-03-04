@@ -1,0 +1,471 @@
+---
+title: "Data analysis: Ecological drivers of parrotfish coral predation vary across spatial scales"
+author: "Hannah Rempel"
+date: "Last updated 2/Sep/2023"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+# ___________________________________________________________________________________
+
+#Setup: reading in and summarizing data
+
+```{r Setting R markdown options, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE)
+```
+
+```{r Setup, echo=FALSE, message=FALSE}
+if (!require(mgcv)) install.packages("mgcv") 
+if (!require(itsadug)) install.packages("itsadug") 
+if (!require(cowplot)) install.packages("cowplot") 
+if (!require(magick)) install.packages("mgaick") 
+if (!require(DHARMa)) install.packages("DHARMa") 
+if (!require(glmmTMB)) install.packages("glmmTMB") 
+if (!require(here)) install.packages("here") 
+if (!require(here)) install.packages("broom") 
+
+if (!require(tidyverse)) install.packages("tidyverse") 
+
+packages <- c("mgcv", "itsadug", "magick", "broom", "cowplot", "DHARMa", "glmmTMB", "here", "tidyverse")
+sapply(packages, require, character.only = T)
+```
+
+```{r Reading in coral and scar data, message = FALSE}
+fish_df <- read_csv(here("data/regional_fish_data.csv")) %>%
+  mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) 
+
+coral_scar_df <- read.csv(here("data/processed_coral_scar_data_colony_level.csv"), 
+                          fileEncoding = "UTF-8") %>% #UTF-8 is compatible with accents/tildes
+  mutate(region= factor(region, levels = c("Panamá", "Florida", "St. Croix", "Bonaire")))
+
+site_coordinates <- read.csv(here("data/site_coordinates.csv"), 
+                          fileEncoding = "UTF-8") %>%
+  mutate(region= factor(region, levels = c("Panamá", "Florida", "St. Croix", "Bonaire")))
+```
+
+```{r Table S1: Site coordinates and sampling effort}
+#depth of each fish survey transect
+depth_fish_surveys <- fish_df  %>% 
+  group_by(region, site, transect) %>% 
+  distinct(depth_m)%>%
+  rename(fish_survey_depth_m=depth_m)
+
+#summary of the number of transects and depth range by site
+summarized_n_depth_fish_surveys<-depth_fish_surveys %>% 
+  group_by(region, site) %>%
+  dplyr::reframe(n_fish_surveys=n(),
+                 min_fish_survey_depth_m =min(fish_survey_depth_m),
+                 med_fish_survey_depth_m =round(median(fish_survey_depth_m), 1),
+                 max_fish_survey_depth_m =max(fish_survey_depth_m))
+
+#depth of each coral and scar survey 
+depth_coral_surveys <- coral_scar_df %>% 
+  group_by(region, site, transect) %>% 
+  distinct(depth_m) %>%
+  rename(coral_survey_depth_m=depth_m)
+
+#summary of the number of surveys and depth range by site
+summarized_n_depth_coral_surveys<-depth_coral_surveys %>% 
+  group_by(region, site) %>%
+  dplyr::reframe(n_coral_surveys=n(),
+                 min_coral_survey_depth_m =min(coral_survey_depth_m),
+                 med_coral_survey_depth_m =round(median(coral_survey_depth_m), 1),
+                 max_coral_survey_depth_m =max(coral_survey_depth_m))
+
+#joining site-level sampling effort summary with site coordinates
+table_s1 <- site_coordinates %>%
+  left_join(summarized_n_depth_fish_surveys) %>% 
+  left_join(summarized_n_depth_coral_surveys)
+
+write.csv(table_s1, 
+          here("supplements/table_s1_site_coordinates_sample_size.csv"),  
+          fileEncoding = "UTF-8", 
+          row.names=FALSE)
+```
+
+## Summarising parrotfish density data
+
+Parrotfish density estimates are for parrotfishes that were at least 15cm fork length. We classified major corallivores as species that, on average, take at least 1% of their foraging bites on coral: *Sc. taeniopterus, Sc. vetula, Sp. viride*. See manuscript for details. 
+
+```{r}
+fish_ab_vals <- read_csv(here("data/fish_ab_values.csv"))
+  
+filtered_fish_ab_vals <- fish_ab_vals %>% 
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>%
+  group_by(species) %>% 
+  filter(rsquared>0.85 | is.na(rsquared)) %>% #filtering out values with low R2
+  slice_max(n_obs, n=1) %>% #from values with R2>0.85, selecting those with the max species observed 
+  select(species, n_obs, measurement_type, a, b, ref_short) 
+
+ab_val_noVR <- filtered_fish_ab_vals %>%
+fish_weight_noVR <- fish_df %>% 
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>%
+  mutate(size_cm_est=case_when(
+    size_cm=="15 to 20"~17.5,
+    size_cm=="20 to 25"~22.5,
+    size_cm=="25 to 30"~27.5,
+    TRUE~as.numeric(size_cm))
+    ) %>%  
+  left_join(ab_val_noVR) %>% #CHANGED
+  mutate(weight_g=a*size_cm_est^b)
+
+pf_biomass_transect <- fish_weight_noVR %>%
+  mutate(survey_area_m2=survey_l_m*survey_w_m) %>% #summarizing transect metadata
+  group_by(region, site, transect, survey_area_m2, depth_m) %>%
+  dplyr::reframe(biomass_g_m2=sum(weight_g)/survey_area_m2)
+
+fish_df %>% 
+  distinct(species)
+
+weight_g <- function(a,b,size_cm_est){
+  a*size_cm_est^b
+}
+print(weight)
+
+weight_g(0.01445, 3.03, 10) #FB 15.48345
+weight_g((2.887*10^-6), 3.33, 10) #FB 15.48345
+2.887*10^-6
+```
+
+```{r Summary of parrotfish density data}
+# Transect-level summary of fish density
+major_corallivores_df <- fish_df %>% 
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>%
+  group_by(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>%
+  dplyr::reframe(n_major_corallivores=n()) 
+
+#merging data in transect-level summary of parrotfish denisty
+pf_density_transect <- fish_df %>% 
+  select(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>%
+  mutate(survey_area_m2=survey_l_m*survey_w_m) %>% #summarizing transect metadata
+  distinct() %>% 
+  left_join(major_corallivores_df) %>% #adding in fish data
+  left_join(pf_biomass_transect) %>%
+  mutate(n_major_corallivores = replace_na(n_major_corallivores, 0), #replacing NA with 0 for surveys with no parrotfishes
+         density_major_corallivores = n_major_corallivores/survey_area_m2*100,
+         biomass_g_m2=replace_na(biomass_g_m2, 0)) %>% # calculating density (fish/100 m2) 
+  ungroup()
+
+# Site-level summary of fish density
+pf_density_site <- pf_density_transect %>% 
+  group_by(region, site) %>%
+  dplyr::reframe(mean_density_major_corallivores=mean(density_major_corallivores),
+                 mean_biomass_major_corallivores=mean(biomass_g_m2)) %>%
+  ungroup()
+
+#function to calculate the standard error of the mean
+sem <- function(x) {
+  sd(x, na.rm=TRUE)/sqrt(sum(!is.na(x)))
+}
+
+# Region-level summary of fish density
+regional_parrotfish_density <- pf_density_site %>%
+  group_by(region) %>%
+   dplyr::reframe(mean_density_major=mean(mean_density_major_corallivores),
+            sem_major=sem(mean_density_major_corallivores),
+            mean_biomass_major=mean(mean_biomass_major_corallivores),
+            sem_biomass=sem(mean_biomass_major_corallivores))
+```
+
+## Summarising coral and scar data
+
+```{r Summary of coral and scar data, echo=FALSE, message=FALSE}
+# Transect and genus-level summary of coral data
+coral_transect_and_genus <- coral_scar_df %>% 
+    mutate(coral_genus=gsub("\\s.*", "", coral_species),
+         coral_genus=case_when(coral_genus=="Branching"~"Porites",
+                               TRUE~as.character(coral_genus))) %>%
+  mutate(proportion_grazed=total_grazed_cm2/col_area_cm2) %>%
+  group_by(region, site, transect, depth_m, coral_genus) %>%
+   dplyr::reframe(genus_total_col_area_cm2=sum(col_area_cm2),
+            genus_total_scar_area_cm2=sum(total_grazed_cm2),
+            genus_total_n_scars=sum(n_new_scars),
+            mean_proportion_grazed=mean(proportion_grazed)) %>%
+  mutate(pct_coral_cover_by_genera=(genus_total_col_area_cm2/300000)*100,
+         scars_m2_coral_by_genera=genus_total_n_scars/(genus_total_col_area_cm2/10000),
+         pct_coral_grazed_by_genera=(genus_total_scar_area_cm2/genus_total_col_area_cm2)*100) %>%
+  ungroup()
+
+# Transect-level summary of coral data
+coral_transect <- coral_scar_df %>% 
+  mutate(proportion_grazed=total_grazed_cm2/col_area_cm2) %>%
+  group_by(region, site, transect, depth_m) %>%
+   dplyr::reframe(total_col_area_cm2=sum(col_area_cm2),
+            total_scar_area_cm2=sum(total_grazed_cm2),
+            total_n_scars=sum(n_new_scars),
+            mean_proportion_grazed=mean(proportion_grazed),
+            n_colonies=n()) %>%
+  mutate(pct_coral_cover=(total_col_area_cm2/300000)*100,
+         scars_m2_coral=total_n_scars/(total_col_area_cm2/10000),
+         pct_coral_grazed=(total_scar_area_cm2/total_col_area_cm2)*100) %>%
+  ungroup()
+
+# Site-level summary of coral data
+coral_site <- coral_transect %>%
+  group_by(region, site) %>%
+   dplyr::reframe(mean_pct_coral_cover=mean(pct_coral_cover),
+            sem_coral_cover=sem(pct_coral_cover),
+            mean_pct_coral_grazed=mean(pct_coral_grazed),
+            sem_pct_grazed=sem(pct_coral_grazed),
+            mean_scars_m2_coral= mean(scars_m2_coral),
+            sem_scar_density=sem(scars_m2_coral),
+            mean_total_n_scars=round(mean(total_n_scars), 0),
+            sem_total_n_scars=sem(total_n_scars)) %>%
+  ungroup()
+
+# Regional summary of coral data
+regional_coral_scar_patterns <- coral_site %>%
+  group_by(region) %>%
+   dplyr::reframe(mean_coral_cover=mean(mean_pct_coral_cover),
+            sem_cover=sem(mean_pct_coral_cover),
+            mean_scar_density=mean(mean_scars_m2_coral),
+            sem_density=sem(mean_scars_m2_coral),
+            mean_coral_area_grazed=mean(mean_pct_coral_grazed),
+            sem_area_grazed=sem(mean_pct_coral_grazed),
+            mean_scar_abundance_per_30m2=mean(mean_total_n_scars),
+            sem_scar_abundance=sem(mean_total_n_scars))
+
+# Regional summary mean scar size for grazed colonies
+mean_scar_size_by_region <- coral_scar_df %>% 
+  filter(mean_scar_area_cm2>0) %>%
+  group_by(region) %>%
+  dplyr::reframe(mean_scar_size_cm2=mean(mean_scar_area_cm2), #regional mean calculated from mean scar size per colony with grazing scars
+                 sem_scar_size=sem(mean_scar_area_cm2)) 
+```
+
+```{r Merging site-level fish and coral data, message=FALSE}
+fish_corals_site_level <- coral_site %>% 
+  left_join(pf_density_site) %>%
+  mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) 
+```
+
+All palettes have been checked in a colorblindness simulator ([link](https://davidmathlogic.com/colorblind/))
+```{r Color palettes for figures, include=FALSE, echo=FALSE}
+parrotfish_palette <- c("#6DF3DC", "#4BCAB0", "#0D8A87", "#014D4E")
+
+parrotfish_size_palette <- c("#6DF3DC", "#56CBB3", "#199E8F", "#067F7C", "#014D4E")
+
+coral_palette <- c("#EF977F", "#DA5849", "#C92741", "#9E1831")
+
+region_palette <- c("#00B1EA", "#FE4248", "#8266FF", "#520E44") 
+```
+
+# ___________________________________________________________________________________
+
+#Variation in corallivory intensity and coral selectivity among regions
+
+##Summarizing and visualizing regional trends
+
+**Table 2.** Regional means ± S.E. of major corallivore density, cover of coral species targeted by parrotfishes (%), scar density, mean scar area on predated corals, and mean coral colony area predated (%). 
+```{r Table 2: Regional patterns in parrotfish density + coral cover + corallivory intensity}
+regional_parrotfish_coral_scar_summary <- regional_parrotfish_density %>% 
+  left_join(regional_coral_scar_patterns, by = join_by(region)) %>% 
+  left_join(mean_scar_size_by_region, by = join_by(region)) %>%
+  mutate_at(2:7, round, 1) %>% 
+  mutate_at(8:11, round, 3)
+```
+
+##Analysis of regional trends
+
+Kruskal-Wallis tests of the density of major corallivores and  target coral cover (%), with post-hoc Dunn’s tests of pairwise comparisons among regions using the Benjamini-Hochberg correction for multiple comparisons.
+
+```{r Data analysis: KW test of parrotfish density and coral cover by region}
+#corallivore density ~ region has a non-normal distribution of the residuals
+rstatix::shapiro_test(residuals(aov(mean_density_major_corallivores~region, data = fish_corals_site_level))) #data violate normality assumption
+fish_corals_site_level %>% rstatix::levene_test(mean_density_major_corallivores ~ region) 
+
+#corallivore biomass ~ region has a non-normal distribution of the residuals
+rstatix::shapiro_test(residuals(aov(mean_biomass_major_corallivores~region, data = fish_corals_site_level))) #data violate normality assumption
+fish_corals_site_level %>% rstatix::levene_test(mean_biomass_major_corallivores ~ region) 
+
+#coral cover ~ region has a non-normal homogeneity of variance
+rstatix::shapiro_test(residuals(aov(mean_pct_coral_cover~region, data = fish_corals_site_level))) 
+fish_corals_site_level %>% rstatix::levene_test(mean_pct_coral_cover ~ region) #data violate homogeneity of variance assumption
+
+#Kruskal-Wallis test of corallivore density by region and post-hoc Dunn test
+KW_test_major_corallivore_density <- kruskal.test(mean_density_major_corallivores ~ region, data=fish_corals_site_level) %>% 
+  tidy() 
+KW_test_major_corallivore_density
+
+Dunn_test_major_corallivore_density <- fish_corals_site_level %>% 
+  rstatix::dunn_test(mean_density_major_corallivores ~ region, p.adjust.method = "BH", detailed = FALSE) 
+Dunn_test_major_corallivore_density
+
+#Kruskal-Wallis test of corallivore biomass by region and post-hoc Dunn test
+KW_test_major_corallivore_biomass <- kruskal.test(mean_biomass_major_corallivores ~ region, data=fish_corals_site_level) %>% 
+  tidy() 
+KW_test_major_corallivore_biomass
+
+Dunn_test_major_corallivore_biomass <- fish_corals_site_level %>% 
+  rstatix::dunn_test(mean_biomass_major_corallivores ~ region, p.adjust.method = "BH", detailed = FALSE) 
+Dunn_test_major_corallivore_biomass
+
+#Kruskal-Wallis test of coral cover by region and post-hoc Dunn test
+KW_test_coral_cover <- kruskal.test(mean_pct_coral_cover ~ region, data=fish_corals_site_level) %>% 
+  tidy() 
+KW_test_coral_cover
+
+Dunn_test_coral_cover <- fish_corals_site_level %>% 
+  rstatix::dunn_test(mean_pct_coral_cover ~ region, p.adjust.method = "BH", detailed = FALSE) 
+Dunn_test_coral_cover 
+```
+
+**Model:** ANOVA of regional variation in natural-log transformed scar density, with a Tukey Honest Significant Differences post-hoc comparison for significant differences. 
+
+```{r Data analysis: ANOVA of scar density by region}
+model_scar_density_region <- aov(log(mean_scars_m2_coral)~region, data = fish_corals_site_level)
+
+#Testing model assumptions: outliers by region via IQR method (none)
+fish_corals_site_level %>%
+  group_by(region) %>%
+  mutate(lm_mean_scars_m2_coral=log(mean_scars_m2_coral)) %>%
+  rstatix::identify_outliers(lm_mean_scars_m2_coral)
+
+#Testing model assumptions: no significant violations of homogeneity of variance
+fish_corals_site_level %>%
+  mutate(lm_mean_scars_m2_coral=log(mean_scars_m2_coral)) %>% 
+  rstatix::levene_test(lm_mean_scars_m2_coral ~ region)
+
+#Testing model assumptions: no significant violations of normality assumption by region
+fish_corals_site_level %>%
+  group_by(region) %>%
+  mutate(lm_mean_scars_m2_coral=log(mean_scars_m2_coral)) %>%
+  rstatix::shapiro_test(lm_mean_scars_m2_coral)
+
+#Testing model assumptions: no significant violations of normality assumption for overall model
+rstatix::shapiro_test(residuals(model_scar_density_region))
+
+#Testing model assumptions: visual assessment of residuals
+plot(model_scar_density_region) 
+
+#Model meets assumptions, so proceeding with interpreting model output
+summary(model_scar_density_region)
+
+#Testing for pairwise differences in scar density by region and estimated marginal means
+TukeyHSD(model_scar_density_region) %>% broom::tidy()
+```
+
+**Model:** KW  of regional variation in natural-log percent coral area grazed, with a Dunn's test for post-hoc comparisons. 
+
+```{r Data analysis: ANOVA of percent area grazed by region}
+model_pct_grazed_region <- aov(log(mean_pct_coral_grazed)~region, data = fish_corals_site_level)
+
+#Testing model assumptions: significant violations of normality assumption for overall model
+rstatix::shapiro_test(residuals(model_pct_grazed_region))
+
+#Testing model assumptions: significant violations of normality assumption by region for St. Croix
+fish_corals_site_level %>%
+  group_by(region) %>%
+  mutate(lm_mean_pct_coral_grazed=log(mean_pct_coral_grazed)) %>%
+  rstatix::shapiro_test(lm_mean_pct_coral_grazed)
+
+#Testing model assumptions: outliers by region via IQR method (Teague Bay in St. Croix sig. outlier)
+fish_corals_site_level %>%
+  group_by(region) %>%
+  mutate(lm_mean_pct_coral_grazed=log(mean_pct_coral_grazed)) %>%
+  rstatix::identify_outliers(lm_mean_pct_coral_grazed)
+
+#Testing model assumptions: no significant violations of homogeneity of variance
+fish_corals_site_level %>% mutate(ln_mean_pct_coral_grazed=log(mean_pct_coral_grazed)) %>% rstatix::levene_test(ln_mean_pct_coral_grazed ~ region) 
+
+#Using non-parametric test instead due to normality violations
+#Kruskal-Wallis test of percent coral grazed by region and post-hoc Dunn test
+KW_test_pct_coral_grazed <- kruskal.test(mean_pct_coral_grazed ~ region, data=fish_corals_site_level) %>% 
+  tidy() 
+KW_test_pct_coral_grazed
+
+#post hoc test
+Dunn_test_pct_coral_grazed <- fish_corals_site_level %>% 
+  rstatix::dunn_test(mean_pct_coral_grazed ~ region, p.adjust.method = "BH", detailed = FALSE) 
+Dunn_test_pct_coral_grazed 
+```
+
+
+# ___________________________________________________________________________________
+
+#Variation in corallivory intensity within and among reefs
+##Analysis of patterns across reefs
+
+```{r}
+set.seed(1945) #for reproducible results from random simulations of residuals
+
+#PARROTFISH DENSITY MODELS
+pfdensity1 <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~sqrt(mean_density_major_corallivores)*mean_pct_coral_cover+
+                                      #asin(sqrt(mean_pct_coral_cover/100)) +
+                              (1 | region), #transects nested within sites within regions
+                              data = fish_corals_site_level,
+                              family=gaussian)
+
+pfdensity1_residuals <- DHARMa::simulateResiduals(pfdensity1, n = 10000, use.u = T) 
+DHARMa::testDispersion(pfdensity1_residuals, plot=F) #no significant overdispersion
+plot(pfdensity1_residuals) #KS test significant
+pfdensity1 %>% summary()
+
+pfdensity2 <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~sqrt(mean_density_major_corallivores)*mean_pct_coral_cover+
+                                      #asin(sqrt(mean_pct_coral_cover/100)) +
+                              (1 | region), #transects nested within sites within regions
+                              data = fish_corals_site_level,
+                              family=gaussian)
+
+pfdensity2_residuals <- DHARMa::simulateResiduals(pfdensity2, n = 10000, use.u = T) 
+DHARMa::testDispersion(pfdensity2_residuals, plot=F) #no significant overdispersion
+plot(pfdensity2_residuals) #KS test significant
+pfdensity2 %>% summary()
+```
+Second one quantile deviations but combined test NS
+
+```{r}
+#PARROTFISH BIOMASS MODELS
+pfbiomass1 <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~sqrt(mean_biomass_major_corallivores)*mean_pct_coral_cover+
+                                      #asin(sqrt(mean_pct_coral_cover/100)) +
+                              (1 | region), #transects nested within sites within regions
+                              data = fish_corals_site_level,
+                              family=gaussian)
+
+pfbiomass1_residuals <- DHARMa::simulateResiduals(pfdensity1, n = 10000, use.u = T) 
+DHARMa::testDispersion(pfbiomass1_residuals, plot=F) #no significant overdispersion
+plot(pfbiomass1_residuals) #nothing significant
+pfbiomass1 %>% summary()
+
+pfbiomass2 <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~sqrt(mean_biomass_major_corallivores)*mean_pct_coral_cover+
+                                      #asin(sqrt(mean_pct_coral_cover/100)) +
+                              (1 | region), #transects nested within sites within regions
+                              data = fish_corals_site_level,
+                              family=gaussian)
+
+pfbiomass2_residuals <- DHARMa::simulateResiduals(pfdensity1, n = 10000, use.u = T) 
+DHARMa::testDispersion(pfbiomass2_residuals, plot=F) #no significant overdispersion
+plot(pfbiomass2_residuals) #KS test significant
+pfbiomass2 %>% summary()
+```
+
+```{r}
+#PARROTFISH BIOMASS MODELS W/O PANAMA
+fish_corals_site_level_subset <- fish_corals_site_level %>% filter(region!="Panamá")
+
+pfbiomass1_subset <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~sqrt(mean_biomass_major_corallivores)*mean_pct_coral_cover+
+                                      #asin(sqrt(mean_pct_coral_cover/100)) +
+                              (1 | region), #transects nested within sites within regions
+                              data = fish_corals_site_level_subset,
+                              family=gaussian)
+
+pfbiomass1_subset_residuals <- DHARMa::simulateResiduals(pfbiomass1_subset, n = 10000, use.u = T) 
+DHARMa::testDispersion(pfbiomass1_subset_residuals, plot=F) #no significant overdispersion
+plot(pfbiomass1_subset_residuals) 
+pfbiomass1_subset %>% summary() #nothing significant
+
+pfbiomass2_subset <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~sqrt(mean_biomass_major_corallivores)*mean_pct_coral_cover+
+                                      #asin(sqrt(mean_pct_coral_cover/100)) +
+                              (1 | region), #transects nested within sites within regions
+                              data = fish_corals_site_level_subset,
+                              family=gaussian)
+
+pfbiomass2_subset_residuals <- DHARMa::simulateResiduals(pfbiomass2_subset, n = 10000, use.u = T) 
+DHARMa::testDispersion(pfbiomass2_subset_residuals, plot=F) #no significant overdispersion
+plot(pfbiomass2_subset_residuals) #cant calculate quantiles bc too few
+pfbiomass2_subset %>% summary()
+```

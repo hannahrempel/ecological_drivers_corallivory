@@ -1,1238 +1,868 @@
-"region","site","date","transect","depth_m","species","phase","size_cm","count","survey_l_m","survey_w_m"
-"Panamá","Crawl Cay",2013-07-10,2,5,"Sparisoma aurofrenatum","IP","20 to 25",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,1,10,"Scarus iseri","IP","15 to 20",1,25,4
-"Panamá","Punta STRI",2013-07-11,1,10,"Sparisoma viride","IP","25 to 30",1,25,4
-"Panamá","Punta STRI",2013-07-11,2,5,"Sparisoma viride","IP","15 to 20",1,25,4
-"Panamá","Punta STRI",2013-07-11,2,5,"Sparisoma viride","IP","15 to 20",1,25,4
-"Panamá","Punta STRI",2013-07-11,2,5,"Sparisoma viride","IP","20 to 25",1,25,4
-"Panamá","Punta STRI",2013-07-11,2,5,"Sparisoma viride","IP","20 to 25",1,25,4
-"Panamá","Punta STRI",2013-07-11,2,5,"Sparisoma viride","IP","25 to 30",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Scarus vetula","TP","25",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Scarus vetula","IP","22",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Scarus vetula","IP","20",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma viride","IP","22",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma viride","IP","22",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma aurofrenatum","IP","16",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma aurofrenatum","IP","17",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma rubripinne","TP","30",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma rubripinne","IP","20",1,25,4
-"Florida","Molasses Reef",2013-07-02,1,6.1,"Sparisoma rubripinne","IP","25",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Scarus taeniopterus","TP","28",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma viride","TP","35",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma viride","IP","27",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma viride","IP","17",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma viride","IP","25",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma viride","IP","25",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma rubripinne","TP","28",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma rubripinne","IP","30",1,25,4
-"Florida","Molasses Reef",2013-07-02,2,6.1,"Sparisoma rubripinne","IP","23",1,25,4
-"Florida","French Reef",2013-08-10,1,9,"Scarus coelestinus","TP","31",1,25,4
-"Florida","French Reef",2013-08-10,1,9,"Sparisoma viride","IP","18",1,25,4
-"Florida","French Reef",2013-08-10,1,9,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","French Reef",2013-08-10,2,9.8,"Sparisoma viride","TP","32",1,25,4
-"Florida","French Reef",2013-08-10,2,9.8,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","French Reef",2013-08-10,3,7,"Scarus vetula","IP","25",1,25,4
-"Florida","French Reef",2013-08-10,3,7,"Sparisoma viride","TP","31",1,25,4
-"Florida","French Reef",2013-08-10,3,7,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","French Reef",2013-08-10,3,7,"Sparisoma aurofrenatum","TP","19",1,25,4
-"Florida","French Reef",2013-08-10,4,7.8,"Scarus vetula","TP","25",1,25,4
-"Florida","French Reef",2013-08-10,4,7.8,"Sparisoma viride","IP","17",1,25,4
-"Florida","French Reef",2013-08-10,4,7.8,"Sparisoma aurofrenatum","TP","18",1,25,4
-"Florida","French Reef",2013-08-10,4,7.8,"Sparisoma aurofrenatum","TP","17",1,25,4
-"Florida","French Reef",2013-08-10,4,7.8,"Sparisoma aurofrenatum","TP","17",1,25,4
-"Florida","Conch Reef",2013-08-23,1,5.8,"Sparisoma aurofrenatum","TP","18",1,25,4
-"Florida","Conch Reef",2013-08-23,1,5.8,"Sparisoma aurofrenatum","TP","18",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Sparisoma viride","TP","30",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Sparisoma viride","IP","20",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Sparisoma viride","TP","22",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Scarus vetula","IP","20",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Scarus vetula","TP","25",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Scarus vetula","IP","18",1,25,4
-"Florida","Conch Reef",2013-08-23,2,5.5,"Sparisoma aurofrenatum","TP","19",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma aurofrenatum","TP","18",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma aurofrenatum","TP","16",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma viride","TP","25",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma viride","TP","22",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma viride","IP","18",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Sparisoma chrysopterum","IP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Scarus vetula","IP","16",1,25,4
-"Florida","Davis Reef",2013-08-23,1,6.7,"Scarus vetula","IP","16",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Scarus vetula","TP","26",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma chrysopterum","IP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma chrysopterum","IP","21",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma chrysopterum","IP","19",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma chrysopterum","IP","16",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma viride","IP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma viride","IP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma viride","IP","19",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma viride","IP","18",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma viride","TP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma viride","IP","16",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma aurofrenatum","TP","21",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma aurofrenatum","TP","18",1,25,4
-"Florida","Davis Reef",2013-08-23,2,6.7,"Sparisoma rubripinne","IP","17",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma rubripinne","TP","25",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma aurofrenatum","TP","19",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma aurofrenatum","TP","20",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma viride","IP","18",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma viride","IP","16",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma viride","IP","22",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma viride","IP","21",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma viride","TP","25",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Sparisoma chrysopterum","TP","26",1,25,4
-"Florida","Davis Reef",2013-08-23,3,6.1,"Scarus coeruleus","TP","28",1,25,4
-"St. Croix","Cane Bay",2018-07-08,1,14,"Sparisoma viride","IP","18",1,16,5
-"St. Croix","Cane Bay",2018-07-08,1,14,"Sparisoma aurofrenatum","IP","16",1,16,5
-"St. Croix","Cane Bay",2018-07-08,2,14.3,"Scarus taeniopterus","IP","15",1,18,5
-"St. Croix","Cane Bay",2018-07-08,3,16.2,"Scarus taeniopterus","TP","26",1,20,5
-"St. Croix","Cane Bay",2018-07-08,4,15.2,"Sparisoma aurofrenatum","IP","18",1,20,5
-"St. Croix","Cane Bay",2018-07-08,5,14,"Sparisoma aurofrenatum","IP","16",1,17,5
-"St. Croix","Cane Bay",2018-07-08,5,14,"Sparisoma aurofrenatum","IP","17",1,17,5
-"St. Croix","Cane Bay",2018-07-08,5,14,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","Cane Bay",2018-07-08,5,14,"Sparisoma aurofrenatum","IP","15",1,17,5
-"St. Croix","Cane Bay",2018-07-08,5,14,"Sparisoma aurofrenatum","TP","19",1,17,5
-"St. Croix","Cane Bay",2018-07-08,5,14,"Scarus taeniopterus","TP","22",1,17,5
-"St. Croix","Cane Bay",2018-07-08,6,16.2,"Scarus iseri","TP","19",1,19,5
-"St. Croix","Cane Bay",2018-07-08,6,16.2,"Sparisoma aurofrenatum","IP","17",1,19,5
-"St. Croix","Cane Bay",2018-07-08,7,15.5,"Sparisoma aurofrenatum","IP","16",1,16,5
-"St. Croix","Cane Bay",2018-07-08,7,15.5,"Sparisoma aurofrenatum","TP","26",1,16,5
-"St. Croix","Cane Bay",2018-07-08,8,14.9,"Sparisoma aurofrenatum","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-08,8,14.9,"Sparisoma aurofrenatum","TP","21",1,18,5
-"St. Croix","Cane Bay",2018-07-08,9,15.2,"Sparisoma aurofrenatum","IP","18",1,20,5
-"St. Croix","Cane Bay",2018-07-08,9,15.2,"Sparisoma aurofrenatum","IP","17",1,20,5
-"St. Croix","Cane Bay",2018-07-08,9,15.2,"Sparisoma chrysopterum","TP","32",1,20,5
-"St. Croix","Cane Bay",2018-07-08,10,11.3,"Sparisoma aurofrenatum","TP","28",1,17,5
-"St. Croix","Cane Bay",2018-07-08,10,11.3,"Sparisoma aurofrenatum","TP","26",1,17,5
-"St. Croix","Cane Bay",2018-07-08,10,11.3,"Scarus taeniopterus","TP","28",1,17,5
-"St. Croix","Cane Bay",2018-07-08,11,10.4,"Sparisoma aurofrenatum","IP","21",1,16,5
-"St. Croix","Cane Bay",2018-07-08,11,10.4,"Scarus taeniopterus","TP","27",1,16,5
-"St. Croix","Cane Bay",2018-07-08,12,10.7,"Sparisoma viride","TP","28",1,16,5
-"St. Croix","Cane Bay",2018-07-08,12,10.7,"Sparisoma aurofrenatum","IP","23",1,16,5
-"St. Croix","Cane Bay",2018-07-08,13,10.4,"Sparisoma aurofrenatum","IP","20",1,16,5
-"St. Croix","Cane Bay",2018-07-08,13,10.4,"Sparisoma aurofrenatum","IP","15",1,16,5
-"St. Croix","Cane Bay",2018-07-08,14,10.7,"Sparisoma viride","TP","32",1,17,5
-"St. Croix","Cane Bay",2018-07-08,14,10.7,"Sparisoma aurofrenatum","IP","18",1,17,5
-"St. Croix","Cane Bay",2018-07-08,15,10.7,"Sparisoma aurofrenatum","TP","25",1,17,5
-"St. Croix","Cane Bay",2018-07-08,16,10.4,"Sparisoma aurofrenatum","TP","25",1,17,5
-"St. Croix","Cane Bay",2018-07-08,16,10.4,"Sparisoma aurofrenatum","IP","18",1,17,5
-"St. Croix","Cane Bay",2018-07-08,16,10.4,"Sparisoma aurofrenatum","TP","24",1,17,5
-"St. Croix","Cane Bay",2018-07-08,17,9.8,"Sparisoma aurofrenatum","TP","19",1,20,5
-"St. Croix","Cane Bay",2018-07-08,17,9.8,"Scarus taeniopterus","IP","20",1,20,5
-"St. Croix","Salt River",2018-07-27,1,14.9,"Scarus taeniopterus","IP","15",1,18,5
-"St. Croix","Salt River",2018-07-27,1,14.9,"Scarus taeniopterus","IP","17",1,18,5
-"St. Croix","Salt River",2018-07-27,1,14.9,"Scarus taeniopterus","IP","21",1,18,5
-"St. Croix","Salt River",2018-07-27,1,14.9,"Sparisoma aurofrenatum","TP","23",1,18,5
-"St. Croix","Salt River",2018-07-27,2,17.7,"Sparisoma aurofrenatum","IP","16",1,17,5
-"St. Croix","Salt River",2018-07-27,3,15.8,"Scarus taeniopterus","TP","26",1,17,5
-"St. Croix","Salt River",2018-07-27,3,15.8,"Scarus taeniopterus","IP","16",1,17,5
-"St. Croix","Salt River",2018-07-27,3,15.8,"Sparisoma viride","TP","27",1,17,5
-"St. Croix","Salt River",2018-07-27,3,15.8,"Scarus taeniopterus","IP","20",1,17,5
-"St. Croix","Salt River",2018-07-27,3,15.8,"Sparisoma viride","TP","29",1,17,5
-"St. Croix","Salt River",2018-07-27,4,14.6,"Sparisoma chrysopterum","IP","24",1,16,5
-"St. Croix","Salt River",2018-07-27,4,14.6,"Sparisoma chrysopterum","IP","28",1,16,5
-"St. Croix","Salt River",2018-07-27,4,14.6,"Sparisoma chrysopterum","IP","26",1,16,5
-"St. Croix","Salt River",2018-07-27,4,14.6,"Sparisoma chrysopterum","TP","29",1,16,5
-"St. Croix","Salt River",2018-07-27,4,14.6,"Sparisoma chrysopterum","TP","30",1,16,5
-"St. Croix","Salt River",2018-07-27,5,8.2,"Sparisoma aurofrenatum","IP","15",1,16,5
-"St. Croix","Salt River",2018-07-27,5,8.2,"Sparisoma aurofrenatum","IP","15",1,16,5
-"St. Croix","Salt River",2018-07-27,5,8.2,"Sparisoma aurofrenatum","TP","25",1,16,5
-"St. Croix","Salt River",2018-07-27,5,8.2,"Scarus taeniopterus","IP","20",1,16,5
-"St. Croix","Salt River",2018-07-27,5,8.2,"Scarus taeniopterus","IP","15",1,16,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma chrysopterum","IP","15",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma chrysopterum","IP","19",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma aurofrenatum","TP","24",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma chrysopterum","IP","24",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma chrysopterum","TP","28",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma chrysopterum","TP","28",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Scarus taeniopterus","TP","27",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Sparisoma viride","IP","18",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Scarus taeniopterus","IP","15",1,17,5
-"St. Croix","Salt River",2018-07-27,6,7.3,"Scarus taeniopterus","IP","16",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Sparisoma aurofrenatum","TP","26",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Scarus taeniopterus","TP","25",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Sparisoma chrysopterum","IP","15",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Sparisoma chrysopterum","IP","16",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Scarus taeniopterus","IP","15",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Scarus taeniopterus","IP","16",1,17,5
-"St. Croix","Salt River",2018-07-27,7,7,"Scarus iseri","TP","24",1,17,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","IP","15",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","IP","16",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","IP","18",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","TP","24",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","TP","25",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Scarus taeniopterus","IP","18",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Scarus taeniopterus","IP","15",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Scarus taeniopterus","IP","21",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","IP","16",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Scarus taeniopterus","TP","23",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Sparisoma aurofrenatum","IP","15",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Scarus taeniopterus","IP","15",1,20,5
-"St. Croix","Salt River",2018-07-27,8,6.4,"Scarus taeniopterus","IP","18",1,20,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Scarus iseri","TP","24",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Scarus iseri","TP","22",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Sparisoma chrysopterum","TP","26",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Sparisoma chrysopterum","IP","18",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Scarus taeniopterus","TP","26",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Sparisoma aurofrenatum","TP","22",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Scarus taeniopterus","IP","18",1,19,5
-"St. Croix","Salt River",2018-07-27,9,6.1,"Scarus taeniopterus","IP","19",1,19,5
-"St. Croix","Salt River",2018-07-27,10,15.8,"Sparisoma aurofrenatum","TP","22",1,16,5
-"St. Croix","Salt River",2018-07-27,10,15.8,"Scarus taeniopterus","IP","21",1,16,5
-"St. Croix","Salt River",2018-07-27,10,15.8,"Sparisoma rubripinne","IP","28",1,16,5
-"St. Croix","Salt River",2018-07-27,11,13.1,"Scarus taeniopterus","TP","27",1,18,5
-"St. Croix","Salt River",2018-07-27,12,15.2,"Scarus taeniopterus","TP","27",1,19,5
-"St. Croix","Salt River",2018-07-27,13,14.6,"Scarus taeniopterus","IP","18",1,20,5
-"St. Croix","Salt River",2018-07-27,14,13.1,"Scarus taeniopterus","IP","16",1,17,5
-"St. Croix","Salt River",2018-07-27,14,13.1,"Scarus taeniopterus","IP","18",1,17,5
-"St. Croix","Salt River",2018-07-27,14,13.1,"Scarus taeniopterus","TP","24",1,17,5
-"St. Croix","Salt River",2018-07-27,15,14,"Scarus taeniopterus","IP","16",1,19,5
-"St. Croix","Salt River",2018-07-27,15,14,"Sparisoma aurofrenatum","IP","15",1,19,5
-"St. Croix","Salt River",2018-07-27,16,10.1,"Scarus taeniopterus","IP","18",1,19,5
-"St. Croix","Salt River",2018-07-27,17,8.8,"Sparisoma aurofrenatum","IP","15",1,19,5
-"St. Croix","Salt River",2018-07-27,17,8.8,"Sparisoma aurofrenatum","IP","18",1,19,5
-"St. Croix","Salt River",2018-07-27,17,8.8,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","Salt River",2018-07-27,18,8.2,"Sparisoma viride","TP","26",1,18,5
-"St. Croix","Salt River",2018-07-27,19,7.9,"Scarus taeniopterus","IP","15",1,17,5
-"St. Croix","Salt River",2018-07-27,19,7.9,"Scarus taeniopterus","IP","17",1,17,5
-"St. Croix","Northstar",2018-07-10,1,14.9,"Scarus taeniopterus","IP","21",1,16,5
-"St. Croix","Northstar",2018-07-10,1,14.9,"Sparisoma aurofrenatum","TP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,2,15.5,"Sparisoma aurofrenatum","IP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,2,15.5,"Sparisoma aurofrenatum","IP","16",1,16,5
-"St. Croix","Northstar",2018-07-10,3,15.2,"Scarus taeniopterus","IP","22",1,16,5
-"St. Croix","Northstar",2018-07-10,4,15.2,"Scarus taeniopterus","IP","23",1,16,5
-"St. Croix","Northstar",2018-07-10,5,16.2,"Scarus vetula","TP","30",1,16,5
-"St. Croix","Northstar",2018-07-10,5,16.2,"Scarus iseri","TP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,6,15.2,"Sparisoma aurofrenatum","IP","19",1,16,5
-"St. Croix","Northstar",2018-07-10,6,15.2,"Scarus taeniopterus","IP","18",1,16,5
-"St. Croix","Northstar",2018-07-10,6,15.2,"Scarus taeniopterus","TP","25",1,16,5
-"St. Croix","Northstar",2018-07-10,7,11.6,"Scarus taeniopterus","IP","22",1,16,5
-"St. Croix","Northstar",2018-07-10,7,11.6,"Scarus taeniopterus","IP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,8,11.9,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","Northstar",2018-07-10,8,11.9,"Sparisoma viride","IP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,8,11.9,"Sparisoma aurofrenatum","IP","22",1,16,5
-"St. Croix","Northstar",2018-07-10,9,11.3,"Scarus taeniopterus","IP","22",1,19,5
-"St. Croix","Northstar",2018-07-10,9,11.3,"Sparisoma aurofrenatum","IP","19",1,19,5
-"St. Croix","Northstar",2018-07-10,10,11.6,"Sparisoma aurofrenatum","TP","24",1,18,5
-"St. Croix","Northstar",2018-07-10,10,11.6,"Sparisoma aurofrenatum","IP","21",1,18,5
-"St. Croix","Northstar",2018-07-10,10,11.6,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Northstar",2018-07-10,11,11.3,"Sparisoma aurofrenatum","TP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,11,11.3,"Scarus vetula","IP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,11,11.3,"Sparisoma viride","IP","27",1,16,5
-"St. Croix","Northstar",2018-07-10,12,11.6,"Sparisoma aurofrenatum","IP","23",1,17,5
-"St. Croix","Northstar",2018-07-10,12,11.6,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","Northstar",2018-07-10,13,13.7,"Sparisoma aurofrenatum","IP","21",1,19,5
-"St. Croix","Northstar",2018-07-10,13,13.7,"Sparisoma viride","IP","25",1,19,5
-"St. Croix","Northstar",2018-07-10,13,13.7,"Scarus taeniopterus","TP","23",1,19,5
-"St. Croix","Northstar",2018-07-10,14,12.8,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","Northstar",2018-07-10,14,12.8,"Scarus taeniopterus","TP","23",1,17,5
-"St. Croix","Northstar",2018-07-10,14,12.8,"Sparisoma aurofrenatum","TP","22",1,17,5
-"St. Croix","Northstar",2018-07-10,14,12.8,"Sparisoma viride","IP","27",1,17,5
-"St. Croix","Northstar",2018-07-10,15,12.5,"Scarus taeniopterus","TP","23",1,17,5
-"St. Croix","Northstar",2018-07-10,16,13.1,"Scarus taeniopterus","IP","15",1,19,5
-"St. Croix","Northstar",2018-07-10,16,13.1,"Scarus taeniopterus","IP","17",1,19,5
-"St. Croix","Northstar",2018-07-10,16,13.1,"Scarus taeniopterus","IP","22",1,19,5
-"St. Croix","Northstar",2018-07-10,17,11.3,"Sparisoma aurofrenatum","IP","16",1,18,5
-"St. Croix","Northstar",2018-07-10,17,11.3,"Sparisoma aurofrenatum","TP","22",1,18,5
-"St. Croix","Northstar",2018-07-10,17,11.3,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Northstar",2018-07-10,17,11.3,"Scarus taeniopterus","IP","18",1,18,5
-"St. Croix","Northstar",2018-07-10,18,11,"Scarus taeniopterus","TP","23",1,18,5
-"St. Croix","Northstar",2018-07-10,18,11,"Scarus taeniopterus","IP","21",1,18,5
-"St. Croix","Northstar",2018-07-10,18,11,"Scarus taeniopterus","TP","24",1,18,5
-"St. Croix","Northstar",2018-07-10,18,11,"Sparisoma aurofrenatum","IP","18",1,18,5
-"St. Croix","Northstar",2018-07-10,18,11,"Scarus taeniopterus","IP","17",1,18,5
-"St. Croix","Northstar",2018-07-10,19,9.8,"Scarus taeniopterus","IP","22",1,16,5
-"St. Croix","Northstar",2018-07-10,19,9.8,"Sparisoma aurofrenatum","TP","22",1,16,5
-"St. Croix","Northstar",2018-07-10,19,9.8,"Scarus vetula","TP","32",1,16,5
-"St. Croix","Northstar",2018-07-10,19,9.8,"Scarus taeniopterus","IP","18",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Scarus taeniopterus","IP","18",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Scarus taeniopterus","IP","20",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Scarus taeniopterus","IP","18",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Scarus taeniopterus","IP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Scarus vetula","IP","17",1,16,5
-"St. Croix","Northstar",2018-07-10,20,9.1,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","Northstar",2018-07-10,21,9.1,"Sparisoma aurofrenatum","IP","17",1,16,5
-"St. Croix","Northstar",2018-07-10,21,9.1,"Scarus taeniopterus","IP","15",1,16,5
-"St. Croix","Northstar",2018-07-10,21,9.1,"Sparisoma aurofrenatum","IP","20",1,16,5
-"St. Croix","Northstar",2018-07-10,21,9.1,"Scarus taeniopterus","IP","22",1,16,5
-"St. Croix","Northstar",2018-07-10,21,9.1,"Scarus taeniopterus","TP","24",1,16,5
-"St. Croix","Northstar",2018-07-10,21,9.1,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","Northstar",2018-07-10,22,8.5,"Scarus taeniopterus","IP","15",1,18,5
-"St. Croix","Northstar",2018-07-10,22,8.5,"Scarus taeniopterus","IP","17",1,18,5
-"St. Croix","Northstar",2018-07-10,22,8.5,"Scarus taeniopterus","TP","22",1,18,5
-"St. Croix","Northstar",2018-07-10,22,8.5,"Scarus taeniopterus","IP","19",1,18,5
-"St. Croix","Northstar",2018-07-10,22,8.5,"Scarus taeniopterus","IP","20",1,18,5
-"St. Croix","Northstar",2018-07-10,22,8.5,"Scarus taeniopterus","IP","21",1,18,5
-"St. Croix","Northstar",2018-07-10,23,8.8,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","Northstar",2018-07-10,23,8.8,"Scarus taeniopterus","TP","23",1,17,5
-"St. Croix","Northstar",2018-07-10,24,9.1,"Scarus taeniopterus","TP","23",1,18,5
-"St. Croix","Northstar",2018-07-10,24,9.1,"Scarus taeniopterus","IP","21",1,18,5
-"St. Croix","Northstar",2018-07-10,24,9.1,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Northstar",2018-07-10,25,9.1,"Sparisoma aurofrenatum","IP","18",1,17,5
-"St. Croix","Northstar",2018-07-10,25,9.1,"Scarus taeniopterus","IP","19",1,17,5
-"St. Croix","Northstar",2018-07-10,25,9.1,"Sparisoma aurofrenatum","TP","20",1,17,5
-"St. Croix","Northstar",2018-07-10,25,9.1,"Scarus taeniopterus","TP","22",1,17,5
-"St. Croix","Northstar",2018-07-10,25,9.1,"Scarus taeniopterus","IP","19",1,17,5
-"St. Croix","Northstar",2018-07-10,26,8.5,"Sparisoma viride","IP","16",1,19,5
-"St. Croix","Northstar",2018-07-10,26,8.5,"Sparisoma viride","IP","20",1,19,5
-"St. Croix","Northstar",2018-07-10,26,8.5,"Sparisoma viride","IP","22",1,19,5
-"St. Croix","Northstar",2018-07-10,26,8.5,"Sparisoma viride","IP","23",1,19,5
-"St. Croix","Northstar",2018-07-10,26,8.5,"Sparisoma viride","IP","23",1,19,5
-"St. Croix","Northstar",2018-07-10,26,8.5,"Scarus vetula","IP","22",1,19,5
-"St. Croix","Northstar",2018-07-10,27,8.2,"Scarus vetula","TP","29",1,16,5
-"St. Croix","Northstar",2018-07-10,27,8.2,"Sparisoma viride","TP","30",1,16,5
-"St. Croix","Northstar",2018-07-10,27,8.2,"Scarus taeniopterus","IP","18",1,16,5
-"St. Croix","Northstar",2018-07-10,27,8.2,"Sparisoma aurofrenatum","IP","18",1,16,5
-"St. Croix","Teague Bay",2018-07-11,1,9.1,"Sparisoma viride","IP","18",1,20,5
-"St. Croix","Teague Bay",2018-07-11,1,9.1,"Scarus vetula","IP","23",1,20,5
-"St. Croix","Teague Bay",2018-07-11,2,10.1,"Sparisoma aurofrenatum","TP","24",1,20,5
-"St. Croix","Teague Bay",2018-07-11,2,10.1,"Sparisoma aurofrenatum","IP","16",1,20,5
-"St. Croix","Teague Bay",2018-07-11,3,8.5,"Sparisoma aurofrenatum","IP","15",1,20,5
-"St. Croix","Teague Bay",2018-07-11,3,8.5,"Sparisoma aurofrenatum","IP","19",1,20,5
-"St. Croix","Teague Bay",2018-07-11,4,11,"Sparisoma aurofrenatum","TP","26",1,20,5
-"St. Croix","Teague Bay",2018-07-11,5,7.3,"Scarus vetula","IP","24",1,16,5
-"St. Croix","Teague Bay",2018-07-11,5,7.3,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","Teague Bay",2018-07-11,5,7.3,"Sparisoma aurofrenatum","IP","15",1,16,5
-"St. Croix","Teague Bay",2018-07-11,6,5.2,"Sparisoma aurofrenatum","TP","25",1,20,5
-"St. Croix","Teague Bay",2018-07-11,6,5.2,"Sparisoma aurofrenatum","TP","23",1,20,5
-"St. Croix","Teague Bay",2018-07-11,6,5.2,"Sparisoma viride","IP","20",1,20,5
-"St. Croix","Teague Bay",2018-07-11,6,5.2,"Scarus iseri","TP","15",1,20,5
-"St. Croix","Teague Bay",2018-07-11,7,5.2,"Sparisoma viride","IP","17",1,18,5
-"St. Croix","Teague Bay",2018-07-11,7,5.2,"Sparisoma viride","IP","20",1,18,5
-"St. Croix","Teague Bay",2018-07-11,7,5.2,"Sparisoma viride","IP","22",1,18,5
-"St. Croix","Teague Bay",2018-07-11,7,5.2,"Sparisoma aurofrenatum","IP","18",1,18,5
-"St. Croix","Teague Bay",2018-07-11,8,5.5,"Sparisoma aurofrenatum","IP","18",1,20,5
-"St. Croix","Teague Bay",2018-07-11,8,5.5,"Sparisoma viride","IP","15",1,20,5
-"St. Croix","Teague Bay",2018-07-11,9,5.8,"Sparisoma aurofrenatum","TP","22",1,17,5
-"St. Croix","Teague Bay",2018-07-11,9,5.8,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","Teague Bay",2018-07-11,10,4.6,"Sparisoma aurofrenatum","IP","15",1,18,5
-"St. Croix","Teague Bay",2018-07-11,10,4.6,"Sparisoma aurofrenatum","IP","18",1,18,5
-"St. Croix","Teague Bay",2018-07-11,10,4.6,"Sparisoma aurofrenatum","IP","21",1,18,5
-"St. Croix","Teague Bay",2018-07-11,10,4.6,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Teague Bay",2018-07-11,11,5.2,"Scarus iseri","IP","15",1,16,5
-"St. Croix","Teague Bay",2018-07-11,11,5.2,"Scarus iseri","IP","15",1,16,5
-"St. Croix","Teague Bay",2018-07-11,12,5.2,"Sparisoma viride","IP","18",1,17,5
-"St. Croix","Teague Bay",2018-07-11,12,5.2,"Scarus iseri","TP","15",1,17,5
-"St. Croix","Teague Bay",2018-07-11,12,5.2,"Scarus iseri","TP","16",1,17,5
-"St. Croix","Teague Bay",2018-07-11,12,5.2,"Scarus iseri","TP","15",1,17,5
-"St. Croix","Teague Bay",2018-07-11,12,5.2,"Scarus vetula","IP","15",1,17,5
-"St. Croix","Teague Bay",2018-07-11,13,6.4,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Teague Bay",2018-07-11,14,5.8,"Sparisoma viride","IP","24",1,19,5
-"St. Croix","Teague Bay",2018-07-11,14,5.8,"Scarus vetula","IP","20",1,19,5
-"St. Croix","Teague Bay",2018-07-11,14,5.8,"Sparisoma aurofrenatum","IP","20",1,19,5
-"St. Croix","Teague Bay",2018-07-11,15,5.2,"Sparisoma aurofrenatum","TP","20",1,19,5
-"St. Croix","Teague Bay",2018-07-11,15,5.2,"Sparisoma viride","TP","22",1,19,5
-"St. Croix","Teague Bay",2018-07-11,15,5.2,"Scarus taeniopterus","TP","23",1,19,5
-"St. Croix","Teague Bay",2018-07-11,15,5.2,"Sparisoma aurofrenatum","IP","16",1,19,5
-"St. Croix","Teague Bay",2018-07-11,16,8.8,"Sparisoma aurofrenatum","IP","24",1,20,5
-"St. Croix","Teague Bay",2018-07-11,16,8.8,"Sparisoma aurofrenatum","IP","22",1,20,5
-"St. Croix","Teague Bay",2018-07-11,16,8.8,"Sparisoma chrysopterum","IP","26",1,20,5
-"St. Croix","Teague Bay",2018-07-11,16,8.8,"Scarus taeniopterus","IP","24",1,20,5
-"St. Croix","Teague Bay",2018-07-11,17,7.3,"Sparisoma aurofrenatum","IP","16",1,19,5
-"St. Croix","Teague Bay",2018-07-11,17,7.3,"Sparisoma aurofrenatum","IP","20",1,19,5
-"St. Croix","Teague Bay",2018-07-11,17,7.3,"Sparisoma aurofrenatum","IP","18",1,19,5
-"St. Croix","Teague Bay",2018-07-11,17,7.3,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","Teague Bay",2018-07-11,18,7,"Sparisoma chrysopterum","IP","22",1,20,5
-"St. Croix","Teague Bay",2018-07-11,19,6.4,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","Teague Bay",2018-07-11,19,6.4,"Sparisoma chrysopterum","IP","23",1,19,5
-"St. Croix","Teague Bay",2018-07-11,19,6.4,"Sparisoma aurofrenatum","IP","22",1,19,5
-"St. Croix","Teague Bay",2018-07-11,20,7,"Sparisoma chrysopterum","IP","23",1,19,5
-"St. Croix","Teague Bay",2018-07-11,20,7,"Sparisoma chrysopterum","IP","24",1,19,5
-"St. Croix","Teague Bay",2018-07-11,21,6.7,"Scarus taeniopterus","TP","25",1,18,5
-"St. Croix","Teague Bay",2018-07-11,22,5.2,"Scarus iseri","TP","15",1,17,5
-"St. Croix","Teague Bay",2018-07-11,22,5.2,"Scarus vetula","IP","15",1,17,5
-"St. Croix","Teague Bay",2018-07-11,23,4.6,"Sparisoma rubripinne","IP","28",1,17,5
-"St. Croix","Teague Bay",2018-07-11,23,4.6,"Sparisoma rubripinne","IP","27",1,17,5
-"St. Croix","Teague Bay",2018-07-11,24,5.5,"Sparisoma aurofrenatum","IP","15",1,19,5
-"St. Croix","Teague Bay",2018-07-11,25,5.5,"Sparisoma viride","IP","16",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,1,6.4,"Sparisoma aurofrenatum","IP","15",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,1,6.4,"Scarus vetula","TP","28",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,1,6.4,"Scarus vetula","IP","23",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,1,6.4,"Sparisoma aurofrenatum","IP","15",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,2,7.6,"Sparisoma viride","TP","20",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,2,7.6,"Sparisoma aurofrenatum","IP","17",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Scarus iseri","TP","16",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Sparisoma viride","TP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Sparisoma viride","TP","26",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Sparisoma viride","TP","31",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Sparisoma aurofrenatum","IP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Sparisoma aurofrenatum","IP","23",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Scarus iseri","IP","15",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,"Sparisoma aurofrenatum","TP","23",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,4,9.4,"Scarus iseri","IP","15",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,5,9.8,"Sparisoma aurofrenatum","TP","24",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,6,9.1,"Sparisoma viride","TP","28",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,7,8.5,"Scarus vetula","IP","22",1,20,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,7,8.5,"Sparisoma aurofrenatum","TP","24",1,20,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,"Sparisoma aurofrenatum","TP","22",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,"Sparisoma chrysopterum","IP","24",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,"Sparisoma chrysopterum","IP","26",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,"Sparisoma aurofrenatum","TP","22",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,"Sparisoma chrysopterum","IP","24",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,"Sparisoma viride","IP","22",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,"Sparisoma aurofrenatum","IP","24",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,"Scarus vetula","IP","20",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,"Sparisoma viride","IP","18",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,10,9.8,"Scarus vetula","IP","21",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,10,9.8,"Scarus iseri","IP","15",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,10,9.8,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,11,9.1,"Sparisoma aurofrenatum","TP","23",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,11,9.1,"Sparisoma viride","TP","33",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,11,9.1,"Sparisoma aurofrenatum","IP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,11,9.1,"Sparisoma viride","TP","34",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,12,7.6,"Sparisoma aurofrenatum","TP","22",1,20,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,12,7.6,"Sparisoma viride","TP","28",1,20,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,12,7.6,"Sparisoma viride","TP","32",1,20,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Sparisoma viride","IP","18",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Sparisoma aurofrenatum","TP","25",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Scarus vetula","IP","20",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Sparisoma viride","TP","31",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Sparisoma viride","TP","28",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Sparisoma aurofrenatum","IP","20",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,"Sparisoma viride","TP","25",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,"Sparisoma viride","TP","28",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,"Sparisoma viride","TP","26",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,"Sparisoma viride","TP","27",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,"Sparisoma viride","TP","30",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,"Sparisoma viride","IP","20",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,"Scarus vetula","IP","20",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,"Sparisoma aurofrenatum","IP","17",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,"Sparisoma viride","TP","27",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma aurofrenatum","IP","18",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma aurofrenatum","IP","20",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma viride","IP","22",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma aurofrenatum","TP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma viride","TP","22",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma viride","TP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Sparisoma aurofrenatum","TP","25",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,"Scarus vetula","IP","25",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,17,5.2,"Scarus vetula","IP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,17,5.2,"Sparisoma aurofrenatum","IP","16",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,17,5.2,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,17,5.2,"Sparisoma viride","IP","15",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,"Sparisoma viride","IP","20",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,"Sparisoma viride","IP","21",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,"Sparisoma viride","IP","23",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,"Sparisoma viride","IP","24",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,"Scarus taeniopterus","IP","17",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Sparisoma viride","TP","28",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Sparisoma viride","TP","29",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Sparisoma viride","IP","26",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Scarus vetula","TP","28",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Scarus iseri","IP","15",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Scarus vetula","IP","21",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,"Sparisoma aurofrenatum","TP","24",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,20,5.5,"Sparisoma aurofrenatum","IP","24",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,20,5.5,"Sparisoma viride","IP","20",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,20,5.5,"Sparisoma aurofrenatum","IP","20",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,20,5.5,"Sparisoma viride","IP","16",1,16,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Sparisoma viride","TP","24",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Scarus vetula","IP","23",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Sparisoma viride","TP","29",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Sparisoma aurofrenatum","TP","23",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Scarus vetula","IP","22",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Sparisoma viride","TP","27",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Scarus vetula","TP","28",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,"Scarus vetula","TP","30",1,18,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,"Scarus vetula","IP","25",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,"Scarus vetula","TP","28",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,"Scarus vetula","IP","25",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,"Sparisoma viride","IP","22",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,"Sparisoma viride","TP","26",1,19,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,23,5.5,"Sparisoma viride","TP","23",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,23,5.5,"Sparisoma viride","TP","22",1,17,5
-"St. Croix","BIRNM S. Forereef",2018-07-12,23,5.5,"Scarus taeniopterus","IP","18",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Scarus vetula","TP","28",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma aurofrenatum","TP","24",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma aurofrenatum","TP","22",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma viride","IP","28",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Scarus vetula","TP","29",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma aurofrenatum","TP","25",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma aurofrenatum","TP","24",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,"Sparisoma aurofrenatum","IP","26",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,2,6.1,"Sparisoma rubripinne","IP","26",1,19,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,2,6.1,"Sparisoma aurofrenatum","IP","24",1,19,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Sparisoma rubripinne","IP","28",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Sparisoma rubripinne","IP","26",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Sparisoma rubripinne","IP","27",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Sparisoma viride","TP","30",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Scarus taeniopterus","TP","20",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,"Sparisoma aurofrenatum","TP","20",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,"Sparisoma viride","IP","29",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,"Sparisoma viride","IP","22",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,"Sparisoma aurofrenatum","IP","25",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,"Scarus taeniopterus","IP","18",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,5,7,"Scarus vetula","IP","26",1,18,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,5,7,"Scarus vetula","TP","28",1,18,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,5,7,"Sparisoma rubripinne","IP","30",1,18,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,5,7,"Sparisoma aurofrenatum","IP","25",1,18,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,6,7,"Sparisoma aurofrenatum","IP","22",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,6,7,"Scarus vetula","IP","15",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,6,7,"Scarus taeniopterus","IP","16",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,"Sparisoma rubripinne","IP","24",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,"Sparisoma rubripinne","IP","25",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,"Sparisoma rubripinne","IP","26",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,"Sparisoma rubripinne","IP","28",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,"Sparisoma rubripinne","IP","25",1,17,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,"Scarus taeniopterus","IP","16",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,"Sparisoma aurofrenatum","IP","22",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,"Sparisoma aurofrenatum","IP","22",1,16,5
-"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,"Scarus vetula","IP","23",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Scarus vetula","IP","26",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Sparisoma aurofrenatum","IP","22",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Scarus vetula","TP","29",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Sparisoma viride","IP","28",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Scarus vetula","IP","25",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Sparisoma viride","TP","26",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,"Sparisoma viride","IP","20",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Sparisoma aurofrenatum","IP","24",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Sparisoma aurofrenatum","IP","23",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Scarus vetula","IP","24",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Sparisoma viride","TP","32",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Scarus vetula","TP","30",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Sparisoma viride","IP","28",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,"Scarus vetula","IP","26",1,19,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Sparisoma aurofrenatum","IP","24",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Sparisoma aurofrenatum","IP","21",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Sparisoma aurofrenatum","IP","18",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Scarus vetula","TP","28",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Scarus iseri","TP","20",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Scarus vetula","IP","20",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Scarus vetula","IP","24",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Scarus vetula","IP","26",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,"Scarus vetula","IP","18",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Sparisoma viride","IP","28",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Sparisoma viride","IP","29",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Sparisoma viride","IP","30",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Sparisoma viride","IP","26",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Sparisoma viride","IP","28",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Sparisoma viride","IP","24",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Scarus vetula","TP","28",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,"Scarus vetula","TP","31",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Sparisoma aurofrenatum","TP","23",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Scarus vetula","IP","25",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Scarus vetula","TP","27",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Scarus vetula","TP","29",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Sparisoma viride","IP","26",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Sparisoma viride","IP","26",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Sparisoma viride","IP","27",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Sparisoma viride","IP","28",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Scarus vetula","IP","26",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,"Scarus vetula","IP","24",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,"Scarus vetula","IP","20",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,"Scarus vetula","IP","22",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,"Scarus vetula","IP","23",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,"Scarus vetula","IP","27",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,"Scarus vetula","TP","29",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,"Scarus vetula","IP","21",1,16,5
-"St. Croix","BIRNM Lagoon",2018-07-12,7,3,"Scarus vetula","IP","21",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,7,3,"Scarus vetula","IP","26",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,7,3,"Sparisoma aurofrenatum","IP","24",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,7,3,"Sparisoma aurofrenatum","IP","18",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,7,3,"Sparisoma viride","TP","28",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,7,3,"Sparisoma viride","TP","30",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Sparisoma aurofrenatum","TP","23",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Scarus iseri","IP","15",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Sparisoma viride","TP","30",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Sparisoma viride","IP","27",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Scarus vetula","TP","30",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Sparisoma viride","TP","32",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,"Scarus vetula","IP","25",1,20,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Scarus vetula","TP","30",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Sparisoma viride","IP","25",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Sparisoma chrysopterum","TP","26",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Scarus vetula","IP","25",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Sparisoma aurofrenatum","IP","24",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Sparisoma chrysopterum","IP","28",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Sparisoma chrysopterum","IP","26",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,"Sparisoma chrysopterum","TP","26",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,"Sparisoma viride","IP","25",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,"Scarus vetula","IP","23",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,"Sparisoma aurofrenatum","TP","19",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,"Sparisoma aurofrenatum","TP","22",1,17,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma viride","IP","25",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma viride","TP","27",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma aurofrenatum","IP","23",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma aurofrenatum","IP","23",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma viride","IP","26",1,18,5
-"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,"Sparisoma viride","TP","30",1,18,5
-"St. Croix","Long Reef",2018-07-13,1,12.8,"Scarus taeniopterus","IP","20",1,16,5
-"St. Croix","Long Reef",2018-07-13,2,13.4,"Sparisoma aurofrenatum","TP","21",1,19,5
-"St. Croix","Long Reef",2018-07-13,2,13.4,"Sparisoma aurofrenatum","IP","23",1,19,5
-"St. Croix","Long Reef",2018-07-13,3,13.1,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","Long Reef",2018-07-13,4,13.7,"Sparisoma aurofrenatum","IP","16",1,17,5
-"St. Croix","Long Reef",2018-07-13,4,13.7,"Scarus taeniopterus","IP","17",1,17,5
-"St. Croix","Long Reef",2018-07-13,5,12.2,"Sparisoma aurofrenatum","IP","18",1,17,5
-"St. Croix","Long Reef",2018-07-13,6,13.7,"Scarus taeniopterus","TP","24",1,16,5
-"St. Croix","Long Reef",2018-07-13,7,12.2,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Long Reef",2018-07-13,7,12.2,"Scarus taeniopterus","IP","18",1,18,5
-"St. Croix","Long Reef",2018-07-13,7,12.2,"Scarus taeniopterus","IP","20",1,18,5
-"St. Croix","Long Reef",2018-07-13,8,10.4,"Scarus taeniopterus","IP","19",1,17,5
-"St. Croix","Long Reef",2018-07-13,8,10.4,"Scarus iseri","IP","15",1,17,5
-"St. Croix","Long Reef",2018-07-13,8,10.4,"Scarus iseri","IP","16",1,17,5
-"St. Croix","Long Reef",2018-07-13,9,10.1,"Scarus iseri","IP","15",1,19,5
-"St. Croix","Long Reef",2018-07-13,9,10.1,"Scarus taeniopterus","IP","18",1,19,5
-"St. Croix","Long Reef",2018-07-13,10,9.4,"Sparisoma viride","IP","16",1,17,5
-"St. Croix","Long Reef",2018-07-13,10,9.4,"Sparisoma aurofrenatum","TP","20",1,17,5
-"St. Croix","Long Reef",2018-07-13,10,9.4,"Sparisoma aurofrenatum","TP","22",1,17,5
-"St. Croix","Long Reef",2018-07-13,10,9.4,"Scarus iseri","IP","15",1,17,5
-"St. Croix","Long Reef",2018-07-13,11,9.4,"Sparisoma chrysopterum","TP","28",1,20,5
-"St. Croix","Long Reef",2018-07-13,11,9.4,"Sparisoma chrysopterum","IP","26",1,20,5
-"St. Croix","Long Reef",2018-07-13,11,9.4,"Sparisoma rubripinne","IP","27",1,20,5
-"St. Croix","Long Reef",2018-07-13,12,9.4,"Sparisoma viride","TP","31",1,18,5
-"St. Croix","Long Reef",2018-07-13,13,10.4,"Sparisoma aurofrenatum","IP","20",1,18,5
-"St. Croix","Long Reef",2018-07-13,14,10.4,"Sparisoma chrysopterum","TP","28",1,16,5
-"St. Croix","Long Reef",2018-07-13,14,10.4,"Scarus iseri","TP","18",1,16,5
-"St. Croix","Long Reef",2018-07-13,14,10.4,"Scarus taeniopterus","IP","19",1,16,5
-"St. Croix","Long Reef",2018-07-13,15,9.8,"Scarus vetula","TP","27",1,16,5
-"St. Croix","Long Reef",2018-07-13,15,9.8,"Scarus taeniopterus","IP","16",1,16,5
-"St. Croix","Long Reef",2018-07-13,15,9.8,"Scarus taeniopterus","IP","17",1,16,5
-"St. Croix","Long Reef",2018-07-13,15,9.8,"Sparisoma rubripinne","IP","28",1,16,5
-"St. Croix","Long Reef",2018-07-13,15,9.8,"Scarus vetula","TP","29",1,16,5
-"St. Croix","Long Reef",2018-07-13,16,10.4,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Long Reef",2018-07-13,16,10.4,"Sparisoma viride","IP","27",1,18,5
-"St. Croix","Long Reef",2018-07-13,16,10.4,"Sparisoma aurofrenatum","IP","22",1,18,5
-"St. Croix","Long Reef",2018-07-13,16,10.4,"Scarus vetula","TP","28",1,18,5
-"St. Croix","Long Reef",2018-07-13,17,10.1,"Scarus taeniopterus","IP","19",1,18,5
-"St. Croix","Long Reef",2018-07-13,17,10.1,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Long Reef",2018-07-13,17,10.1,"Scarus taeniopterus","IP","17",1,18,5
-"St. Croix","Long Reef",2018-07-13,18,9.4,"Sparisoma aurofrenatum","IP","19",1,18,5
-"St. Croix","Long Reef",2018-07-13,19,10.7,"Sparisoma aurofrenatum","IP","20",1,20,5
-"St. Croix","Long Reef",2018-07-13,19,10.7,"Scarus taeniopterus","IP","21",1,20,5
-"St. Croix","Long Reef",2018-07-13,20,10.1,"Scarus taeniopterus","IP","18",1,20,5
-"St. Croix","Long Reef",2018-07-13,20,10.1,"Scarus taeniopterus","IP","19",1,20,5
-"St. Croix","Long Reef",2018-07-13,21,10.4,"Scarus taeniopterus","IP","15",1,17,5
-"St. Croix","Long Reef",2018-07-13,22,8.2,"Sparisoma viride","IP","21",1,20,5
-"St. Croix","Long Reef",2018-07-13,22,8.2,"Scarus taeniopterus","IP","18",1,20,5
-"St. Croix","Long Reef",2018-07-13,22,8.2,"Scarus taeniopterus","IP","19",1,20,5
-"St. Croix","Long Reef",2018-07-13,22,8.2,"Scarus taeniopterus","IP","20",1,20,5
-"St. Croix","Long Reef",2018-07-13,23,7.9,"Sparisoma aurofrenatum","TP","19",1,18,5
-"St. Croix","Long Reef",2018-07-13,23,7.9,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Long Reef",2018-07-13,24,7.6,"Scarus iseri","TP","16",1,17,5
-"St. Croix","Long Reef",2018-07-13,24,7.6,"Sparisoma aurofrenatum","IP","19",1,17,5
-"St. Croix","Long Reef",2018-07-13,24,7.6,"Scarus taeniopterus","TP","19",1,17,5
-"St. Croix","Long Reef",2018-07-13,25,7,"Scarus vetula","IP","21",1,18,5
-"St. Croix","Long Reef",2018-07-13,25,7,"Scarus vetula","IP","24",1,18,5
-"St. Croix","Long Reef",2018-07-13,26,8.2,"Scarus taeniopterus","IP","19",1,19,5
-"St. Croix","Long Reef",2018-07-13,26,8.2,"Sparisoma aurofrenatum","TP","21",1,19,5
-"St. Croix","Long Reef",2018-07-13,27,8.5,"Sparisoma viride","IP","16",1,17,5
-"St. Croix","Long Reef",2018-07-13,27,8.5,"Sparisoma viride","IP","17",1,17,5
-"St. Croix","Long Reef",2018-07-13,28,7.3,"Sparisoma viride","IP","25",1,19,5
-"St. Croix","Long Reef",2018-07-13,28,7.3,"Sparisoma aurofrenatum","IP","18",1,19,5
-"St. Croix","Long Reef",2018-07-13,29,7,"Sparisoma aurofrenatum","TP","22",1,19,5
-"St. Croix","Long Reef",2018-07-13,29,7,"Sparisoma aurofrenatum","IP","19",1,19,5
-"St. Croix","Long Reef",2018-07-13,29,7,"Sparisoma aurofrenatum","TP","22",1,19,5
-"St. Croix","Long Reef",2018-07-13,29,7,"Sparisoma aurofrenatum","IP","23",1,19,5
-"St. Croix","Long Reef",2018-07-13,29,7,"Sparisoma aurofrenatum","IP","22",1,19,5
-"St. Croix","Long Reef",2018-07-13,30,7,"Scarus iseri","IP","15",1,20,5
-"St. Croix","Cane Bay",2018-07-14,18,7.6,"Scarus taeniopterus","IP","24",1,18,5
-"St. Croix","Cane Bay",2018-07-14,18,7.6,"Sparisoma rubripinne","IP","26",1,18,5
-"St. Croix","Cane Bay",2018-07-14,19,8.2,"Scarus taeniopterus","IP","17",1,19,5
-"St. Croix","Cane Bay",2018-07-14,19,8.2,"Scarus taeniopterus","TP","25",1,19,5
-"St. Croix","Cane Bay",2018-07-14,19,8.2,"Sparisoma aurofrenatum","TP","23",1,19,5
-"St. Croix","Cane Bay",2018-07-14,19,8.2,"Sparisoma aurofrenatum","IP","19",1,19,5
-"St. Croix","Cane Bay",2018-07-14,20,7.9,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,20,7.9,"Sparisoma aurofrenatum","TP","23",1,18,5
-"St. Croix","Cane Bay",2018-07-14,20,7.9,"Sparisoma viride","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,21,8.2,"Scarus taeniopterus","IP","19",1,19,5
-"St. Croix","Cane Bay",2018-07-14,21,8.2,"Scarus taeniopterus","TP","24",1,19,5
-"St. Croix","Cane Bay",2018-07-14,21,8.2,"Sparisoma viride","IP","16",1,19,5
-"St. Croix","Cane Bay",2018-07-14,21,8.2,"Scarus taeniopterus","IP","18",1,19,5
-"St. Croix","Cane Bay",2018-07-14,22,8.5,"Sparisoma aurofrenatum","IP","20",1,17,5
-"St. Croix","Cane Bay",2018-07-14,22,8.5,"Sparisoma viride","IP","16",1,17,5
-"St. Croix","Cane Bay",2018-07-14,22,8.5,"Sparisoma aurofrenatum","TP","23",1,17,5
-"St. Croix","Cane Bay",2018-07-14,23,7.3,"Sparisoma aurofrenatum","IP","19",1,19,5
-"St. Croix","Cane Bay",2018-07-14,24,6.7,"Scarus taeniopterus","IP","18",1,19,5
-"St. Croix","Cane Bay",2018-07-14,24,6.7,"Scarus iseri","IP","16",1,19,5
-"St. Croix","Cane Bay",2018-07-14,24,6.7,"Scarus taeniopterus","IP","17",1,19,5
-"St. Croix","Cane Bay",2018-07-14,25,6.7,"Sparisoma chrysopterum","TP","26",1,20,5
-"St. Croix","Cane Bay",2018-07-14,25,6.7,"Sparisoma aurofrenatum","IP","20",1,20,5
-"St. Croix","Cane Bay",2018-07-14,26,6.7,"Sparisoma aurofrenatum","IP","21",1,18,5
-"St. Croix","Cane Bay",2018-07-14,26,6.7,"Scarus taeniopterus","IP","20",1,18,5
-"St. Croix","Cane Bay",2018-07-14,26,6.7,"Scarus taeniopterus","IP","22",1,18,5
-"St. Croix","Cane Bay",2018-07-14,26,6.7,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,26,6.7,"Scarus taeniopterus","IP","18",1,18,5
-"St. Croix","Cane Bay",2018-07-14,26,6.7,"Scarus vetula","IP","23",1,18,5
-"St. Croix","Cane Bay",2018-07-14,27,6.7,"Scarus vetula","IP","18",1,19,5
-"St. Croix","Cane Bay",2018-07-14,27,6.7,"Sparisoma aurofrenatum","IP","20",1,19,5
-"St. Croix","Cane Bay",2018-07-14,27,6.7,"Sparisoma aurofrenatum","IP","19",1,19,5
-"St. Croix","Cane Bay",2018-07-14,28,6.1,"Scarus vetula","IP","17",1,20,5
-"St. Croix","Cane Bay",2018-07-14,28,6.1,"Sparisoma aurofrenatum","TP","22",1,20,5
-"St. Croix","Cane Bay",2018-07-14,28,6.1,"Scarus iseri","TP","21",1,20,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus taeniopterus","IP","15",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus taeniopterus","IP","17",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus vetula","TP","31",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus vetula","IP","28",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Sparisoma viride","IP","27",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus taeniopterus","IP","19",1,18,5
-"St. Croix","Cane Bay",2018-07-14,29,5.8,"Scarus taeniopterus","IP","21",1,18,5
-"St. Croix","Cane Bay",2018-07-14,30,6.1,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,30,6.1,"Sparisoma viride","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,30,6.1,"Scarus taeniopterus","IP","20",1,18,5
-"St. Croix","Cane Bay",2018-07-14,30,6.1,"Scarus taeniopterus","TP","23",1,18,5
-"St. Croix","Cane Bay",2018-07-14,31,5.2,"Scarus taeniopterus","IP","16",1,18,5
-"St. Croix","Cane Bay",2018-07-14,31,5.2,"Scarus taeniopterus","IP","18",1,18,5
-"St. Croix","Cane Bay",2018-07-14,31,5.2,"Scarus taeniopterus","IP","20",1,18,5
-"St. Croix","Cane Bay",2018-07-14,32,5.2,"Scarus vetula","IP","25",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Scarus taeniopterus","IP","20",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Scarus taeniopterus","IP","26",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Scarus taeniopterus","IP","18",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Sparisoma viride","IP","19",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Scarus vetula","IP","27",1,17,5
-"Bonaire","Cliff",2019-09-07,1,17.1,"Sparisoma aurofrenatum","IP","24",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Sparisoma viride","TP","32",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Scarus taeniopterus","IP","18",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Scarus vetula","TP","33",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Cliff",2019-09-07,2,11,"Scarus vetula","IP","27",1,17,5
-"Bonaire","Cliff",2019-09-07,3,11.3,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Cliff",2019-09-07,3,11.3,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Cliff",2019-09-07,3,11.3,"Scarus taeniopterus","TP","25",1,17,5
-"Bonaire","Cliff",2019-09-07,3,11.3,"Sparisoma viride","TP","31",1,17,5
-"Bonaire","Cliff",2019-09-07,3,11.3,"Scarus vetula","IP","28",1,17,5
-"Bonaire","Cliff",2019-09-07,3,11.3,"Scarus taeniopterus","IP","18",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Scarus vetula","IP","25",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Scarus iseri","TP","25",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Sparisoma viride","IP","21",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Scarus vetula","TP","32",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Scarus vetula","IP","15",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Scarus taeniopterus","IP","21",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,"Scarus iseri","IP","15",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Scarus vetula","IP","23",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Scarus vetula","TP","32",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Sparisoma viride","IP","26",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Sparisoma viride","IP","24",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Scarus vetula","IP","25",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Scarus vetula","IP","28",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Sparisoma viride","IP","24",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Sparisoma viride","IP","26",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Scarus vetula","TP","34",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,"Scarus vetula","IP","28",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus vetula","IP","26",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus iseri","TP","27",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Sparisoma viride","IP","28",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Sparisoma viride","IP","16",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus taeniopterus","TP","23",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus taeniopterus","TP","24",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus vetula","IP","16",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,"Scarus vetula","TP","32",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Sparisoma aurofrenatum","IP","15",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Scarus vetula","IP","24",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Scarus taeniopterus","IP","19",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Scarus taeniopterus","IP","18",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Scarus taeniopterus","TP","26",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Scarus taeniopterus","TP","28",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Sparisoma aurofrenatum","TP","21",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Sparisoma viride","TP","30",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,"Sparisoma aurofrenatum","TP","22",1,16,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Sparisoma aurofrenatum","TP","22",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Scarus taeniopterus","IP","20",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Scarus taeniopterus","IP","18",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Sparisoma aurofrenatum","IP","15",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Scarus vetula","TP","33",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Scarus vetula","IP","29",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,"Sparisoma viride","IP","26",1,19,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Sparisoma viride","TP","33",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Sparisoma viride","TP","31",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Sparisoma viride","IP","24",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Sparisoma aurofrenatum","TP","23",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Scarus taeniopterus","TP","26",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Scarus vetula","IP","17",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,"Scarus vetula","IP","18",1,17,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Scarus taeniopterus","TP","27",1,18,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Sparisoma viride","IP","28",1,18,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Sparisoma viride","IP","29",1,18,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Scarus taeniopterus","IP","16",1,18,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,"Scarus vetula","IP","28",1,18,5
-"Bonaire","Cliff",2019-09-09,4,9.1,"Scarus iseri","TP","27",1,18,5
-"Bonaire","Cliff",2019-09-09,4,9.1,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Cliff",2019-09-09,4,9.1,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Cliff",2019-09-09,4,9.1,"Sparisoma viride","IP","20",1,18,5
-"Bonaire","Cliff",2019-09-09,4,9.1,"Sparisoma aurofrenatum","IP","15",1,18,5
-"Bonaire","Cliff",2019-09-09,4,9.1,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus vetula","IP","26",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus vetula","TP","32",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus taeniopterus","TP","28",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus taeniopterus","IP","15",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus taeniopterus","IP","20",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Sparisoma viride","IP","27",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Sparisoma viride","IP","28",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Sparisoma viride","TP","31",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus taeniopterus","IP","17",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus taeniopterus","IP","18",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus taeniopterus","IP","17",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus vetula","IP","28",1,16,5
-"Bonaire","Cliff",2019-09-09,5,10.4,"Scarus vetula","TP","33",1,16,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Scarus taeniopterus","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Scarus vetula","IP","27",1,20,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Sparisoma aurofrenatum","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Scarus taeniopterus","IP","15",1,20,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Scarus taeniopterus","IP","15",1,20,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Sparisoma aurofrenatum","IP","15",1,20,5
-"Bonaire","Karpata",2019-09-10,1,15.8,"Sparisoma aurofrenatum","TP","24",1,20,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Sparisoma viride","IP","26",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Sparisoma viride","TP","34",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Scarus taeniopterus","IP","17",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Scarus taeniopterus","IP","16",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-10,2,14.6,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Karpata",2019-09-10,3,14.3,"Sparisoma aurofrenatum","TP","24",1,20,5
-"Bonaire","Karpata",2019-09-10,3,14.3,"Sparisoma viride","TP","31",1,20,5
-"Bonaire","Karpata",2019-09-10,3,14.3,"Scarus vetula","TP","32",1,20,5
-"Bonaire","Karpata",2019-09-10,3,14.3,"Scarus vetula","IP","29",1,20,5
-"Bonaire","Karpata",2019-09-10,3,14.3,"Sparisoma aurofrenatum","IP","15",1,20,5
-"Bonaire","Karpata",2019-09-10,4,14.6,"Scarus taeniopterus","TP","25",1,20,5
-"Bonaire","Karpata",2019-09-10,4,14.6,"Scarus taeniopterus","TP","21",1,20,5
-"Bonaire","Karpata",2019-09-10,4,14.6,"Sparisoma aurofrenatum","TP","22",1,20,5
-"Bonaire","Karpata",2019-09-10,5,14,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","TP","25",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","TP","22",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","IP","17",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","IP","16",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-10,5,14,"Sparisoma aurofrenatum","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-10,6,13.4,"Sparisoma viride","IP","24",1,20,5
-"Bonaire","Karpata",2019-09-10,6,13.4,"Sparisoma viride","TP","33",1,20,5
-"Bonaire","Karpata",2019-09-10,6,13.4,"Scarus taeniopterus","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-10,6,13.4,"Scarus vetula","IP","26",1,20,5
-"Bonaire","Karpata",2019-09-10,6,13.4,"Scarus taeniopterus","TP","23",1,20,5
-"Bonaire","Karpata",2019-09-10,6,13.4,"Scarus vetula","IP","21",1,20,5
-"Bonaire","Karpata",2019-09-10,7,6.1,"Sparisoma viride","IP","28",1,19,5
-"Bonaire","Karpata",2019-09-10,7,6.1,"Sparisoma viride","IP","26",1,19,5
-"Bonaire","Karpata",2019-09-10,7,6.1,"Scarus vetula","IP","28",1,19,5
-"Bonaire","Karpata",2019-09-10,7,6.1,"Sparisoma viride","IP","18",1,19,5
-"Bonaire","Karpata",2019-09-10,7,6.1,"Scarus vetula","TP","32",1,19,5
-"Bonaire","Karpata",2019-09-10,7,6.1,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Sparisoma viride","IP","27",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Scarus vetula","TP","32",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Scarus vetula","IP","27",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Scarus taeniopterus","IP","17",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Scarus taeniopterus","TP","26",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Scarus taeniopterus","TP","25",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Sparisoma viride","IP","27",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Sparisoma viride","IP","27",1,16,5
-"Bonaire","Karpata",2019-09-10,8,6.4,"Sparisoma aurofrenatum","IP","15",1,16,5
-"Bonaire","Karpata",2019-09-10,9,5.8,"Scarus vetula","IP","24",1,17,5
-"Bonaire","Karpata",2019-09-10,9,5.8,"Sparisoma viride","IP","18",1,17,5
-"Bonaire","Karpata",2019-09-10,9,5.8,"Scarus vetula","TP","33",1,17,5
-"Bonaire","Karpata",2019-09-10,9,5.8,"Sparisoma viride","IP","15",1,17,5
-"Bonaire","Karpata",2019-09-10,9,5.8,"Scarus vetula","IP","27",1,17,5
-"Bonaire","Karpata",2019-09-10,10,6.4,"Scarus taeniopterus","TP","26",1,17,5
-"Bonaire","Karpata",2019-09-10,10,6.4,"Scarus taeniopterus","IP","27",1,17,5
-"Bonaire","Karpata",2019-09-10,11,6.1,"Scarus taeniopterus","IP","16",1,16,5
-"Bonaire","Karpata",2019-09-10,11,6.1,"Sparisoma viride","IP","15",1,16,5
-"Bonaire","Karpata",2019-09-10,11,6.1,"Scarus vetula","IP","19",1,16,5
-"Bonaire","Karpata",2019-09-10,11,6.1,"Scarus vetula","TP","33",1,16,5
-"Bonaire","Karpata",2019-09-10,11,6.1,"Sparisoma aurofrenatum","IP","15",1,16,5
-"Bonaire","Karpata",2019-09-10,11,6.1,"Sparisoma aurofrenatum","IP","16",1,16,5
-"Bonaire","Karpata",2019-09-10,12,6.1,"Sparisoma aurofrenatum","TP","24",1,16,5
-"Bonaire","Karpata",2019-09-10,12,6.1,"Scarus vetula","TP","31",1,16,5
-"Bonaire","Karpata",2019-09-10,12,6.1,"Scarus vetula","IP","27",1,16,5
-"Bonaire","Karpata",2019-09-10,12,6.1,"Sparisoma viride","IP","17",1,16,5
-"Bonaire","Karpata",2019-09-10,12,6.1,"Scarus taeniopterus","IP","19",1,16,5
-"Bonaire","Karpata",2019-09-10,13,5.5,"Scarus taeniopterus","TP","25",1,16,5
-"Bonaire","Karpata",2019-09-10,13,5.5,"Scarus vetula","IP","16",1,16,5
-"Bonaire","Karpata",2019-09-10,13,5.5,"Scarus vetula","IP","22",1,16,5
-"Bonaire","Karpata",2019-09-10,13,5.5,"Scarus vetula","IP","28",1,16,5
-"Bonaire","Karpata",2019-09-10,13,5.5,"Sparisoma viride","IP","27",1,16,5
-"Bonaire","Karpata",2019-09-10,13,5.5,"Scarus taeniopterus","TP","26",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Scarus vetula","IP","26",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Scarus vetula","IP","25",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Sparisoma viride","IP","16",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Sparisoma viride","IP","26",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Sparisoma aurofrenatum","IP","29",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Scarus taeniopterus","IP","19",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Scarus taeniopterus","IP","15",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Scarus taeniopterus","IP","16",1,16,5
-"Bonaire","Karpata",2019-09-10,14,5.8,"Sparisoma aurofrenatum","IP","15",1,16,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Scarus vetula","TP","32",1,17,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Karpata",2019-09-10,15,4.9,"Scarus vetula","IP","24",1,17,5
-"Bonaire","Tolo",2019-09-10,1,14.3,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-10,1,14.3,"Scarus taeniopterus","IP","17",1,19,5
-"Bonaire","Tolo",2019-09-10,1,14.3,"Scarus taeniopterus","IP","16",1,19,5
-"Bonaire","Tolo",2019-09-10,1,14.3,"Sparisoma viride","TP","32",1,19,5
-"Bonaire","Tolo",2019-09-10,1,14.3,"Scarus taeniopterus","TP","26",1,19,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Scarus vetula","IP","28",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Scarus taeniopterus","IP","21",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Scarus taeniopterus","IP","16",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-10,2,15.2,"Sparisoma viride","IP","28",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Sparisoma aurofrenatum","IP","16",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Sparisoma viride","IP","25",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Tolo",2019-09-10,3,15.5,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Tolo",2019-09-10,4,15.2,"Scarus vetula","TP","32",1,20,5
-"Bonaire","Tolo",2019-09-10,4,15.2,"Sparisoma viride","TP","31",1,20,5
-"Bonaire","Tolo",2019-09-10,4,15.2,"Scarus taeniopterus","IP","19",1,20,5
-"Bonaire","Tolo",2019-09-10,4,15.2,"Scarus vetula","IP","26",1,20,5
-"Bonaire","Tolo",2019-09-10,4,15.2,"Scarus taeniopterus","TP","25",1,20,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","IP","20",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","IP","17",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus iseri","TP","24",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Tolo",2019-09-10,5,15.2,"Scarus taeniopterus","TP","23",1,18,5
-"Bonaire","Tolo",2019-09-10,6,7,"Sparisoma viride","IP","27",1,16,5
-"Bonaire","Tolo",2019-09-10,6,7,"Scarus vetula","TP","32",1,16,5
-"Bonaire","Tolo",2019-09-10,6,7,"Scarus taeniopterus","TP","27",1,16,5
-"Bonaire","Tolo",2019-09-10,6,7,"Sparisoma viride","IP","15",1,16,5
-"Bonaire","Tolo",2019-09-10,6,7,"Scarus vetula","IP","27",1,16,5
-"Bonaire","Tolo",2019-09-10,6,7,"Scarus taeniopterus","IP","15",1,16,5
-"Bonaire","Tolo",2019-09-10,7,7,"Scarus vetula","IP","27",1,17,5
-"Bonaire","Tolo",2019-09-10,7,7,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Tolo",2019-09-10,7,7,"Sparisoma aurofrenatum","TP","22",1,17,5
-"Bonaire","Tolo",2019-09-10,7,7,"Scarus vetula","IP","17",1,17,5
-"Bonaire","Tolo",2019-09-10,7,7,"Scarus vetula","IP","20",1,17,5
-"Bonaire","Tolo",2019-09-10,7,7,"Sparisoma aurofrenatum","TP","23",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma viride","TP","32",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma aurofrenatum","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma rubripinne","IP","28",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Scarus vetula","IP","21",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Scarus vetula","IP","25",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Scarus vetula","TP","33",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Sparisoma viride","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-10,8,6.7,"Scarus vetula","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Sparisoma viride","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Scarus vetula","IP","25",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Scarus vetula","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Scarus vetula","TP","33",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Sparisoma viride","TP","31",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,9,6.7,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Scarus vetula","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Scarus taeniopterus","TP","27",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Sparisoma viride","IP","28",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Scarus vetula","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-10,10,6.7,"Sparisoma viride","IP","24",1,18,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","16",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","16",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","TP","25",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","TP","24",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus vetula","TP","28",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","19",1,19,5
-"Bonaire","Tolo",2019-09-10,11,7,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-10,12,6.7,"Sparisoma rubripinne","TP","27",1,20,5
-"Bonaire","Tolo",2019-09-10,12,6.7,"Sparisoma aurofrenatum","IP","15",1,20,5
-"Bonaire","Tolo",2019-09-10,12,6.7,"Sparisoma viride","TP","31",1,20,5
-"Bonaire","Tolo",2019-09-10,12,6.7,"Scarus vetula","IP","25",1,20,5
-"Bonaire","Tolo",2019-09-10,12,6.7,"Sparisoma viride","IP","26",1,20,5
-"Bonaire","Tolo",2019-09-10,12,6.7,"Sparisoma viride","IP","15",1,20,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Scarus vetula","TP","33",1,17,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Sparisoma chrysopterum","IP","28",1,17,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Scarus taeniopterus","TP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Sparisoma viride","IP","28",1,17,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Sparisoma viride","IP","27",1,17,5
-"Bonaire","Tolo",2019-09-10,13,6.7,"Sparisoma viride","IP","25",1,17,5
-"Bonaire","Tolo",2019-09-10,14,6.1,"Sparisoma viride","TP","32",1,19,5
-"Bonaire","Tolo",2019-09-10,14,6.1,"Scarus vetula","IP","26",1,19,5
-"Bonaire","Tolo",2019-09-10,14,6.1,"Sparisoma aurofrenatum","IP","17",1,19,5
-"Bonaire","Tolo",2019-09-10,14,6.1,"Scarus vetula","TP","33",1,19,5
-"Bonaire","Tolo",2019-09-10,14,6.1,"Scarus taeniopterus","IP","16",1,19,5
-"Bonaire","Tolo",2019-09-10,14,6.1,"Scarus vetula","TP","31",1,19,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Scarus vetula","IP","28",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Sparisoma viride","TP","32",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Sparisoma viride","IP","15",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Sparisoma viride","IP","15",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Sparisoma viride","IP","26",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Scarus taeniopterus","IP","15",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Scarus vetula","IP","26",1,16,5
-"Bonaire","Tolo",2019-09-10,15,5.8,"Scarus vetula","IP","27",1,16,5
-"Bonaire","Tolo",2019-09-11,16,14.6,"Sparisoma aurofrenatum","TP","24",1,16,5
-"Bonaire","Tolo",2019-09-11,16,14.6,"Sparisoma aurofrenatum","TP","26",1,16,5
-"Bonaire","Tolo",2019-09-11,16,14.6,"Scarus vetula","IP","27",1,16,5
-"Bonaire","Tolo",2019-09-11,16,14.6,"Scarus iseri","IP","16",1,16,5
-"Bonaire","Tolo",2019-09-11,16,14.6,"Scarus taeniopterus","TP","26",1,16,5
-"Bonaire","Tolo",2019-09-11,16,14.6,"Scarus taeniopterus","TP","25",1,16,5
-"Bonaire","Tolo",2019-09-11,17,14.6,"Scarus taeniopterus","IP","18",1,19,5
-"Bonaire","Tolo",2019-09-11,17,14.6,"Sparisoma viride","TP","32",1,19,5
-"Bonaire","Tolo",2019-09-11,17,14.6,"Scarus taeniopterus","IP","18",1,19,5
-"Bonaire","Tolo",2019-09-11,17,14.6,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-11,17,14.6,"Sparisoma aurofrenatum","TP","25",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Sparisoma viride","IP","27",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Sparisoma viride","IP","28",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Sparisoma viride","IP","26",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Scarus taeniopterus","TP","26",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Sparisoma viride","TP","33",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Scarus taeniopterus","TP","27",1,19,5
-"Bonaire","Tolo",2019-09-11,18,14.3,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Tolo",2019-09-11,19,14,"Sparisoma chrysopterum","TP","31",1,17,5
-"Bonaire","Tolo",2019-09-11,19,14,"Scarus taeniopterus","TP","26",1,17,5
-"Bonaire","Tolo",2019-09-11,19,14,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,19,14,"Scarus vetula","TP","32",1,17,5
-"Bonaire","Tolo",2019-09-11,19,14,"Scarus taeniopterus","IP","17",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","TP","27",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","IP","19",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","IP","18",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus vetula","IP","27",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","IP","17",1,17,5
-"Bonaire","Tolo",2019-09-11,20,14,"Scarus taeniopterus","IP","19",1,17,5
-"Bonaire","Tolo",2019-09-11,21,14,"Scarus taeniopterus","TP","26",1,17,5
-"Bonaire","Tolo",2019-09-11,21,14,"Scarus taeniopterus","IP","19",1,17,5
-"Bonaire","Tolo",2019-09-11,21,14,"Scarus taeniopterus","IP","17",1,17,5
-"Bonaire","Tolo",2019-09-11,21,14,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,21,14,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,21,14,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,22,14.3,"Scarus taeniopterus","IP","19",1,16,5
-"Bonaire","Tolo",2019-09-11,22,14.3,"Scarus taeniopterus","IP","15",1,16,5
-"Bonaire","Tolo",2019-09-11,22,14.3,"Scarus taeniopterus","IP","17",1,16,5
-"Bonaire","Tolo",2019-09-11,23,14,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Scarus taeniopterus","IP","17",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Scarus taeniopterus","IP","18",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Scarus taeniopterus","TP","25",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Sparisoma viride","IP","26",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,23,14,"Sparisoma viride","TP","33",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","IP","19",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","TP","25",1,17,5
-"Bonaire","Tolo",2019-09-11,24,13.7,"Scarus taeniopterus","TP","24",1,17,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Sparisoma viride","IP","18",1,16,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Sparisoma viride","IP","26",1,16,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Sparisoma aurofrenatum","TP","23",1,16,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Scarus taeniopterus","IP","18",1,16,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Scarus taeniopterus","IP","16",1,16,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Scarus taeniopterus","TP","27",1,16,5
-"Bonaire","Tolo",2019-09-11,25,13.7,"Sparisoma viride","TP","33",1,16,5
-"Bonaire","Tolo",2019-09-11,26,7.6,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Tolo",2019-09-11,26,7.6,"Sparisoma viride","IP","26",1,18,5
-"Bonaire","Tolo",2019-09-11,26,7.6,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Tolo",2019-09-11,26,7.6,"Scarus vetula","TP","33",1,18,5
-"Bonaire","Tolo",2019-09-11,26,7.6,"Sparisoma aurofrenatum","TP","23",1,18,5
-"Bonaire","Tolo",2019-09-11,26,7.6,"Sparisoma viride","IP","28",1,18,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus taeniopterus","IP","15",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus taeniopterus","IP","16",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus taeniopterus","IP","17",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus vetula","IP","25",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus vetula","IP","28",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus vetula","IP","22",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Sparisoma viride","IP","25",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Scarus vetula","TP","30",1,20,5
-"Bonaire","Tolo",2019-09-11,27,8.2,"Sparisoma aurofrenatum","TP","25",1,20,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus taeniopterus","IP","16",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus vetula","IP","25",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus vetula","TP","33",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Scarus vetula","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-11,28,7.6,"Sparisoma aurofrenatum","IP","23",1,18,5
-"Bonaire","Tolo",2019-09-11,29,7.6,"Scarus taeniopterus","TP","25",1,17,5
-"Bonaire","Tolo",2019-09-11,29,7.6,"Scarus taeniopterus","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,29,7.6,"Scarus vetula","TP","32",1,17,5
-"Bonaire","Tolo",2019-09-11,29,7.6,"Scarus taeniopterus","IP","16",1,17,5
-"Bonaire","Tolo",2019-09-11,29,7.6,"Sparisoma aurofrenatum","IP","15",1,17,5
-"Bonaire","Tolo",2019-09-11,29,7.6,"Sparisoma aurofrenatum","TP","22",1,17,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Scarus taeniopterus","IP","16",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Scarus vetula","IP","26",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Sparisoma aurofrenatum","TP","23",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Scarus vetula","TP","31",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Scarus iseri","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Sparisoma viride","TP","33",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Sparisoma viride","IP","29",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Sparisoma viride","IP","30",1,18,5
-"Bonaire","Tolo",2019-09-11,30,7.6,"Sparisoma viride","IP","28",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Sparisoma viride","IP","27",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Scarus iseri","TP","28",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Scarus taeniopterus","TP","27",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Sparisoma viride","IP","26",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Scarus vetula","TP","31",1,18,5
-"Bonaire","Tolo",2019-09-11,31,7.3,"Scarus taeniopterus","TP","25",1,18,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Scarus taeniopterus","TP","27",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Sparisoma viride","IP","29",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Scarus vetula","TP","29",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Scarus taeniopterus","IP","15",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Scarus taeniopterus","IP","16",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Scarus taeniopterus","TP","26",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Sparisoma viride","IP","26",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Sparisoma viride","IP","27",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Scarus vetula","IP","16",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Sparisoma aurofrenatum","IP","15",1,20,5
-"Bonaire","Tolo",2019-09-11,32,7.6,"Sparisoma aurofrenatum","IP","17",1,20,5
-"Bonaire","Karpata",2019-09-11,16,13.1,"Sparisoma viride","IP","28",1,17,5
-"Bonaire","Karpata",2019-09-11,16,13.1,"Sparisoma viride","IP","25",1,17,5
-"Bonaire","Karpata",2019-09-11,16,13.1,"Scarus taeniopterus","IP","17",1,17,5
-"Bonaire","Karpata",2019-09-11,17,13.7,"Scarus taeniopterus","TP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,17,13.7,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-11,17,13.7,"Scarus vetula","IP","29",1,18,5
-"Bonaire","Karpata",2019-09-11,18,13.7,"Scarus vetula","TP","30",1,16,5
-"Bonaire","Karpata",2019-09-11,18,13.7,"Scarus vetula","IP","18",1,16,5
-"Bonaire","Karpata",2019-09-11,18,13.7,"Sparisoma aurofrenatum","TP","24",1,16,5
-"Bonaire","Karpata",2019-09-11,19,13.4,"Sparisoma aurofrenatum","TP","23",1,18,5
-"Bonaire","Karpata",2019-09-11,19,13.4,"Scarus taeniopterus","TP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,19,13.4,"Scarus vetula","IP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,19,13.4,"Sparisoma viride","IP","29",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Scarus vetula","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Scarus vetula","IP","16",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma viride","IP","25",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma viride","IP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Scarus iseri","IP","16",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma chrysopterum","TP","28",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma chrysopterum","IP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Scarus vetula","TP","31",1,18,5
-"Bonaire","Karpata",2019-09-11,20,6.1,"Sparisoma viride","IP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma aurofrenatum","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma aurofrenatum","IP","18",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma aurofrenatum","TP","24",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Scarus vetula","IP","24",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Scarus vetula","IP","22",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Scarus vetula","IP","18",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Scarus vetula","TP","32",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma aurofrenatum","TP","23",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma viride","TP","32",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma viride","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Sparisoma viride","IP","27",1,18,5
-"Bonaire","Karpata",2019-09-11,21,5.8,"Scarus taeniopterus","IP","15",1,18,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Scarus taeniopterus","IP","15",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Scarus vetula","TP","32",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Scarus vetula","TP","30",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Sparisoma viride","IP","27",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Scarus vetula","IP","26",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Scarus vetula","IP","23",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Sparisoma viride","TP","33",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Scarus vetula","IP","23",1,19,5
-"Bonaire","Karpata",2019-09-11,22,6.7,"Sparisoma aurofrenatum","IP","15",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Scarus taeniopterus","TP","26",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Scarus taeniopterus","TP","23",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Sparisoma viride","IP","15",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Sparisoma viride","IP","28",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Sparisoma aurofrenatum","TP","23",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Scarus vetula","IP","27",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Scarus vetula","IP","25",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Scarus vetula","TP","32",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Scarus vetula","TP","31",1,19,5
-"Bonaire","Karpata",2019-09-11,23,6.1,"Sparisoma aurofrenatum","IP","16",1,19,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Scarus taeniopterus","IP","17",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Sparisoma viride","IP","24",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Scarus vetula","TP","32",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Scarus taeniopterus","IP","15",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Scarus taeniopterus","IP","15",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Scarus vetula","IP","26",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Sparisoma viride","IP","28",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Sparisoma aurofrenatum","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-11,24,6.7,"Sparisoma viride","IP","27",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Scarus taeniopterus","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Scarus taeniopterus","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Scarus taeniopterus","IP","17",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Sparisoma aurofrenatum","IP","16",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Sparisoma aurofrenatum","IP","18",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Scarus vetula","TP","33",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Sparisoma viride","IP","28",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Sparisoma viride","IP","24",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Sparisoma viride","IP","27",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Scarus vetula","IP","26",1,20,5
-"Bonaire","Karpata",2019-09-11,25,6.4,"Sparisoma aurofrenatum","TP","24",1,20,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Sparisoma viride","IP","26",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Sparisoma viride","IP","25",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Scarus vetula","TP","32",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Scarus taeniopterus","IP","17",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Scarus taeniopterus","IP","18",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Scarus taeniopterus","TP","25",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Scarus taeniopterus","TP","26",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Sparisoma aurofrenatum","TP","31",1,18,5
-"Bonaire","Karpata",2019-09-11,26,6.4,"Sparisoma viride","IP","28",1,18,5
-"Panamá","Arcoiris Reef",2013-08-20,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Arcoiris Reef",2013-08-20,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Casa Blanca",2013-07-08,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Casa Blanca",2013-07-08,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Cayo Roldan",2013-08-19,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Cayo Roldan",2013-08-19,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Crawl Cay",2013-07-10,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Finca",2013-07-11,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Finca",2013-07-11,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Isla Pastores Inside",2013-08-19,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Isla Pastores Outside",2013-08-20,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Isla Pastores Outside",2013-08-20,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Mystery Spot",2013-07-09,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Mystery Spot",2013-07-09,2,5,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Seagal",2013-07-09,1,10,"No parrotfishes",NA,NA,0,25,4
-"Panamá","Seagal",2013-07-09,2,5,"No parrotfishes",NA,NA,0,25,4
+"region","site","date","transect","depth_m","survey_l_m","survey_w_m","species","phase","size_cm","count","a","b","size_cm_est","weight_g"
+"Panamá","Arcoiris Reef",2013-08-20,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Arcoiris Reef",2013-08-20,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Casa Blanca",2013-07-08,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Casa Blanca",2013-07-08,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Cayo Roldan",2013-08-19,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Cayo Roldan",2013-08-19,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Crawl Cay",2013-07-10,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Crawl Cay",2013-07-10,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Finca",2013-07-11,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Finca",2013-07-11,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Isla Pastores Inside",2013-08-19,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Isla Pastores Inside",2013-08-19,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Isla Pastores Outside",2013-08-20,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Isla Pastores Outside",2013-08-20,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Mystery Spot",2013-07-09,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Mystery Spot",2013-07-09,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Punta STRI",2013-07-11,1,10,25,4,"Sparisoma viride","IP","25 to 30",1,0.025067,2.9214,27.5,401.762032802474
+"Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","15 to 20",1,0.025067,2.9214,17.5,107.278752948417
+"Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","15 to 20",1,0.025067,2.9214,17.5,107.278752948417
+"Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
+"Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
+"Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","25 to 30",1,0.025067,2.9214,27.5,401.762032802474
+"Panamá","Seagal",2013-07-09,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Seagal",2013-07-09,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Scarus vetula","TP","25",1,0.01445,3.03,25,248.671533964271
+"Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"Florida","Molasses Reef",2013-07-02,2,6.1,25,4,"Scarus taeniopterus","TP","28",1,0.144378,2.3852,28,408.566127068819
+"Florida","Molasses Reef",2013-07-02,2,6.1,25,4,"Sparisoma viride","TP","35",1,0.025067,2.9214,35,812.723365595372
+"Florida","Molasses Reef",2013-07-02,2,6.1,25,4,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Florida","Molasses Reef",2013-07-02,2,6.1,25,4,"Sparisoma viride","IP","17",1,0.025067,2.9214,17,98.5679762542753
+"Florida","Molasses Reef",2013-07-02,2,6.1,25,4,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Florida","Molasses Reef",2013-07-02,2,6.1,25,4,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Florida","French Reef",2013-08-10,1,9,25,4,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Florida","French Reef",2013-08-10,2,9.8,25,4,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Florida","French Reef",2013-08-10,3,7,25,4,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Florida","French Reef",2013-08-10,3,7,25,4,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Florida","French Reef",2013-08-10,4,7.8,25,4,"Scarus vetula","TP","25",1,0.01445,3.03,25,248.671533964271
+"Florida","French Reef",2013-08-10,4,7.8,25,4,"Sparisoma viride","IP","17",1,0.025067,2.9214,17,98.5679762542753
+"Florida","Conch Reef",2013-08-23,1,5.8,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Florida","Conch Reef",2013-08-23,2,5.5,25,4,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"Florida","Conch Reef",2013-08-23,2,5.5,25,4,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"Florida","Conch Reef",2013-08-23,2,5.5,25,4,"Sparisoma viride","TP","22",1,0.025067,2.9214,22,209.341812872094
+"Florida","Conch Reef",2013-08-23,2,5.5,25,4,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"Florida","Conch Reef",2013-08-23,2,5.5,25,4,"Scarus vetula","TP","25",1,0.01445,3.03,25,248.671533964271
+"Florida","Conch Reef",2013-08-23,2,5.5,25,4,"Scarus vetula","IP","18",1,0.01445,3.03,18,91.9059307409809
+"Florida","Davis Reef",2013-08-23,1,6.7,25,4,"Sparisoma viride","TP","25",1,0.025067,2.9214,25,304.119524204388
+"Florida","Davis Reef",2013-08-23,1,6.7,25,4,"Sparisoma viride","TP","22",1,0.025067,2.9214,22,209.341812872094
+"Florida","Davis Reef",2013-08-23,1,6.7,25,4,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Florida","Davis Reef",2013-08-23,1,6.7,25,4,"Scarus vetula","IP","16",1,0.01445,3.03,16,64.3207936553023
+"Florida","Davis Reef",2013-08-23,1,6.7,25,4,"Scarus vetula","IP","16",1,0.01445,3.03,16,64.3207936553023
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Scarus vetula","TP","26",1,0.01445,3.03,26,280.050976571214
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Sparisoma viride","IP","19",1,0.025067,2.9214,19,136.412174163732
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Sparisoma viride","TP","20",1,0.025067,2.9214,20,158.464283154516
+"Florida","Davis Reef",2013-08-23,2,6.7,25,4,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"Florida","Davis Reef",2013-08-23,3,6.1,25,4,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Florida","Davis Reef",2013-08-23,3,6.1,25,4,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"Florida","Davis Reef",2013-08-23,3,6.1,25,4,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"Florida","Davis Reef",2013-08-23,3,6.1,25,4,"Sparisoma viride","IP","21",1,0.025067,2.9214,21,182.740079141825
+"Florida","Davis Reef",2013-08-23,3,6.1,25,4,"Sparisoma viride","TP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","Cane Bay",2018-07-08,1,14,16,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"St. Croix","Cane Bay",2018-07-08,2,14.3,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Cane Bay",2018-07-08,3,16.2,20,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"St. Croix","Cane Bay",2018-07-08,4,15.2,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,5,14,17,5,"Scarus taeniopterus","TP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Cane Bay",2018-07-08,6,16.2,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,7,15.5,16,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,8,14.9,18,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,9,15.2,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,10,11.3,17,5,"Scarus taeniopterus","TP","28",1,0.144378,2.3852,28,408.566127068819
+"St. Croix","Cane Bay",2018-07-08,11,10.4,16,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"St. Croix","Cane Bay",2018-07-08,12,10.7,16,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","Cane Bay",2018-07-08,13,10.4,16,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,14,10.7,17,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"St. Croix","Cane Bay",2018-07-08,15,10.7,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,16,10.4,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-08,17,9.8,20,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Salt River",2018-07-27,1,14.9,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,1,14.9,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Salt River",2018-07-27,1,14.9,18,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Salt River",2018-07-27,2,17.7,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Salt River",2018-07-27,3,15.8,17,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"St. Croix","Salt River",2018-07-27,3,15.8,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Salt River",2018-07-27,3,15.8,17,5,"Sparisoma viride","TP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","Salt River",2018-07-27,3,15.8,17,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Salt River",2018-07-27,3,15.8,17,5,"Sparisoma viride","TP","29",1,0.025067,2.9214,29,469.193375896473
+"St. Croix","Salt River",2018-07-27,4,14.6,16,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Salt River",2018-07-27,5,8.2,16,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Salt River",2018-07-27,5,8.2,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,6,7.3,17,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"St. Croix","Salt River",2018-07-27,6,7.3,17,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"St. Croix","Salt River",2018-07-27,6,7.3,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,6,7.3,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Salt River",2018-07-27,7,7,17,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"St. Croix","Salt River",2018-07-27,7,7,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,7,7,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Salt River",2018-07-27,8,6.4,20,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Salt River",2018-07-27,8,6.4,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,8,6.4,20,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Salt River",2018-07-27,8,6.4,20,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Salt River",2018-07-27,8,6.4,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,8,6.4,20,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Salt River",2018-07-27,9,6.1,19,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"St. Croix","Salt River",2018-07-27,9,6.1,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Salt River",2018-07-27,9,6.1,19,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Salt River",2018-07-27,10,15.8,16,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Salt River",2018-07-27,11,13.1,18,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"St. Croix","Salt River",2018-07-27,12,15.2,19,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"St. Croix","Salt River",2018-07-27,13,14.6,20,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Salt River",2018-07-27,14,13.1,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Salt River",2018-07-27,14,13.1,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Salt River",2018-07-27,14,13.1,17,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Salt River",2018-07-27,15,14,19,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Salt River",2018-07-27,16,10.1,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Salt River",2018-07-27,17,8.8,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Salt River",2018-07-27,18,8.2,18,5,"Sparisoma viride","TP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","Salt River",2018-07-27,19,7.9,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Salt River",2018-07-27,19,7.9,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Northstar",2018-07-10,1,14.9,16,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Northstar",2018-07-10,2,15.5,16,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Northstar",2018-07-10,3,15.2,16,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,4,15.2,16,5,"Scarus taeniopterus","IP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,5,16.2,16,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"St. Croix","Northstar",2018-07-10,6,15.2,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Northstar",2018-07-10,6,15.2,16,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"St. Croix","Northstar",2018-07-10,7,11.6,16,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,7,11.6,16,5,"Scarus taeniopterus","IP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Northstar",2018-07-10,8,11.9,16,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","Northstar",2018-07-10,9,11.3,19,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,10,11.6,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Northstar",2018-07-10,11,11.3,16,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","Northstar",2018-07-10,11,11.3,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","Northstar",2018-07-10,12,11.6,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Northstar",2018-07-10,13,13.7,19,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","Northstar",2018-07-10,13,13.7,19,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,14,12.8,17,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,14,12.8,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","Northstar",2018-07-10,15,12.5,17,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,16,13.1,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Northstar",2018-07-10,16,13.1,19,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Northstar",2018-07-10,16,13.1,19,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,17,11.3,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Northstar",2018-07-10,18,11,18,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,18,11,18,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Northstar",2018-07-10,18,11,18,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Northstar",2018-07-10,18,11,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Northstar",2018-07-10,19,9.8,16,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,19,9.8,16,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"St. Croix","Northstar",2018-07-10,19,9.8,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Northstar",2018-07-10,20,9.1,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Northstar",2018-07-10,20,9.1,16,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Northstar",2018-07-10,20,9.1,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Northstar",2018-07-10,20,9.1,16,5,"Scarus taeniopterus","IP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Northstar",2018-07-10,20,9.1,16,5,"Scarus vetula","IP","17",1,0.01445,3.03,17,77.290849185865
+"St. Croix","Northstar",2018-07-10,21,9.1,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Northstar",2018-07-10,21,9.1,16,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,21,9.1,16,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Northstar",2018-07-10,22,8.5,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Northstar",2018-07-10,22,8.5,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Northstar",2018-07-10,22,8.5,18,5,"Scarus taeniopterus","TP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,22,8.5,18,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Northstar",2018-07-10,22,8.5,18,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Northstar",2018-07-10,22,8.5,18,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Northstar",2018-07-10,23,8.8,17,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,24,9.1,18,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Northstar",2018-07-10,24,9.1,18,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Northstar",2018-07-10,25,9.1,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Northstar",2018-07-10,25,9.1,17,5,"Scarus taeniopterus","TP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Northstar",2018-07-10,25,9.1,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Northstar",2018-07-10,26,8.5,19,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Northstar",2018-07-10,26,8.5,19,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","Northstar",2018-07-10,26,8.5,19,5,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","Northstar",2018-07-10,26,8.5,19,5,"Sparisoma viride","IP","23",1,0.025067,2.9214,23,238.371352791311
+"St. Croix","Northstar",2018-07-10,26,8.5,19,5,"Sparisoma viride","IP","23",1,0.025067,2.9214,23,238.371352791311
+"St. Croix","Northstar",2018-07-10,26,8.5,19,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"St. Croix","Northstar",2018-07-10,27,8.2,16,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"St. Croix","Northstar",2018-07-10,27,8.2,16,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","Northstar",2018-07-10,27,8.2,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Teague Bay",2018-07-11,1,9.1,20,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"St. Croix","Teague Bay",2018-07-11,1,9.1,20,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","Teague Bay",2018-07-11,2,10.1,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,3,8.5,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,4,11,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,5,7.3,16,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","Teague Bay",2018-07-11,6,5.2,20,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","Teague Bay",2018-07-11,7,5.2,18,5,"Sparisoma viride","IP","17",1,0.025067,2.9214,17,98.5679762542753
+"St. Croix","Teague Bay",2018-07-11,7,5.2,18,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","Teague Bay",2018-07-11,7,5.2,18,5,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","Teague Bay",2018-07-11,8,5.5,20,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"St. Croix","Teague Bay",2018-07-11,9,5.8,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,10,4.6,18,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,11,5.2,16,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,12,5.2,17,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"St. Croix","Teague Bay",2018-07-11,12,5.2,17,5,"Scarus vetula","IP","15",1,0.01445,3.03,15,52.8961863676089
+"St. Croix","Teague Bay",2018-07-11,13,6.4,18,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,14,5.8,19,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","Teague Bay",2018-07-11,14,5.8,19,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"St. Croix","Teague Bay",2018-07-11,15,5.2,19,5,"Sparisoma viride","TP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","Teague Bay",2018-07-11,15,5.2,19,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Teague Bay",2018-07-11,16,8.8,20,5,"Scarus taeniopterus","IP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Teague Bay",2018-07-11,17,7.3,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,18,7,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,19,6.4,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,20,7,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,21,6.7,18,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"St. Croix","Teague Bay",2018-07-11,22,5.2,17,5,"Scarus vetula","IP","15",1,0.01445,3.03,15,52.8961863676089
+"St. Croix","Teague Bay",2018-07-11,23,4.6,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,24,5.5,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Teague Bay",2018-07-11,25,5.5,19,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","BIRNM S. Forereef",2018-07-12,1,6.4,16,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM S. Forereef",2018-07-12,1,6.4,16,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","BIRNM S. Forereef",2018-07-12,2,7.6,18,5,"Sparisoma viride","TP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,18,5,"Sparisoma viride","TP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,18,5,"Sparisoma viride","TP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM S. Forereef",2018-07-12,3,8.5,18,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"St. Croix","BIRNM S. Forereef",2018-07-12,4,9.4,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","BIRNM S. Forereef",2018-07-12,5,9.8,16,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","BIRNM S. Forereef",2018-07-12,6,9.1,19,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM S. Forereef",2018-07-12,7,8.5,20,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"St. Croix","BIRNM S. Forereef",2018-07-12,8,8.5,19,5,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,17,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"St. Croix","BIRNM S. Forereef",2018-07-12,9,8.8,17,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"St. Croix","BIRNM S. Forereef",2018-07-12,10,9.8,19,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"St. Croix","BIRNM S. Forereef",2018-07-12,11,9.1,18,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"St. Croix","BIRNM S. Forereef",2018-07-12,11,9.1,18,5,"Sparisoma viride","TP","34",1,0.025067,2.9214,34,746.732183210758
+"St. Croix","BIRNM S. Forereef",2018-07-12,12,7.6,20,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM S. Forereef",2018-07-12,12,7.6,20,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,18,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,18,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,18,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,18,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM S. Forereef",2018-07-12,13,4.9,18,5,"Sparisoma viride","TP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,19,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,19,5,"Sparisoma viride","TP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM S. Forereef",2018-07-12,14,6.7,19,5,"Sparisoma viride","TP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,19,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,19,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,19,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"St. Croix","BIRNM S. Forereef",2018-07-12,15,6.1,19,5,"Sparisoma viride","TP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,18,5,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,18,5,"Sparisoma viride","TP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,18,5,"Sparisoma viride","TP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","BIRNM S. Forereef",2018-07-12,16,5.8,18,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM S. Forereef",2018-07-12,17,5.2,18,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","BIRNM S. Forereef",2018-07-12,17,5.2,18,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,17,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,17,5,"Sparisoma viride","IP","21",1,0.025067,2.9214,21,182.740079141825
+"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,17,5,"Sparisoma viride","IP","23",1,0.025067,2.9214,23,238.371352791311
+"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,17,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","BIRNM S. Forereef",2018-07-12,18,6.4,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,16,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,16,5,"Sparisoma viride","TP","29",1,0.025067,2.9214,29,469.193375896473
+"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,16,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM S. Forereef",2018-07-12,19,6.1,16,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"St. Croix","BIRNM S. Forereef",2018-07-12,20,5.5,16,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","BIRNM S. Forereef",2018-07-12,20,5.5,16,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Sparisoma viride","TP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Sparisoma viride","TP","29",1,0.025067,2.9214,29,469.193375896473
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Sparisoma viride","TP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM S. Forereef",2018-07-12,21,4.6,18,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,19,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,19,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,19,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,19,5,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","BIRNM S. Forereef",2018-07-12,22,4.9,19,5,"Sparisoma viride","TP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM S. Forereef",2018-07-12,23,5.5,17,5,"Sparisoma viride","TP","23",1,0.025067,2.9214,23,238.371352791311
+"St. Croix","BIRNM S. Forereef",2018-07-12,23,5.5,17,5,"Sparisoma viride","TP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","BIRNM S. Forereef",2018-07-12,23,5.5,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,16,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,16,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Scuba Cut",2018-07-12,1,6.1,16,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"St. Croix","BIRNM Scuba Cut",2018-07-12,2,6.1,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,17,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","BIRNM Scuba Cut",2018-07-12,3,7.3,17,5,"Scarus taeniopterus","TP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,17,5,"Sparisoma viride","IP","29",1,0.025067,2.9214,29,469.193375896473
+"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,17,5,"Sparisoma viride","IP","22",1,0.025067,2.9214,22,209.341812872094
+"St. Croix","BIRNM Scuba Cut",2018-07-12,4,6.7,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","BIRNM Scuba Cut",2018-07-12,5,7,18,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"St. Croix","BIRNM Scuba Cut",2018-07-12,5,7,18,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM Scuba Cut",2018-07-12,6,7,17,5,"Scarus vetula","IP","15",1,0.01445,3.03,15,52.8961863676089
+"St. Croix","BIRNM Scuba Cut",2018-07-12,6,7,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","BIRNM Scuba Cut",2018-07-12,7,7.3,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,16,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","BIRNM Scuba Cut",2018-07-12,8,8.5,16,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,20,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,20,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,20,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,20,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,20,5,"Sparisoma viride","TP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM Lagoon",2018-07-12,1,2.4,20,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,19,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,19,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,19,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,19,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Lagoon",2018-07-12,2,2.4,19,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,17,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,17,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,17,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,17,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"St. Croix","BIRNM Lagoon",2018-07-12,3,1.5,17,5,"Scarus vetula","IP","18",1,0.01445,3.03,18,91.9059307409809
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Sparisoma viride","IP","29",1,0.025067,2.9214,29,469.193375896473
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Sparisoma viride","IP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","BIRNM Lagoon",2018-07-12,4,1.5,18,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Scarus vetula","TP","27",1,0.01445,3.03,27,313.978602778686
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"St. Croix","BIRNM Lagoon",2018-07-12,5,1.5,16,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,16,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,16,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,16,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,16,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,16,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"St. Croix","BIRNM Lagoon",2018-07-12,6,1.5,16,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"St. Croix","BIRNM Lagoon",2018-07-12,7,3,20,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"St. Croix","BIRNM Lagoon",2018-07-12,7,3,20,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"St. Croix","BIRNM Lagoon",2018-07-12,7,3,20,5,"Sparisoma viride","TP","28",1,0.025067,2.9214,28,423.477005854589
+"St. Croix","BIRNM Lagoon",2018-07-12,7,3,20,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,20,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,20,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,20,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,20,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"St. Croix","BIRNM Lagoon",2018-07-12,8,2.4,20,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,17,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,17,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","BIRNM Lagoon",2018-07-12,9,2.4,17,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,17,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","BIRNM Lagoon",2018-07-12,10,1.5,17,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,18,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,18,5,"Sparisoma viride","TP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,18,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"St. Croix","BIRNM Lagoon",2018-07-12,11,2.1,18,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"St. Croix","Long Reef",2018-07-13,1,12.8,16,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Long Reef",2018-07-13,2,13.4,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,3,13.1,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,4,13.7,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Long Reef",2018-07-13,5,12.2,17,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,6,13.7,16,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Long Reef",2018-07-13,7,12.2,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Long Reef",2018-07-13,7,12.2,18,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Long Reef",2018-07-13,8,10.4,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,9,10.1,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Long Reef",2018-07-13,10,9.4,17,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Long Reef",2018-07-13,11,9.4,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,12,9.4,18,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"St. Croix","Long Reef",2018-07-13,13,10.4,18,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,14,10.4,16,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,15,9.8,16,5,"Scarus vetula","TP","27",1,0.01445,3.03,27,313.978602778686
+"St. Croix","Long Reef",2018-07-13,15,9.8,16,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Long Reef",2018-07-13,15,9.8,16,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Long Reef",2018-07-13,15,9.8,16,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"St. Croix","Long Reef",2018-07-13,16,10.4,18,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","Long Reef",2018-07-13,16,10.4,18,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","Long Reef",2018-07-13,17,10.1,18,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,17,10.1,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Long Reef",2018-07-13,17,10.1,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Long Reef",2018-07-13,18,9.4,18,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,19,10.7,20,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Long Reef",2018-07-13,20,10.1,20,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Long Reef",2018-07-13,20,10.1,20,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,21,10.4,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Long Reef",2018-07-13,22,8.2,20,5,"Sparisoma viride","IP","21",1,0.025067,2.9214,21,182.740079141825
+"St. Croix","Long Reef",2018-07-13,22,8.2,20,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Long Reef",2018-07-13,22,8.2,20,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,22,8.2,20,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Long Reef",2018-07-13,23,7.9,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Long Reef",2018-07-13,24,7.6,17,5,"Scarus taeniopterus","TP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,25,7,18,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"St. Croix","Long Reef",2018-07-13,25,7,18,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"St. Croix","Long Reef",2018-07-13,26,8.2,19,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Long Reef",2018-07-13,27,8.5,17,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Long Reef",2018-07-13,27,8.5,17,5,"Sparisoma viride","IP","17",1,0.025067,2.9214,17,98.5679762542753
+"St. Croix","Long Reef",2018-07-13,28,7.3,19,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"St. Croix","Long Reef",2018-07-13,29,7,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Long Reef",2018-07-13,30,7,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-14,18,7.6,18,5,"Scarus taeniopterus","IP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Cane Bay",2018-07-14,19,8.2,19,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Cane Bay",2018-07-14,19,8.2,19,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"St. Croix","Cane Bay",2018-07-14,20,7.9,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Cane Bay",2018-07-14,20,7.9,18,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Cane Bay",2018-07-14,21,8.2,19,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Cane Bay",2018-07-14,21,8.2,19,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"St. Croix","Cane Bay",2018-07-14,21,8.2,19,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Cane Bay",2018-07-14,21,8.2,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Cane Bay",2018-07-14,22,8.5,17,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Cane Bay",2018-07-14,23,7.3,19,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-14,24,6.7,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Cane Bay",2018-07-14,24,6.7,19,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Cane Bay",2018-07-14,25,6.7,20,5,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"St. Croix","Cane Bay",2018-07-14,26,6.7,18,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Cane Bay",2018-07-14,26,6.7,18,5,"Scarus taeniopterus","IP","22",1,0.144378,2.3852,22,229.851636261276
+"St. Croix","Cane Bay",2018-07-14,26,6.7,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Cane Bay",2018-07-14,26,6.7,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Cane Bay",2018-07-14,26,6.7,18,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"St. Croix","Cane Bay",2018-07-14,27,6.7,19,5,"Scarus vetula","IP","18",1,0.01445,3.03,18,91.9059307409809
+"St. Croix","Cane Bay",2018-07-14,28,6.1,20,5,"Scarus vetula","IP","17",1,0.01445,3.03,17,77.290849185865
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"St. Croix","Cane Bay",2018-07-14,29,5.8,18,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"St. Croix","Cane Bay",2018-07-14,30,6.1,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Cane Bay",2018-07-14,30,6.1,18,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"St. Croix","Cane Bay",2018-07-14,30,6.1,18,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Cane Bay",2018-07-14,30,6.1,18,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"St. Croix","Cane Bay",2018-07-14,31,5.2,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"St. Croix","Cane Bay",2018-07-14,31,5.2,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"St. Croix","Cane Bay",2018-07-14,31,5.2,18,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"St. Croix","Cane Bay",2018-07-14,32,5.2,17,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Cliff",2019-09-07,1,17.1,17,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"Bonaire","Cliff",2019-09-07,1,17.1,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Cliff",2019-09-07,1,17.1,17,5,"Scarus taeniopterus","IP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Cliff",2019-09-07,1,17.1,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Cliff",2019-09-07,1,17.1,17,5,"Sparisoma viride","IP","19",1,0.025067,2.9214,19,136.412174163732
+"Bonaire","Cliff",2019-09-07,1,17.1,17,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Cliff",2019-09-07,2,11,17,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Cliff",2019-09-07,3,11.3,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Cliff",2019-09-07,3,11.3,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Cliff",2019-09-07,3,11.3,17,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Cliff",2019-09-07,3,11.3,17,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Cliff",2019-09-07,3,11.3,17,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Cliff",2019-09-07,3,11.3,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,16,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,16,5,"Sparisoma viride","IP","21",1,0.025067,2.9214,21,182.740079141825
+"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,16,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,16,5,"Scarus vetula","IP","15",1,0.01445,3.03,15,52.8961863676089
+"Bonaire","Bachelor's Beach",2019-09-09,1,9.4,16,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Scarus vetula","TP","34",1,0.01445,3.03,34,631.319153799793
+"Bonaire","Bachelor's Beach",2019-09-09,2,9.1,16,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Scarus vetula","IP","16",1,0.01445,3.03,16,64.3207936553023
+"Bonaire","Bachelor's Beach",2019-09-09,3,9.4,17,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,16,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,16,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,16,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,16,5,"Scarus taeniopterus","TP","28",1,0.144378,2.3852,28,408.566127068819
+"Bonaire","Bachelor's Beach",2019-09-09,4,11.9,16,5,"Sparisoma viride","TP","30",1,0.025067,2.9214,30,518.04131194931
+"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,19,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,19,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,19,5,"Scarus vetula","IP","29",1,0.01445,3.03,29,389.882534604984
+"Bonaire","Bachelor's Beach",2019-09-09,5,12.2,19,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Scarus vetula","IP","17",1,0.01445,3.03,17,77.290849185865
+"Bonaire","Bachelor's Beach",2019-09-09,6,11.6,17,5,"Scarus vetula","IP","18",1,0.01445,3.03,18,91.9059307409809
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Sparisoma viride","IP","29",1,0.025067,2.9214,29,469.193375896473
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Bachelor's Beach",2019-09-09,7,12.2,18,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Cliff",2019-09-09,4,9.1,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Cliff",2019-09-09,4,9.1,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Cliff",2019-09-09,4,9.1,18,5,"Sparisoma viride","IP","20",1,0.025067,2.9214,20,158.464283154516
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus taeniopterus","TP","28",1,0.144378,2.3852,28,408.566127068819
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Cliff",2019-09-09,5,10.4,16,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Karpata",2019-09-10,1,15.8,20,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-10,1,15.8,20,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Karpata",2019-09-10,1,15.8,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,1,15.8,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Sparisoma viride","TP","34",1,0.025067,2.9214,34,746.732183210758
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Karpata",2019-09-10,2,14.6,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,3,14.3,20,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Karpata",2019-09-10,3,14.3,20,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-10,3,14.3,20,5,"Scarus vetula","IP","29",1,0.01445,3.03,29,389.882534604984
+"Bonaire","Karpata",2019-09-10,4,14.6,20,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Karpata",2019-09-10,4,14.6,20,5,"Scarus taeniopterus","TP","21",1,0.144378,2.3852,21,205.711458446353
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","TP","22",1,0.144378,2.3852,22,229.851636261276
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,5,14,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,6,13.4,20,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Karpata",2019-09-10,6,13.4,20,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Karpata",2019-09-10,6,13.4,20,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-10,6,13.4,20,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Karpata",2019-09-10,6,13.4,20,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"Bonaire","Karpata",2019-09-10,6,13.4,20,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"Bonaire","Karpata",2019-09-10,7,6.1,19,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Karpata",2019-09-10,7,6.1,19,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Karpata",2019-09-10,7,6.1,19,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Karpata",2019-09-10,7,6.1,19,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Bonaire","Karpata",2019-09-10,7,6.1,19,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-10,7,6.1,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,8,6.4,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,9,5.8,17,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"Bonaire","Karpata",2019-09-10,9,5.8,17,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Bonaire","Karpata",2019-09-10,9,5.8,17,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Karpata",2019-09-10,9,5.8,17,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Karpata",2019-09-10,9,5.8,17,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Karpata",2019-09-10,10,6.4,17,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Karpata",2019-09-10,10,6.4,17,5,"Scarus taeniopterus","IP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Karpata",2019-09-10,11,6.1,16,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-10,11,6.1,16,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Karpata",2019-09-10,11,6.1,16,5,"Scarus vetula","IP","19",1,0.01445,3.03,19,108.265792182057
+"Bonaire","Karpata",2019-09-10,11,6.1,16,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Karpata",2019-09-10,12,6.1,16,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"Bonaire","Karpata",2019-09-10,12,6.1,16,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Karpata",2019-09-10,12,6.1,16,5,"Sparisoma viride","IP","17",1,0.025067,2.9214,17,98.5679762542753
+"Bonaire","Karpata",2019-09-10,12,6.1,16,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Karpata",2019-09-10,13,5.5,16,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Karpata",2019-09-10,13,5.5,16,5,"Scarus vetula","IP","16",1,0.01445,3.03,16,64.3207936553023
+"Bonaire","Karpata",2019-09-10,13,5.5,16,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"Bonaire","Karpata",2019-09-10,13,5.5,16,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Karpata",2019-09-10,13,5.5,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,13,5.5,16,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,14,5.8,16,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-10,15,4.9,17,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"Bonaire","Tolo",2019-09-10,1,14.3,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,1,14.3,19,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-10,1,14.3,19,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,1,14.3,19,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,1,14.3,19,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Scarus taeniopterus","IP","21",1,0.144378,2.3852,21,205.711458446353
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,2,15.2,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Tolo",2019-09-10,3,15.5,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,3,15.5,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,3,15.5,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,3,15.5,18,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Bonaire","Tolo",2019-09-10,3,15.5,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-10,3,15.5,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-10,4,15.2,20,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-10,4,15.2,20,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Tolo",2019-09-10,4,15.2,20,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-10,4,15.2,20,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Tolo",2019-09-10,4,15.2,20,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","IP","20",1,0.144378,2.3852,20,183.112405170438
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,5,15.2,18,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"Bonaire","Tolo",2019-09-10,6,7,16,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-10,6,7,16,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-10,6,7,16,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-10,6,7,16,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Tolo",2019-09-10,6,7,16,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-10,6,7,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,7,7,17,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-10,7,7,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-10,7,7,17,5,"Scarus vetula","IP","17",1,0.01445,3.03,17,77.290849185865
+"Bonaire","Tolo",2019-09-10,7,7,17,5,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Scarus vetula","IP","21",1,0.01445,3.03,21,146.619694456384
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Tolo",2019-09-10,8,6.7,17,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Sparisoma viride","IP","16",1,0.025067,2.9214,16,82.5692763441211
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-10,9,6.7,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-10,10,6.7,18,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus vetula","TP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-10,11,7,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,12,6.7,20,5,"Sparisoma viride","TP","31",1,0.025067,2.9214,31,570.120179750625
+"Bonaire","Tolo",2019-09-10,12,6.7,20,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Tolo",2019-09-10,12,6.7,20,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-10,12,6.7,20,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Tolo",2019-09-10,13,6.7,17,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Tolo",2019-09-10,13,6.7,17,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-10,13,6.7,17,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Tolo",2019-09-10,13,6.7,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-10,13,6.7,17,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-10,13,6.7,17,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Bonaire","Tolo",2019-09-10,14,6.1,19,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,14,6.1,19,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Tolo",2019-09-10,14,6.1,19,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Tolo",2019-09-10,14,6.1,19,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-10,14,6.1,19,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Tolo",2019-09-10,15,5.8,16,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,16,14.6,16,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,16,14.6,16,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,16,14.6,16,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-11,17,14.6,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-11,17,14.6,19,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-11,17,14.6,19,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-11,17,14.6,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-11,18,14.3,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,19,14,17,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,19,14,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,19,14,17,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-11,19,14,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-11,20,14,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-11,21,14,17,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,21,14,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-11,21,14,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-11,21,14,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,21,14,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,21,14,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,22,14.3,16,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-11,22,14.3,16,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,22,14.3,16,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,23,14,17,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","IP","19",1,0.144378,2.3852,19,162.02577611665
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-11,24,13.7,17,5,"Scarus taeniopterus","TP","24",1,0.144378,2.3852,24,282.866082079353
+"Bonaire","Tolo",2019-09-11,25,13.7,16,5,"Sparisoma viride","IP","18",1,0.025067,2.9214,18,116.481098430094
+"Bonaire","Tolo",2019-09-11,25,13.7,16,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-11,25,13.7,16,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Tolo",2019-09-11,25,13.7,16,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,25,13.7,16,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-11,25,13.7,16,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Tolo",2019-09-11,26,7.6,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,26,7.6,18,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-11,26,7.6,18,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Tolo",2019-09-11,26,7.6,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus vetula","IP","28",1,0.01445,3.03,28,350.555416654281
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Bonaire","Tolo",2019-09-11,27,8.2,20,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Tolo",2019-09-11,28,7.6,18,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-11,29,7.6,17,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-11,29,7.6,17,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,29,7.6,17,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Tolo",2019-09-11,29,7.6,17,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Sparisoma viride","IP","29",1,0.025067,2.9214,29,469.193375896473
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Sparisoma viride","IP","30",1,0.025067,2.9214,30,518.04131194931
+"Bonaire","Tolo",2019-09-11,30,7.6,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"Bonaire","Tolo",2019-09-11,31,7.3,18,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Sparisoma viride","IP","29",1,0.025067,2.9214,29,469.193375896473
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Scarus vetula","TP","29",1,0.01445,3.03,29,389.882534604984
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Tolo",2019-09-11,32,7.6,20,5,"Scarus vetula","IP","16",1,0.01445,3.03,16,64.3207936553023
+"Bonaire","Karpata",2019-09-11,16,13.1,17,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Karpata",2019-09-11,16,13.1,17,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Bonaire","Karpata",2019-09-11,16,13.1,17,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-11,17,13.7,18,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Karpata",2019-09-11,17,13.7,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-11,17,13.7,18,5,"Scarus vetula","IP","29",1,0.01445,3.03,29,389.882534604984
+"Bonaire","Karpata",2019-09-11,18,13.7,16,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"Bonaire","Karpata",2019-09-11,18,13.7,16,5,"Scarus vetula","IP","18",1,0.01445,3.03,18,91.9059307409809
+"Bonaire","Karpata",2019-09-11,19,13.4,18,5,"Scarus taeniopterus","TP","27",1,0.144378,2.3852,27,374.619061662213
+"Bonaire","Karpata",2019-09-11,19,13.4,18,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Karpata",2019-09-11,19,13.4,18,5,"Sparisoma viride","IP","29",1,0.025067,2.9214,29,469.193375896473
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Scarus vetula","IP","15",1,0.01445,3.03,15,52.8961863676089
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Scarus vetula","IP","16",1,0.01445,3.03,16,64.3207936553023
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"Bonaire","Karpata",2019-09-11,20,6.1,18,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Scarus vetula","IP","24",1,0.01445,3.03,24,219.739387422392
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Scarus vetula","IP","18",1,0.01445,3.03,18,91.9059307409809
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Sparisoma viride","TP","32",1,0.025067,2.9214,32,625.529084938513
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-11,21,5.8,18,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Scarus vetula","TP","30",1,0.01445,3.03,30,432.06118147997
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Sparisoma viride","TP","33",1,0.025067,2.9214,33,684.366882096457
+"Bonaire","Karpata",2019-09-11,22,6.7,19,5,"Scarus vetula","IP","23",1,0.01445,3.03,23,193.153770465672
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Scarus taeniopterus","TP","23",1,0.144378,2.3852,23,255.560809972862
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Sparisoma viride","IP","15",1,0.025067,2.9214,15,68.3809870299127
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Scarus vetula","IP","27",1,0.01445,3.03,27,313.978602778686
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Scarus vetula","IP","25",1,0.01445,3.03,25,248.671533964271
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-11,23,6.1,19,5,"Scarus vetula","TP","31",1,0.01445,3.03,31,477.192686938615
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Scarus taeniopterus","IP","15",1,0.144378,2.3852,15,92.1963849462377
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Karpata",2019-09-11,24,6.7,20,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Scarus taeniopterus","IP","16",1,0.144378,2.3852,16,107.539497811269
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Scarus vetula","TP","33",1,0.01445,3.03,33,576.720096152736
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Sparisoma viride","IP","24",1,0.025067,2.9214,24,269.930203781662
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Sparisoma viride","IP","27",1,0.025067,2.9214,27,380.79256629195
+"Bonaire","Karpata",2019-09-11,25,6.4,20,5,"Scarus vetula","IP","26",1,0.01445,3.03,26,280.050976571214
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Sparisoma viride","IP","26",1,0.025067,2.9214,26,341.040141466312
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Sparisoma viride","IP","25",1,0.025067,2.9214,25,304.119524204388
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Scarus vetula","TP","32",1,0.01445,3.03,32,525.378482057391
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Scarus taeniopterus","IP","17",1,0.144378,2.3852,17,124.270426461048
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Scarus taeniopterus","IP","18",1,0.144378,2.3852,18,142.421973909129
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Scarus taeniopterus","TP","25",1,0.144378,2.3852,25,311.793839563469
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Scarus taeniopterus","TP","26",1,0.144378,2.3852,26,342.369801487452
+"Bonaire","Karpata",2019-09-11,26,6.4,18,5,"Sparisoma viride","IP","28",1,0.025067,2.9214,28,423.477005854589

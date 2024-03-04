@@ -22,9 +22,11 @@ stx18_bon19 <- read_csv(here("data/stx18_bon19_fish_data.csv")) %>%
 
 fla13_pan13 <- read.csv(here("data/fla13_pan13_fish_data.csv"), fileEncoding = "UTF-8") %>% #so accents are read in correctly
   mutate(date=as.Date(date))
+
+fish_ab_vals <- read_csv(here("data/fish_ab_values.csv"))
 ```
 #Cleaning St. Croix and Bonaire data
-Checking the average length of survey segments to decide which interval both is most comparable with other surveys (25x4m in length, 100m2) and still maintains a sufficient number of replicates per site. Based on this, the interval of 16x5 (75m2) to 20x5 (100m2) segments both are fairly comparable to other surveys and maximize the number of replicates
+Checking the average length of survey segments to decide which interval both is most comparable with other surveys (25x4m in length, 100m2) and still maintains a sufficient number of replicates per site. Based on this, the interval of 16x5 (80m2) to 20x5 (100m2) segments both are fairly comparable to other surveys and maximize the number of replicates
 ```{r Subsetting STX 18 and BON 19 fish surveys to 15-20m segments}
 checking_average_segment_length <- stx18_bon19 %>% 
   mutate(dist_m_rnd =round(dist_m, 0)) %>%
@@ -44,7 +46,7 @@ fish_df_16_to_20 <- stx18_bon19 %>%
 The following chunk filters the data so that fish survey segments are not collected in back-to-back minutes, ensuring that there is at least 16m between every survey. Here is a description of the process:
 
 (1) Filters the data to only include distinct region, date, site, transect, minute combinations
-(2) Within cumsum, the first logical statement returns TRUE (1) if the min for a given row is equal to the min +1 of the previous row, or FALSE (0) if not
+(2) Within the cumulative sum statement, the first logical statement returns TRUE (1) if the min for a given row is equal to the min +1 of the previous row, or FALSE (0) if not
 The second logical statement within cumsum returns TRUE if the value is NA (which it is for the first row in the dataset only)
 The cumsum component takes the cumulative sum of the TRUE (1) and FALSE (0) rowwise, so segments that are in non-consecutive minutes will have distinctive segment_id values, while those in consecutive minutes will not
 (3) Splits the singular dataframe into many dataframes grouped by their segment ID and within each group assigns a row number (seq(1:n())), then creates a row_to_keep variable is TRUE for odd rows, and FALSE for even rows. The split dataframes are then bound together back into one dataframe
@@ -111,14 +113,42 @@ merged_fish_surveys <- fla13_pan13 %>%
   select(-number)%>%
   mutate(count=1)
 
-full_fish_survey_df <- merged_fish_surveys %>% 
-  dplyr::full_join(fish_survey_metadata) %>%
-  mutate(species=replace_na(species, "No parrotfishes"),
+major_corallivores_df <-  merged_fish_surveys %>% 
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) #filtering to only include predominant corallivore species
+
+major_corallivore_counts_df <- fish_survey_metadata %>%
+  dplyr::left_join(major_corallivores_df) %>%
+  mutate(species=replace_na(species, "No major corallivores"), #accounting for transects with no observed major corallivores
          count=replace_na(count, 0))
 ```
 
+Filtering length to weight conversions for the predominant corallivore species of interest to only include values with an R2 greater than 0.85, then from these data filtering to take the a-b values with the highest number of observations per species. Note that observations only include parrotfishes that were at least 15cm fork length and data are filtered to only include major corallivores. We classified major corallivores as species that, on average, take at least 1% of their foraging bites on coral: *Sc. taeniopterus, Sc. vetula, Sp. viride*. See manuscript for details. 
+
+```{r filtering fish ab values}
+filtered_fish_ab_vals <- fish_ab_vals %>% 
+  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>% #selecting species of interest
+  group_by(species) %>% 
+  filter(rsquared>0.85 | is.na(rsquared)) %>% #filtering out values with low R2
+  slice_max(n_obs, n=1) %>% #from values with R2>0.85, selecting those with the max species observed 
+  select(species, a, b) 
+```
+
+```{r Estimating fish weight per individual}
+major_corallivore_counts_weights_df <-major_corallivore_counts_df %>%
+  left_join(filtered_fish_ab_vals) %>%
+  mutate(size_cm_est=case_when( #NAs introduced by coersion warning caused by NA's for transects with no fish (i.e., not an issue)
+    size_cm=="15 to 20"~17.5, #midpoint within size bin
+    size_cm=="20 to 25"~22.5, 
+    size_cm=="25 to 30"~27.5,
+    TRUE~as.numeric(size_cm))
+    ) %>%  
+  mutate(weight_g=a*size_cm_est^b) %>% #calculating estimated fish weight per individual
+  mutate(weight_g=case_when(is.na(weight_g)~0, #adding in 0's for cases where no fish were observed in a transect 
+                   TRUE~as.numeric(weight_g)))
+```
+
 ```{r writing data to csv}
-write.csv(full_fish_survey_df, 
+write.csv(major_corallivore_counts_weights_df, 
           here("data/regional_fish_data.csv"), 
           fileEncoding = "UTF-8",
           row.names = FALSE)

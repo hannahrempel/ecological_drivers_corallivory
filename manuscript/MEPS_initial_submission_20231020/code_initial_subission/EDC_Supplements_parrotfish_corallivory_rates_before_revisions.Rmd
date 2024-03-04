@@ -1,0 +1,108 @@
+---
+title: "Estimating mean corallivory rates by parrotfish species from published studies"
+author: "Hannah Rempel"
+date: "2023-03-02"
+output: html_document
+---
+
+```{r Setup}
+if (!require(here)) install.packages("here") 
+if (!require(janitor)) install.packages("janitor") 
+if (!require(tidyverse)) install.packages("tidyverse") 
+
+packages <- c("here", "janitor", "tidyverse")
+sapply(packages, require, character.only = T)
+```
+
+```{r Reading in STX and FLA data}
+fla_grazing_raw <- read_csv(here("supplements/supp_data/published_fish_foraging_rates_raw/FLA_foraging_data.csv")) %>%
+  janitor::clean_names()
+
+stx_grazing_raw <- read_csv(here("supplements/supp_data/published_fish_foraging_rates_raw/STX_foraging_data.csv")) %>%
+  janitor::clean_names()
+```
+
+All Florida observations from the Adam et al. dataset were of initial phase (IP) individuals, as described in Adam et al. 2015 and Burkepile et al. 2019
+```{r Cleaning and summarizing parrotfish behavioral data from Florida}
+fla_grazing_raw %>% 
+  distinct(food_category)
+
+fla_coral_predation <- fla_grazing_raw %>% 
+  filter(!food_category %in% c("Not_observed", "Unknown")) %>%
+  filter(food_category=="Coral") %>%
+  group_by(location, species, fish_id) %>%
+  summarise(n_bites_coral=sum(bites))
+
+fla_corallivory_by_fish <- fla_grazing_raw %>% 
+  group_by(location, species, fish_id) %>%
+  filter(!food_category %in% c("Not_observed", "Unknown")) %>%
+  summarise(n_bites=sum(bites)) %>% 
+  left_join(fla_coral_predation, by = join_by(location, species, fish_id)) %>%
+  mutate(n_bites_coral=replace_na(n_bites_coral, 0),
+         pct_bites_coral=n_bites_coral/n_bites*100)
+
+fla_corallivory_by_species <- fla_corallivory_by_fish %>%
+  mutate(region="Florida", phase="IP") %>%
+  group_by(region, species, phase) %>%
+  summarise(mean_corallivory=mean(pct_bites_coral),
+            n_observed=n()) %>%
+  arrange(-mean_corallivory)
+```
+
+```{r Cleaning and summarizing parrotfish behavioral data from St. Croix}
+stx_grazing_raw %>% 
+  distinct(food_specific)
+
+stx_coral_predation <- stx_grazing_raw %>% 
+  filter(! food_specific %in% c("unknown", "out of sight")) %>%
+  filter(food_specific %in% c("porites porites","porites astreoides", "orbicella annularis")) %>%
+  group_by(location, species, phase, date, time_start) %>% #to summarize observations by each unique fish
+  summarise(n_bites_coral=sum(bites)) %>%
+  mutate(species=str_replace(species, "sparisoma", "Sparisoma"),
+         species=str_replace(species, "scarus", "Scarus"))
+
+stx_corallivory_by_fish <- stx_grazing_raw %>% 
+  group_by(location, species, phase, date, time_start) %>%
+  filter(! food_specific %in% c("unknown", "out of sight")) %>%
+  summarise(n_bites=sum(bites)) %>% 
+  left_join(stx_coral_predation, by = join_by(location, species, phase, date, time_start)) %>%
+  mutate(n_bites_coral=replace_na(n_bites_coral, 0),
+         pct_bites_coral=n_bites_coral/n_bites*100) %>%
+  mutate(species=str_replace(species, "sparisoma", "Sparisoma"),
+         species=str_replace(species, "scarus", "Scarus"))
+
+stx_corallivory_by_species  <- stx_corallivory_by_fish  %>%
+  mutate(region="St. Croix") %>%
+  group_by(region, species, phase) %>%
+  summarise(mean_corallivory=mean(pct_bites_coral),
+            n_observed=n()) %>%
+  arrange(-mean_corallivory) 
+```
+
+Writing summarized Florida and St. Croix parrotfish corallivory rate data to csv file
+```{r Merging FLA and STX data and writing to CSV}
+fla_stx_corallivory_by_species <- fla_corallivory_by_species %>% 
+  bind_rows(stx_corallivory_by_species)
+
+write_csv(fla_stx_corallivory_by_species, here("supplements/supp_data/STX_FLA_summarized_corallivory_rates.csv"))
+```
+
+Mean percent of bites on coral from the Cardoso et al. 2009 (Fig. 2) and sample sizes per species (Fig. 1) were extracted using WebPlotDigitizer and added into a combined excel sheet with the summarized data from Florida and St. Croix. These data are read in below.
+
+```{r Reading in combined summaries of parrotfish corallivory rates}
+corallivory_rates_combined <- read_csv(here("supplements/supp_data/corallivory_by_parrotfish_sp.csv"))
+```
+
+Calculated the mean corallivory rates across the datasets weighted by the sample size for each dataset.
+```{r Calculating the mean rates of corallivory by parrotfish species}
+mean_corallivory_by_pf_sp <- corallivory_rates_combined %>%
+  group_by(species) %>%
+  uncount(replicates) %>% #uncounts observations by # of replicates to calculate mean weighted by the sample size
+  summarise(mean_pct_bites_on_coral=mean(as.numeric(pct_bites_on_coral)),
+            replicates=n()) %>%
+  arrange(-mean_pct_bites_on_coral) 
+```
+
+```{r Saving Table S2 to csv}
+write_csv(mean_corallivory_by_pf_sp, here("supplements/table_s3_published_parrotfish_corallivory_rates.csv"))
+```

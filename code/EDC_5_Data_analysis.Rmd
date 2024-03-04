@@ -38,7 +38,7 @@ packages <- c("broom", "broom.mixed", "cowplot", "DHARMa", "electivity", "ggpp",
 sapply(packages, require, character.only = T)
 ```
 
-```{r Reading in coral and scar data, message = FALSE}
+```{r Reading in data, message = FALSE}
 fish_df <- read_csv(here("data/regional_fish_data.csv")) %>%
   mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) 
 
@@ -50,6 +50,14 @@ site_coordinates <- read.csv(here("data/site_coordinates.csv"),
                           fileEncoding = "UTF-8") %>%
   mutate(region= factor(region, levels = c("Panamá", "Florida", "St. Croix", "Bonaire")))
 ```
+
+```{r}
+coral_scar_df %>%
+  filter(region=="Panamá" & n_new_scars>0) %>%
+  group_by(site) %>%
+  reframe(total_scars=sum(n_new_scars))
+```
+
 
 ```{r Table S1: Site coordinates and sampling effort}
 #depth of each fish survey transect
@@ -91,31 +99,40 @@ write.csv(table_s1,
           row.names=FALSE)
 ```
 
-## Summarising parrotfish density data
+## Summarising parrotfish density and biomass data
 
-Parrotfish density estimates are for parrotfishes that were at least 15cm fork length. We classified major corallivores as species that, on average, take at least 1% of their foraging bites on coral: *Sc. taeniopterus, Sc. vetula, Sp. viride*. See manuscript for details. 
-
-```{r Summary of parrotfish density data}
-# Transect-level summary of fish density
+```{r Summary of parrotfish density and biomass by transect; site and region}
+#transect-level summary of fish density
 major_corallivores_df <- fish_df %>% 
-  filter(species %in% c("Scarus taeniopterus", "Scarus vetula", "Sparisoma viride")) %>%
-  group_by(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>%
-   dplyr::reframe(n_major_corallivores=n()) 
-
-#merging data in transect-level summary of parrotfish denisty
-pf_density_transect <- fish_df %>% 
-  select(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>%
   mutate(survey_area_m2=survey_l_m*survey_w_m) %>% #summarizing transect metadata
-  distinct() %>% 
-  left_join(major_corallivores_df) %>% #adding in fish data
-  mutate(n_major_corallivores = replace_na(n_major_corallivores, 0), #replacing NA with 0 for surveys with no parrotfishes
-         density_major_corallivores = n_major_corallivores/survey_area_m2*100) %>% # calculating density (fish/100 m2) 
+  group_by(region, site, date, transect, depth_m, survey_l_m, survey_w_m) %>%
+  dplyr::reframe(n_major_corallivores=sum(count), sum_corallivore_weight_g=sum(weight_g)) %>%
   ungroup()
 
+#double checking that the fish abundance and total weight per transect summary has one row per transect
+sum(table_s1$n_fish_surveys) == nrow(major_corallivores_df) 
+
+#summarizing metadata of for each fish survey transect
+fish_survey_transect_metadata <- fish_df %>% 
+  mutate(survey_area_m2=survey_l_m*survey_w_m) %>% #calculating the area surveyed per transect
+  select(region, site, date, transect, depth_m, survey_area_m2) %>%
+  distinct() %>% #to only have one row per transect 
+  ungroup()
+
+#double checking that the metadata only includes one row per transect
+sum(table_s1$n_fish_surveys) == nrow(fish_survey_transect_metadata) 
+
+#merging data in transect-level summary of parrotfish density
+pf_density_biomass_transect <- fish_survey_transect_metadata %>%
+  left_join(major_corallivores_df) %>% #adding in fish data
+  mutate(density_major_corallivores = n_major_corallivores/survey_area_m2*100, #calculating fish density (n/100 m2) 
+         biomass_major_corallivores = sum_corallivore_weight_g/survey_area_m2*100) #calculating fish biomass (g/100 m2) 
+
 # Site-level summary of fish density
-pf_density_site<- pf_density_transect %>% 
+pf_density_biomass_site<- pf_density_biomass_transect %>% 
   group_by(region, site) %>%
-  dplyr::reframe(mean_density_major_corallivores=mean(density_major_corallivores)) %>%
+  dplyr::reframe(mean_density_major_corallivores=mean(density_major_corallivores),
+                 mean_biomass_major_corallivores=mean(biomass_major_corallivores)) %>%
   ungroup()
 
 #function to calculate the standard error of the mean
@@ -124,11 +141,16 @@ sem <- function(x) {
 }
 
 # Region-level summary of fish density
-regional_parrotfish_density <- pf_density_site %>%
+regional_parrotfish_density <- pf_density_biomass_site %>%
   group_by(region) %>%
-   dplyr::reframe(mean_density_major=mean(mean_density_major_corallivores),
-            sem_major=sem(mean_density_major_corallivores))
+   dplyr::reframe(
+     mean_pf_density=mean(mean_density_major_corallivores),
+     sem_pf_density=sem(mean_density_major_corallivores),
+     mean_pf_biomass=mean(mean_biomass_major_corallivores),
+     sem_pf_biomass=sem(mean_biomass_major_corallivores))
 ```
+
+#STOPPING HERE
 
 ```{r Summary of parrotfish size distributions}
 #creating  df for Panamá data only (b/c in this region fish size was recorded in 5cm bins)
