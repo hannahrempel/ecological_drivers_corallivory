@@ -1432,6 +1432,11 @@ n_grazed_diversity_nbinom <- glmmTMB::glmmTMB(n_colonies_grazed ~ coral_diversit
                               zi=~0, #non zero-inflated
                               family=nbinom2(link = "log"),
                               data = transect_corallivory_diversity_df)
+plot(DHARMa::simulateResiduals(n_grazed_diversity_nbinom, n = 1000, use.u = T))
+
+hist(log(transect_corallivory_diversity_df$proportional_cover))
+hist(sqrt(transect_corallivory_diversity_df$proportional_cover))
+hist((transect_corallivory_diversity_df$proportional_cover)^(1/4))
 
 #likelihood ratio tests suggest NS difference between poisson and negative binomial
 anova(n_grazed_diversity_poisson, n_grazed_diversity_nbinom) 
@@ -1468,8 +1473,7 @@ transect_level_model_output <- n_grazed_diversity_nbinom %>%
 #back transforming estimated effect sizes (see paper supplements for description)
 transect_level_model_output %>%
   #exponentiating all independent variables except proportional cover, which was log transformed
-    mutate(estimate_backtransformed = case_when(!term %in% c("Branching Porites spp.:log(proportional_cover)", "Orbicella annularis:log(proportional_cover)", "Porites astreoides:log(proportional_cover)", "Siderastrea siderea:log(proportional_cover)") ~exp(estimate),
-                                                TRUE~as.double(estimate))) %>%
+    mutate(estimate_backtransformed = exp(estimate)) %>%
   mutate(across(where(is.double), ~round(.x, 3)))
 
 write_csv(transect_level_model_output, here("figures_tables/supplements_tables/table_s5_transect_level_grazed_coral_abundance_results.csv"))
