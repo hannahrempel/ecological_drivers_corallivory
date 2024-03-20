@@ -1,7 +1,7 @@
 ---
 title: "Data processing: Cleaning and merging fish survery data"
 author: "Hannah Rempel"
-date: "2023-01-10"
+date: "Last updated 14/March/2024"
 output: html_document
 ---
 Cleans fish data from Panama 2013, Florida 2013, St. Croix 2018, and Bonaire 2018 then merges data together for ecological drivers of corallivory analysis
@@ -140,6 +140,7 @@ major_corallivore_counts_weights_df <-major_corallivore_counts_df %>%
     size_cm=="15 to 20"~17.5, #midpoint within size bin
     size_cm=="20 to 25"~22.5, 
     size_cm=="25 to 30"~27.5,
+    size_cm=="30 to 35"~32.5,
     TRUE~as.numeric(size_cm))
     ) %>%  
   mutate(weight_g=a*size_cm_est^b) %>% #calculating estimated fish weight per individual

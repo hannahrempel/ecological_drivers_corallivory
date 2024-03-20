@@ -1,0 +1,20 @@
+region,species,phase,mean_corallivory,n_observed
+Florida,Scarus guacamaia,IP,0.915523659948095,16
+Florida,Scarus vetula,IP,0.1850088459426698,17
+Florida,Sparisoma viride,IP,0.08051529790660225,18
+Florida,Scarus taeniopterus,IP,0.08028265565312065,19
+Florida,Sparisoma rubripinne,IP,0.03114294612270321,19
+Florida,Scarus coelestinus,IP,0.01845699520118125,18
+Florida,Scarus coeruleus,IP,0,19
+Florida,Sparisoma aurofrenatum,IP,0,18
+Florida,Sparisoma chrysopterum,IP,0,18
+St. Croix,Scarus taeniopterus,IP,0,15
+St. Croix,Scarus taeniopterus,TP,0,1
+St. Croix,Scarus vetula,IP,0,19
+St. Croix,Scarus vetula,TP,0,2
+St. Croix,Sparisoma aurofrenatum,IP,0,21
+St. Croix,Sparisoma chrysopterum,IP,0,18
+St. Croix,Sparisoma chrysopterum,TP,0,3
+St. Croix,Sparisoma rubripinne,IP,0,19
+St. Croix,Sparisoma viride,IP,0,20
+St. Croix,Sparisoma viride,TP,0,5

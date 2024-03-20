@@ -1,7 +1,7 @@
 ---
 title: "Data processing: Interpolating bite scar size distribution"
 author: "Hannah Rempel"
-date: "2023-01-10"
+date: "Last updated 10/January/2023"
 output: html_document
 ---
 
@@ -16,7 +16,8 @@ sapply(packages, require, character.only = T)
 ```
 
 ```{r Reading in data}
-scar_df_bites <- read_csv(here("data/regional_coral_scar_data.csv")) %>% filter(percent_new>0)
+scar_df_bites <- read_csv(here("data/regional_coral_scar_data.csv")) %>% 
+  filter(percent_new>0) #filtering to only include colonies w/ recent predation scars
 ```
 
 In the field, we recorded the mininum, median, and maximum size of scars, as well as the total abundance of scars. For colonies with scars, the following chunk interpolates that size of scars based these values.

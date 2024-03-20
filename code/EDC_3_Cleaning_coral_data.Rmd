@@ -1,7 +1,7 @@
 ---
 title: "Data processing: Estimating coral size class"
 author: "Hannah Rempel"
-date: "7/2/2020"
+date: "Last updated 17/March/2024"
 output: html_document
 ---
 
@@ -14,33 +14,17 @@ sapply(packages, require, character.only = T)
 ```
 
 ```{r Reading in coral and scar data}
-coral_scar_df <- read.csv(here("data/regional_coral_scar_data.csv"), fileEncoding = "UTF-8")
-bootstrapped_scar_df <- read.csv(here("data/bootstrapped_new_scar_data.csv"), fileEncoding = "UTF-8")
-```
-
-
-```{r}
-bootstrapped_scar_df %>% 
-  filter(site=="Salt River") %>% 
-  filter(transect==5) %>%
-  filter(scar_area_cm_sq==0.002)
-  
-bootstrapped_scar_dfcorr<-bootstrapped_scar_df %>%
-  mutate(scar_area_cm_sq=case_when(colony_id==3476 & scar_area_cm_sq==0.001~0.01,
-                                   colony_id==3475 & scar_area_cm_sq==0.002~0.01,
-                                   colony_id==3475 & scar_area_cm_sq==0.006~0.06,
-                                   TRUE~as.double(scar_area_cm_sq)))
-
-
-bootstrapped_scar_dfcorr %>% filter(region=="Florida") %>% filter(!is.na(scar_area_cm_sq)) %>% summarise(min(scar_area_cm_sq))
+coral_scar_df <- read.csv(here("data/regional_coral_scar_data.csv"), 
+                          fileEncoding = "UTF-8")
+bootstrapped_scar_df <- read.csv(here("data/bootstrapped_new_scar_data.csv"), 
+                                 fileEncoding = "UTF-8")
 ```
 
 ```{r Summary of scar observations by coral colony size category}
-#subsetting df to only include colonies with new scars
 scar_df <- coral_scar_df %>% 
-  filter(n_scars>0 & percent_new>0)
+  filter(n_scars>0 & percent_new>0) #subsetting to colonies w/ new scars
 
-#alphabetical list of all grazed coral species (including those with <3 recently predated colonies across the dataset)
+#alphabetical list of grazed coral species (incl. those w/ <3 recently predated colonies)
 scar_df %>% 
   distinct(coral_species) %>% 
   arrange(coral_species)
@@ -56,7 +40,7 @@ total_observations
 scar_observations_by_dim <- scar_df %>%
   select(coral_species, col_size, l_cm, w_cm) %>% 
   group_by(col_size) %>% 
-   dplyr::reframe(n_observations=n(), 
+  dplyr::reframe(n_observations=n(), 
                   pct_of_observations=round(n()/total_observations*100,1))
 
 scar_observations_by_dim
@@ -78,7 +62,8 @@ sp_with_3plus_scars <- scar_observations_by_sp %>%
 sp_with_3plus_scars %>% 
   tally(n_observations)
 
-write_csv(scar_observations_by_sp, here("supplements/table_s2_predation_by_coral_taxa.csv"))
+write_csv(scar_observations_by_sp,
+          here("figures_tables/supplements_tables/table_s2_predation_by_coral_taxa.csv"))
 ```
 
 ```{r Seperating colonies with and without measurements}
@@ -179,7 +164,7 @@ match_by_size %>% filter(is.na(l_cm))
 estimated_col_sizes <- match_by_species %>%
   bind_rows(match_by_genus, match_by_family, match_by_size, measured_colonies) %>% 
   filter(coral_species %in% sp_with_3plus_scars$coral_species) %>% 
-  #calculating colony are based on SA of a hemisphere
+  #calculating colony area based on SA of a hemisphere
   mutate(col_area_cm2 = (pi * (l_cm/2) * (w_cm/2) * (percent_live/100)*(percent_col_inside/100)),
          percent_new=replace_na(percent_new, 0),
          n_new_scars=ceiling(n_scars*(percent_new/100))) %>%
@@ -207,7 +192,7 @@ coral_scar_df_cleaned <- estimated_col_sizes %>%
 
 coral_scar_df_cleaned %>% distinct(coral_species)
 
-#the 6 instances where coral_species had <3 observed recent grazing scars were excluded due to limited data
+#the 4 predated colonies from species that had <3 observed colonies w/ predation were excluded to to limited data for these species/very rare predation events
 area_grazed_by_col %>% 
   filter(!colony_id %in% c(estimated_col_sizes$colony_id))
 ```

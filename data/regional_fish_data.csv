@@ -5,24 +5,28 @@
 "Panamá","Casa Blanca",2013-07-08,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Cayo Roldan",2013-08-19,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Cayo Roldan",2013-08-19,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
-"Panamá","Crawl Cay",2013-07-10,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
-"Panamá","Crawl Cay",2013-07-10,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
-"Panamá","Finca",2013-07-11,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Crawl Cay",2013-07-10,1,10,25,4,"Sparisoma viride","TP","25 to 30",1,0.025067,2.9214,27.5,401.762032802474
+"Panamá","Crawl Cay",2013-07-10,2,5,25,4,"Sparisoma viride","TP","30 to 35",1,0.025067,2.9214,32.5,654.513203181558
+"Panamá","Finca",2013-07-11,1,10,25,4,"Sparisoma viride","TP","25 to 30",1,0.025067,2.9214,27.5,401.762032802474
+"Panamá","Finca",2013-07-11,1,10,25,4,"Sparisoma viride","TP","30 to 35",1,0.025067,2.9214,32.5,654.513203181558
 "Panamá","Finca",2013-07-11,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Isla Pastores Inside",2013-08-19,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Isla Pastores Inside",2013-08-19,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Isla Pastores Outside",2013-08-20,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Isla Pastores Outside",2013-08-20,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
 "Panamá","Mystery Spot",2013-07-09,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
-"Panamá","Mystery Spot",2013-07-09,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Mystery Spot",2013-07-09,2,5,25,4,"Sparisoma viride","TP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
 "Panamá","Punta STRI",2013-07-11,1,10,25,4,"Sparisoma viride","IP","25 to 30",1,0.025067,2.9214,27.5,401.762032802474
+"Panamá","Punta STRI",2013-07-11,1,10,25,4,"Sparisoma viride","TP","30 to 35",1,0.025067,2.9214,32.5,654.513203181558
 "Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","15 to 20",1,0.025067,2.9214,17.5,107.278752948417
 "Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","15 to 20",1,0.025067,2.9214,17.5,107.278752948417
 "Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
 "Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
 "Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","IP","25 to 30",1,0.025067,2.9214,27.5,401.762032802474
+"Panamá","Punta STRI",2013-07-11,2,5,25,4,"Sparisoma viride","TP","30 to 35",1,0.025067,2.9214,32.5,654.513203181558
 "Panamá","Seagal",2013-07-09,1,10,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
-"Panamá","Seagal",2013-07-09,2,5,25,4,"No major corallivores",NA,NA,0,NA,NA,NA,0
+"Panamá","Seagal",2013-07-09,2,5,25,4,"Sparisoma viride","TP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
+"Panamá","Seagal",2013-07-09,2,5,25,4,"Sparisoma viride","TP","20 to 25",1,0.025067,2.9214,22.5,223.546754689339
 "Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Scarus vetula","TP","25",1,0.01445,3.03,25,248.671533964271
 "Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Scarus vetula","IP","22",1,0.01445,3.03,22,168.814042564888
 "Florida","Molasses Reef",2013-07-02,1,6.1,25,4,"Scarus vetula","IP","20",1,0.01445,3.03,20,126.470353933495

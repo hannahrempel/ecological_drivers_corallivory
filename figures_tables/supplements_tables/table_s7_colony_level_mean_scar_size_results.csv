@@ -1,0 +1,18 @@
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5
+Colony-level mean scar size,(Intercept),-7.034,0,-2.893,-3.7,-2.087
+Colony-level mean scar size,log(col_area_cm2),2.167,0.03,0.082,0.008,0.157
+Colony-level mean scar size,Agaricia humilis,-0.836,0.403,-0.318,-1.064,0.428
+Colony-level mean scar size,Agaricia tenuifolia,3.064,0.002,1.32,0.476,2.164
+Colony-level mean scar size,Agaricia spp.,1.705,0.088,0.933,-0.14,2.005
+Colony-level mean scar size,Madracis auretenra,0.281,0.779,0.13,-0.776,1.036
+Colony-level mean scar size,Madracis decactis,-1.065,0.287,-0.405,-1.151,0.341
+Colony-level mean scar size,Orbicella annularis,1.733,0.083,0.605,-0.079,1.288
+Colony-level mean scar size,Orbicella faveolata,1.495,0.135,0.772,-0.24,1.785
+Colony-level mean scar size,Branching Porites spp.,2.899,0.004,0.804,0.26,1.348
+Colony-level mean scar size,Porites astreoides,1.502,0.133,0.451,-0.138,1.04
+Colony-level mean scar size,Siderastrea siderea,0.728,0.466,0.201,-0.34,0.742
+Colony-level mean scar size,Stephanocoenia intersepta,2.259,0.024,1.27,0.168,2.371
+Colony-level mean scar size,depth_m,0.382,0.703,0.011,-0.043,0.065
+Colony-level mean scar size,regionFlorida,4.821,0,1.063,0.631,1.496
+Colony-level mean scar size,regionSt. Croix,3.18,0.001,0.841,0.323,1.359
+Colony-level mean scar size,regionBonaire,3.946,0,1.076,0.541,1.61

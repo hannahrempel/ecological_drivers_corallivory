@@ -1,0 +1,17 @@
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5
+M1 - Scar density,(Intercept),0.432,0.666,0.461,-1.631,2.554
+M1 - Scar density,sqrt(mean_pf_n_100m2),1.384,0.166,0.805,-0.335,1.946
+M1 - Scar density,mean_pct_coral_cover,-0.681,0.496,-0.044,-0.169,0.082
+M1 - Scar density,sqrt(mean_pf_n_100m2):mean_pct_coral_cover,-0.34,0.734,-0.01,-0.071,0.05
+M3 - Coral area preyed upon (%),(Intercept),-5.55,0,-5.883,-7.961,-3.806
+M3 - Coral area preyed upon (%),sqrt(mean_pf_n_100m2),2.509,0.012,1.344,0.294,2.394
+M3 - Coral area preyed upon (%),mean_pct_coral_cover,-0.917,0.359,-0.055,-0.172,0.062
+M3 - Coral area preyed upon (%),sqrt(mean_pf_n_100m2):mean_pct_coral_cover,0.109,0.913,0.004,-0.069,0.077
+M2 - Scar density,(Intercept),0.817,0.414,0.927,-1.296,3.149
+M2 - Scar density,sqrt(mean_pf_g_100m2),0.762,0.446,0.024,-0.038,0.085
+M2 - Scar density,mean_pct_coral_cover,-0.787,0.431,-0.052,-0.18,0.077
+M2 - Scar density,sqrt(mean_pf_g_100m2):mean_pct_coral_cover,0.096,0.923,0,-0.004,0.004
+M4 - Coral area preyed upon (%),(Intercept),-5.09,0,-5.451,-7.549,-3.352
+M4 - Coral area preyed upon (%),sqrt(mean_pf_g_100m2),2.207,0.027,0.064,0.007,0.122
+M4 - Coral area preyed upon (%),mean_pct_coral_cover,-1.346,0.178,-0.078,-0.191,0.035
+M4 - Coral area preyed upon (%),sqrt(mean_pf_g_100m2):mean_pct_coral_cover,0.549,0.583,0.001,-0.003,0.005

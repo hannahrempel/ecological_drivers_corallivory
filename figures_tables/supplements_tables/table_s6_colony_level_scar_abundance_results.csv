@@ -1,0 +1,18 @@
+model,term,statistic,p_value,estimate,ci_2.5,ci_97.5
+Scar abundance,(Intercept),-6.547,0,-6.063,-7.878,-4.248
+Scar abundance,col_area_cm2,6.608,0,0.001,0,0.001
+Scar abundance,Agaricia humilis,0.73,0.466,0.841,-1.418,3.099
+Scar abundance,Agaricia spp.,1.518,0.129,1.236,-0.36,2.831
+Scar abundance,Agaricia tenuifolia,1.588,0.112,1.416,-0.332,3.164
+Scar abundance,Branching Porites spp.,5.71,0,4.522,2.97,6.074
+Scar abundance,Madracis auretenra,1.529,0.126,1.396,-0.394,3.185
+Scar abundance,Madracis decactis,3.373,0.001,2.79,1.169,4.411
+Scar abundance,Orbicella annularis,5.355,0,4.227,2.68,5.774
+Scar abundance,Orbicella faveolata,0.751,0.453,0.699,-1.126,2.525
+Scar abundance,Porites astreoides,5.42,0,4.174,2.665,5.684
+Scar abundance,Siderastrea siderea,1.47,0.141,1.02,-0.34,2.38
+Scar abundance,Stephanocoenia intersepta,0.672,0.501,0.663,-1.27,2.595
+Scar abundance,depth_m,-0.175,0.861,-0.01,-0.123,0.103
+Scar abundance,regionFlorida,5.424,0,4.465,2.852,6.078
+Scar abundance,regionSt. Croix,-4.95,0,-3.159,-4.411,-1.908
+Scar abundance,regionBonaire,-1.659,0.097,-1.168,-2.548,0.212

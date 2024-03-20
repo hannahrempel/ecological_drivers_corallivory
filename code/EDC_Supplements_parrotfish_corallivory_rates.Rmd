@@ -98,11 +98,11 @@ Calculated the mean corallivory rates across the datasets weighted by the sample
 mean_corallivory_by_pf_sp <- corallivory_rates_combined %>%
   group_by(species) %>%
   uncount(replicates) %>% #uncounts observations by # of replicates to calculate mean weighted by the sample size
-  summarise(mean_pct_bites_on_coral=mean(as.numeric(pct_bites_on_coral)),
+  summarise(mean_pct_bites_on_coral=round(mean(as.numeric(pct_bites_on_coral)),2),
             replicates=n()) %>%
-  arrange(-mean_pct_bites_on_coral) 
+  arrange(-mean_pct_bites_on_coral)
 ```
 
 ```{r Saving Table S2 to csv}
-write_csv(mean_corallivory_by_pf_sp, here("supplements/table_s3_published_parrotfish_corallivory_rates.csv"))
+write_csv(mean_corallivory_by_pf_sp, here("figures_tables/supplements_tables/table_s3_published_parrotfish_corallivory_rates.csv"))
 ```
