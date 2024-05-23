@@ -216,7 +216,7 @@ write.csv(regional_parrotfish_coral_scar_summary, here("figures_tables/table1_re
           row.names=FALSE)
 ```
 
-Figure 1 is a map not made in this script
+Note: Figure 1 is a map, made in a separate script
 
 ```{r Fig. 2: parrotfish + coral + corallivory patterns across sites and regions, echo=FALSE, message=FALSE}
 #Fig 2a) parrotfish density patterns
@@ -374,11 +374,16 @@ fig2_final <- ggpubr::ggarrange(fig2a_b_with_graphics,
                                 nrow=2,
                                 align = "h")
 
+fig2_final
+
+#saving as .jpg version (for presentations) and .pdf version (for publications)
 ggsave(plot=fig2_final, 
        filename=here("figures_tables/fig2_site_level_patterns.jpg"), 
        width = 215, height = 250, dpi = 600, units = "mm") 
 
-fig2_final
+ggsave(plot=fig2_final, 
+       filename=here("figures_tables/fig2_site_level_patterns.pdf"), 
+       width = 215, height = 250, dpi = 600, units = "mm") 
 ```
 
 ```{r Fig. S1: parrotfish biomass by site}
@@ -492,7 +497,6 @@ fig_pf_by_site_size_species <- pf_by_site_size_species_df %>%
         axis.text = element_text(size = 10),
         legend.position = "top")
 
-figs2_pf_size_dist_by_site
 sc_taeniopterus_icon <- magick::image_read(path=here("figures_tables/reef_images", "Scarus_taeniopterus.png"), density = NULL, depth = NULL, strip = TRUE)
 sc_vetula_icon <- magick::image_read(path=here("figures_tables/reef_images", "Scarus_vetula.png"), density = NULL, depth = NULL, strip = TRUE)
 sp_viride_icon <- magick::image_read(path=here("figures_tables/reef_images", "Sparisoma_viride.png"), density = NULL, depth = NULL, strip = TRUE)
@@ -848,8 +852,9 @@ site_level_scar_density_by_corallivore_density <- fish_corals_site_level %>%
   scale_color_manual(values=region_palette)+
   scale_y_continuous(trans = scales::log_trans(),
                      breaks= c(0.05, 0.5, 5, 50, 500),
-                     labels= c(0.05, 0.5, 5, 50, 500))+
-  scale_x_continuous(expand = c(0.1, 0))+ #values near 0 cutoff, expands x-axis to resolve issue
+                     labels= c(0.05, 0.5, 5, 50, 500),
+                     limits=c(0.04, 700))+
+  scale_x_continuous(expand = c(0.025, 0))+ #values near 0 cutoff, expands x-axis to resolve issue
   labs(x=expression(paste("Major corallivore density (n 100 ", m^-2, ")")), 
        y=expression(paste("Scar density (n ", m^-2, " coral)")), 
        color="Region")  +
@@ -866,8 +871,9 @@ site_level_coral_area_grazed_by_corallivore_density <- fish_corals_site_level %>
   scale_color_manual(values=region_palette)+
   scale_y_continuous(trans = scales::log_trans(),
                      breaks= c(0.00025, 0.0025, 0.025, 0.25, 2.5),
-                     labels= c("0.00025", 0.0025, 0.025, 0.25, 2.5))+
-  scale_x_continuous(expand = c(0.1, 0))+ #values near 0 cutoff, expands x-axis to resolve issue
+                     labels= c("0.00025", 0.0025, 0.025, 0.25, 2.5),
+                     limits = c(0.00007,3))+
+  scale_x_continuous(expand = c(0.025, 0))+ #values near 0 cutoff, expands x-axis to resolve issue
   labs(x=expression(paste("Major corallivore density (n 100 ", m^-2, ")")), 
        y=expression(paste("Coral area preyed upon (%)")), 
        color="Region") +
@@ -881,7 +887,9 @@ site_level_scar_density_by_coral_cover <- fish_corals_site_level %>%
   scale_colour_manual(values=region_palette)+
   scale_y_continuous(trans = scales::log_trans(),
                      breaks= c(0.05, 0.5, 5, 50, 500),
-                     labels= c(0.05, 0.5, 5, 50, 500))+
+                     labels= c(0.05, 0.5, 5, 50, 500),
+                     limits=c(0.04, 700))+
+  scale_x_continuous(expand = c(0.05, 0))+ #values near 0 cutoff, expands x-axis to resolve issue
   labs(y=expression(paste("Scar density (n ", m^-2, " coral)")), x="Coral cover (%)", color="Region")+
   theme_bw()+
   theme(legend.position = "top")+ 
@@ -900,7 +908,9 @@ site_level_coral_area_grazed_by_coral_cover <- fish_corals_site_level %>%
   scale_colour_manual(values=region_palette)+
   scale_y_continuous(trans = scales::log_trans(),
                      breaks= c(0.00025, 0.0025, 0.025, 0.25, 2.5),
-                     labels= c("0.00025", 0.0025, 0.025, 0.25, 2.5))+
+                     labels= c("0.00025", 0.0025, 0.025, 0.25, 2.5),
+                     limits = c(0.00007,3))+
+  scale_x_continuous(expand = c(0.05, 0))+ #values near 0 cutoff, expands x-axis to resolve issue
   labs(y="Coral area preyed upon (%)", x="Coral cover (%)", color="Region")+
   theme_bw()+
   theme(legend.position = "top")+
@@ -950,10 +960,16 @@ site_level_corallivory_patterns_with_images <- cowplot::ggdraw() +
 
 site_level_corallivory_patterns_with_images
 
+#saving as .jpg version (for presentations) and .pdf version (for publications)
 ggsave(plot=site_level_corallivory_patterns_with_images, 
        filename=here("figures_tables/fig3_corallivory_by_coral_and_fish.jpg"), 
        width = 215, height = 160, dpi = 600, units = "mm")
+
+ggsave(plot=site_level_corallivory_patterns_with_images, 
+       filename=here("figures_tables/fig3_corallivory_by_coral_and_fish.pdf"), 
+       width = 215, height = 160, dpi = 600, units = "mm")
 ```
+
 
 ```{r Fig. S3 Supp: Corallivory intensity by parrotfish biomass, message=FALSE, echo=FALSE}
 # scar density ~ corallivore biomass
@@ -1119,6 +1135,8 @@ m2_scar_pf_density_residuals <- DHARMa::simulateResiduals(m2_scar_pf_density, n 
 plot(m2_scar_pf_density_residuals) #odd residual versus predicted pattern, trying transformation. But, looks better than Gaussian.
 
 # random-intercept model model with interaction
+m3_scar_pf_density_gauss <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ sqrt(mean_pf_n_100m2)*mean_pct_coral_cover + (1 | region), data = fish_corals_site_level, family=gaussian)
+
 m3_scar_pf_density <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ sqrt(mean_pf_n_100m2)*mean_pct_coral_cover + (1 | region), data = fish_corals_site_level, family=t_family)
 
 m3_scar_pf_density_residuals <- DHARMa::simulateResiduals(m3_scar_pf_density, n = 1000, use.u = T) #evaluating model fit
@@ -1434,12 +1452,23 @@ n_grazed_diversity_nbinom <- glmmTMB::glmmTMB(n_colonies_grazed ~ coral_diversit
                               data = transect_corallivory_diversity_df)
 plot(DHARMa::simulateResiduals(n_grazed_diversity_nbinom, n = 1000, use.u = T))
 
+#scar abundance per colony with negative binomial distribution (with zero-inflation)
+
+n_grazed_diversity_nbinom_zi  <- glmmTMB::glmmTMB(n_colonies_grazed ~ coral_diversity+ coral_species+ coral_species:log(proportional_cover)+ depth_m+ region+
+                              (1 | site/transect), #transects nested within sites within regions
+                              zi=~1, # zero-inflated
+                              family=nbinom2(link = "log"),
+                              data = transect_corallivory_diversity_df)
+plot(DHARMa::simulateResiduals(n_grazed_diversity_nbinom, n = 1000, use.u = T))
+
 hist(log(transect_corallivory_diversity_df$proportional_cover))
 hist(sqrt(transect_corallivory_diversity_df$proportional_cover))
-hist((transect_corallivory_diversity_df$proportional_cover)^(1/4))
 
 #likelihood ratio tests suggest NS difference between poisson and negative binomial
 anova(n_grazed_diversity_poisson, n_grazed_diversity_nbinom) 
+
+#likelihood ratio tests suggest NS difference between negative binomial w/ or w/o zero inflation... supports using non zi model
+anova(n_grazed_diversity_nbinom_zi, n_grazed_diversity_nbinom) 
 
 #simulating residuals and evaluating model fit
 n_grazed_diversity_poisson_residuals <- DHARMa::simulateResiduals(n_grazed_diversity_poisson, n = 1000, use.u = T)
@@ -1447,7 +1476,7 @@ plot(n_grazed_diversity_poisson_residuals) #diagnostic plot: KS test significant
 
 n_grazed_diversity_nbinom_residuals <- DHARMa::simulateResiduals(n_grazed_diversity_nbinom, n = 1000, use.u = T)
 plot(n_grazed_diversity_nbinom_residuals) #diagnostic plot indicates no sig problems: using nbinom distribution
-DHARMa::testZeroInflation(n_grazed_diversity_nbinom_residuals) #no evidence of zero inflation
+DHARMa::testZeroInflation(n_grazed_diversity_nbinom_residuals) #secondary check that there's no evidence of zero inflation (in addition to likelihood ratio test)
 
 n_grazed_diversity_nbinom %>% summary()
 ```
@@ -1570,15 +1599,25 @@ n_scars_col_level_nbinom <- glmmTMB::glmmTMB(n_new_scars ~ col_area_cm2 + coral_
                               family=nbinom2(link = "log"),
                               data = coral_scar_df)
 
+#comparing with zero-inflated model
+n_scars_col_level_nbinom_zi <- glmmTMB::glmmTMB(n_new_scars ~ col_area_cm2 + coral_species + depth_m+ region+ 
+                              (1 | site/transect), #transects nested within sites within regions
+                              zi=~0, #zero-inflated
+                              family=nbinom2(link = "log"),
+                              data = coral_scar_df)
+
 # likelihood ratio test of model using poisson versus negative binomial distribution: nbinom sig better
 anova(n_scars_col_level_poisson, n_scars_col_level_nbinom)
+
+# likelihood ratio test of model using ZI versus non-ZI negative binomial distribution: no sig diff, suggesting no ZI
+anova(n_scars_col_level_nbinom_zi, n_scars_col_level_nbinom)
 
 # simulating residuals and testing
 n_scars_col_level_residuals <- DHARMa::simulateResiduals(n_scars_col_level_nbinom2, n = 1000, use.u = T) 
 
 # evaluating model residuals
 plot(n_scars_col_level_residuals) #NS overdispersion, outliers, or KS
-testZeroInflation(n_scars_col_level_residuals) #NS
+testZeroInflation(n_scars_col_level_residuals) #secondary test to confirm no ZI, test show NS ZI
 
 # model output
 n_scars_col_level_nbinom2 %>% summary()
@@ -1713,10 +1752,6 @@ pct_grazed_t <- glmmTMB::glmmTMB(log(pct_grazed) ~ log(col_area_cm2) + coral_spe
                               family=t_family,
                               data = predated_colonies_subset)
 
-#checking model residuals
-pct_grazed_residuals <- DHARMa::simulateResiduals(pct_grazed, n = 1000, use.u = T) 
-plot(pct_grazed_residuals) #dispersion and KS good, sig outliers
-
 # likelihood ratio test of model using t-distribution versus Gaussian distribution: no sig diff
 anova(pct_grazed_t, pct_grazed_gaussian)
 
@@ -1725,7 +1760,7 @@ pct_grazed_gaussian_residuals <- DHARMa::simulateResiduals(pct_grazed_gaussian, 
 mean_scar_size_t_residuals <- DHARMa::simulateResiduals(pct_grazed_t, n = 1000, use.u = T) 
 
 #diagnostic plots confirm t-distribution is a better fit
-plot(mean_scar_size_gaussian_residuals)
+plot(pct_grazed_gaussian_residuals)
 plot(mean_scar_size_t_residuals) 
 
 #model results
@@ -1867,8 +1902,10 @@ predated_coral_patterns <- ggpubr::ggarrange(fig_mean_scar_taxa,
                                              widths=c(1.5,1,1.2), 
                                              legend="top")
 
-#saving figure
+predated_coral_patterns
+
+#saving as .jpg version (for presentations) and .pdf version (for publications)
 ggsave(plot=predated_coral_patterns, filename=here("figures_tables/fig4_predated_coral_patterns.jpg"), width = 215, height = 80, dpi = 600, units = "mm")
 
-predated_coral_patterns
+ggsave(plot=predated_coral_patterns, filename=here("figures_tables/fig4_predated_coral_patterns.pdf"), width = 215, height = 80, dpi = 600, units = "mm")
 ```
