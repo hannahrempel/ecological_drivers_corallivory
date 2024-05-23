@@ -1225,12 +1225,12 @@ m4_pctgrazed_pfdensity <- glmmTMB::glmmTMB(log(mean_pct_coral_grazed) ~ sqrt(mea
 m4_pctgrazed_pfdensity %>% summary() #similar results when interaction is dropped
 
 #tidying model output and calculating confidence intervals (of model 3, with the interaction)
-pctgrazed_pfdensity_m2_ci <- confint(pctgrazed_pfdensity_m2) %>% as_tibble() %>% select(-Estimate)
+pctgrazed_pfdensity_m3_ci <- confint(m3_pctgrazed_pfdensity) %>% as_tibble() %>% select(-Estimate)
 
-proportion_grazed_pfdensity_model_output <- pctgrazed_pfdensity_m2 %>% 
+proportion_grazed_pfdensity_model_output <- m3_pctgrazed_pfdensity %>% 
   broom.mixed::tidy() %>% 
   filter(term != "sd__Observation") %>%
-  bind_cols(pctgrazed_pfdensity_m2_ci) %>%
+  bind_cols(pctgrazed_pfdensity_m3_ci) %>%
   filter(effect!="ran_pars") %>%
   janitor::clean_names() %>%
   rename(ci_2.5 = x2_5_percent, ci_97.5=x97_5_percent) %>%
@@ -1259,7 +1259,7 @@ plot(scar_density_biomass_m2_residuals_gauss)
 # t-family model
 m2_scar_density_biomass <- glmmTMB::glmmTMB(log(mean_scars_m2_coral) ~ mean_pf_g_100m2*mean_pct_coral_cover + (1 | region), data = fish_corals_site_level, family=t_family)
 
-scar_density_biomass_m2_residuals <- DHARMa::simulateResiduals(scar_density_biomass_m2, n = 1000, use.u = T) 
+scar_density_biomass_m2_residuals <- DHARMa::simulateResiduals(m2_scar_density_biomass, n = 1000, use.u = T) 
 plot(scar_density_biomass_m2_residuals) #residuals look better than Gaussian (lines more horizontal)
 
 m2_scar_density_biomass %>% summary() #viewing model results
@@ -1613,14 +1613,14 @@ anova(n_scars_col_level_poisson, n_scars_col_level_nbinom)
 anova(n_scars_col_level_nbinom_zi, n_scars_col_level_nbinom)
 
 # simulating residuals and testing
-n_scars_col_level_residuals <- DHARMa::simulateResiduals(n_scars_col_level_nbinom2, n = 1000, use.u = T) 
+n_scars_col_level_residuals <- DHARMa::simulateResiduals(n_scars_col_level_nbinom, n = 1000, use.u = T) 
 
 # evaluating model residuals
 plot(n_scars_col_level_residuals) #NS overdispersion, outliers, or KS
 testZeroInflation(n_scars_col_level_residuals) #secondary test to confirm no ZI, test show NS ZI
 
 # model output
-n_scars_col_level_nbinom2 %>% summary()
+n_scars_col_level_nbinom %>% summary()
 
 # summary of mean number of new scars per colony by region
 coral_scar_df %>% 
