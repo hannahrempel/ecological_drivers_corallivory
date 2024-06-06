@@ -15,7 +15,9 @@ sapply(packages, require, character.only = T)
 
 ```{r Reading in coral and scar data}
 coral_scar_df <- read.csv(here("data/regional_coral_scar_data.csv"), 
-                          fileEncoding = "UTF-8")
+                          fileEncoding = "UTF-8")  %>%
+  mutate(date=lubridate::ymd(date)) 
+
 bootstrapped_scar_df <- read.csv(here("data/bootstrapped_new_scar_data.csv"), 
                                  fileEncoding = "UTF-8")
 ```
@@ -195,6 +197,7 @@ coral_scar_df_cleaned %>% distinct(coral_species)
 #the 4 predated colonies from species that had <3 observed colonies w/ predation were excluded to to limited data for these species/very rare predation events
 area_grazed_by_col %>% 
   filter(!colony_id %in% c(estimated_col_sizes$colony_id))
+
 ```
 
 ```{r Writing colony-level data to csv}

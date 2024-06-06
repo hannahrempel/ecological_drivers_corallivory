@@ -42,7 +42,7 @@ sapply(packages, require, character.only = T)
 fish_df <- read_csv(here("data/regional_fish_data.csv")) %>%
   mutate(region= factor(region, levels = c("Panamá", "Florida",  "St. Croix", "Bonaire"))) 
 
-coral_scar_df <- read.csv(here("data/processed_coral_scar_data_colony_level.csv"), 
+coral_scar_df <- read.csv(here("data/coral_scar_data_colony_level.csv"), 
                           fileEncoding = "UTF-8") %>% #UTF-8 is compatible with accents/tildes
   mutate(region= factor(region, levels = c("Panamá", "Florida", "St. Croix", "Bonaire")))
 

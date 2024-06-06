@@ -1,0 +1,52 @@
+﻿File,File_description,Variable,Variable_description,Variable_type,Variable_units
+site_coordinates.csv,Study site coordinates,region,One of four study regions within the Greater Caribbean,Character,NA
+,,site,Study sites within regions ,Character,NA
+,,latitude_DD,Latitude of a study site,Numeric,Decimal degrees
+,,longitude_DD,Longitude of a study site,Numeric,Decimal degrees
+regional_coral_scar_data.csv,Coral species and size surveys including abundance and size estimates for any colonies with observer parrotfish predation scars,region,One of four study regions within the Greater Caribbean,Character,NA
+,,site,Study sites within regions ,Character,NA
+,,date,Date of observation,Date,YYYY-MM-DD
+,,depth_m,Depth of transect conducted parallels to reef,Numeric,Meters
+,,transect,Distinct numeric ID for each transect within a site,Numeric,Whole number
+,,colony_id,Distinct numeric ID for each coral colony across the dataset,Numeric,Whole number
+,,coral_species,Coral species or genus–scientific name,Character,NA
+,,col_size,"Size range of corals within bins (3 to <5, 5 to <10, 10 to <20, 20 to <40, 40 to <80, 80+)",Numeric range,Centimeters
+,,l_cm,Colony diameter measured with ruler or PVC scale bar in situ. In Florida all colonies were recorded. In St. Croix and Bonaire colonies 40cm or larger were recorded as well as any colony with scars. In Panama only colonies with scars were measured to the nearest cm. See research article for reasoning. (Recorded in situ),Numeric,Centimeters
+,,w_cm,Colony perpendicular width (where either length or width are the maximum diameter for an individual colony and the other measurement is perpendicular to diameter),Numeric,Centimeters
+,,percent_live,Visually estimated percent live coral tissue on the colony to the nearest 5% (Recorded in situ),Numeric,Percentage
+,,percent_col_inside,Visually estimated percent of the coral colony that fell within 30 x 1 m transect bounds (Recorded in situ),Numeric,Percentage
+,,n_scars,Visually estimated number of parrotfish predation scars per coral colony (Recorded in situ),Numeric,Whole number
+,,percent_new,"Visually estimated percentage of the total parrotfish pedation scars that were recent–where recent scars were defined as those with no visible healing at the scar perimeter or fouling of algae, cyanobacteria, or other organisms within the scars exposed coral skeleton. (Recorded in situ)",Numeric,Percentage
+,,scar_min_mm2,"Visually estimated surface area of the smallest scar on the colony, recorded using ruler as reference. If there was only one scar this value is NA. (Recoreded in situ)",Numeric,Square centimeters
+,,scar_max_mm2,"Visually estimated surface area of the largest scar on the colony, recorded using ruler as reference. If there was only one scar this value is NA. (Recoreded in situ)",Numeric,Square centimeters
+,,scar_med_mm2,"Visually estimated surface area of the median scar on the colony, recorded using ruler as reference. If there were only two scars this value is NA and those data are instead recorded in min and max. (Recoreded in situ)",Numeric,Square centimeters
+processed_coral_scar_data_colony_level.csv,"Processed data from regional_coral_scar_data.csv including estimated coral colony surface area, mean scar area, and the total coral area grazed.",region,One of four study regions within the Greater Caribbean,Character,NA
+,,site,Study sites within regions ,Character,NA
+,,date,Date of observation,Date,YYYY-MM-DD
+,,depth_m,Depth of transect conducted parallels to reef,Numeric,Meters
+,,transect,Distinct numeric ID for each transect within a site,Numeric,Whole number
+,,colony_id,Distinct numeric ID for each coral colony across the dataset,Numeric,Whole number
+,,coral_species,Coral species or genus–scientific name,Character,NA
+,,col_size,"Size range of corals within bins (3 to <5, 5 to <10, 10 to <20, 20 to <40, 40 to <80, 80+)",Numeric range,Centimeters
+,,col_area_cm2,Estimated coral colony surface area based on the are of an oval using the colony diameter and perpedicular width. For colonies where measurements were only recoreded in size bins this was estimated using data from observations of colonies with length and width to the nearest cm based on the average size observed for a given coral species within a given size bin.,Numeric,Square centimeters
+,,n_new_scars,Esimated number of recent parrotfish predation scars calcualted based on the total number of observed scars multiplied by the esimated percentage of those scars that were recent.,Numeric,Whole number
+,,scar_min_cm2,"Visually estimated surface area of the smallest scar on the colony, recorded using ruler as reference. If there was only one scar this value is NA. (Recoreded in situ)",Numeric,Square centimeters
+,,scar_med_cm2,"Visually estimated surface area of the largest scar on the colony, recorded using ruler as reference. If there was only one scar this value is NA. (Recoreded in situ)",Numeric,Square centimeters
+,,scar_max_cm2,"Visually estimated surface area of the median scar on the colony, recorded using ruler as reference. If there were only two scars this value is NA and those data are instead recorded in min and max. (Recoreded in situ)",Numeric,Square centimeters
+,,mean_scar_area_cm2,"Estimated mean surface area of recent parrotfish predation scars per colony based on the number of recent scars per colony and recoreded min, median, and maximum scar area. We used these estimates to interpolate the distribution of scars on colonies based on a normal distribution of scar sizes bounded by the minimum and maximum scar size and centered on the median scar size with 10000 boostrapped iterations. We calculated the average area of recent scars per a given colony across the 10000 boostrapped iterations.",Numeric,Square centimeters
+,,total_grazed_cm2,"Estimated total surface area of recent parrotfish predation scars per colony based on the number of recent scars per colony and recoreded min, median, and maximum scar area. We used these estimates to interpolate the distribution of scars on colonies based on a normal distribution of scar sizes bounded by the minimum and maximum scar size and centered on the median scar size with 10000 boostrapped iterations. We summed the average area of recent scars per colony averaged across the 10000 boostrapped iterations.",Numeric,Square centimeters
+regional_fish_data.csv,Underwater visual census surveys of parrotfishes,region,One of four study regions within the Greater Caribbean,Character,NA
+,,site,Study sites within regions ,Character,NA
+,,date,Date of observation,Date,YYYY-MM-DD
+,,transect,Distinct numeric ID for each transect within a site,Numeric,Whole number
+,,depth_m,Depth of transect conducted parallels to reef,Numeric,Meters
+,,survey_l_m,"Length of the survey area (25 m in Florida and Panama, and ranging from 18-20 m in Bonaire and St. Croix)",Numeric,Meters
+,,survey_w_m,"Width of the survey area (4 m in Florida and Panama, and 5 m in Bonaire and St. Croix)",Numeric,Meters
+,,species,Parrotfish species–scientific name (recoreded in situ by trained observers),Character,NA
+,,phase,Parrotfish phase–initial phase (IP) or terminal phase (TP) as parrtofishes are protogynous hermaphrodites that are sexually dimorphic for most species,Character,NA
+,,size_cm,Estimated fish fork length recorded in 5 cm bins in Panama and to the nearest cm in all other regions,Numeric/numeric range,Centimeters
+,,count,"Number of observed fish of a given species, phase, and size per transect within a site",Numeric,Whole number
+,,a,"Fish length-weight conversion a values from literature (Fishbase Bayesial Estimate for Scarus vetula based on species within the genus of a similar body plan, for all other species values are from Bohnsack & Harper 1988 where if there were multiple values for a species across regions the values for chosen for values with an R2>0.8 and the region with the highest number of observed individuals of that species)",Numeric,Number with decimals
+,,b,Fish length-weight conversion b values from literature (see notes above),Numeric,Number with decimals
+,,size_cm_est,"Estimated fish fork length for individuals in Panama based on the midpoint of a given size bin (e.g., 17.5 for fish within a 15 to 20cm bin), or directly observed fish lengths for all other regions",Numeric,Centimeters
+,,weight_g,Estimated fish weight based on length-weight scaling relationships,Numeric,Grams

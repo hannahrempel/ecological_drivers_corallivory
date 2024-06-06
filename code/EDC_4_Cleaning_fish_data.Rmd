@@ -18,7 +18,7 @@ sapply(packages, require, character.only = T)
 
 ```{r Reading in data}
 stx18_bon19 <- read_csv(here("data/stx18_bon19_fish_data.csv")) %>% 
-  mutate(date=as.Date(date, "%m/%d/%y"))
+  mutate(date=as.Date(date))
 
 fla13_pan13 <- read.csv(here("data/fla13_pan13_fish_data.csv"), fileEncoding = "UTF-8") %>% #so accents are read in correctly
   mutate(date=as.Date(date))
