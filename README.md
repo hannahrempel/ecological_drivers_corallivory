@@ -3,9 +3,9 @@ This repository contains all data analyses and visualization associated with the
 
 Overview:
 
--The 'code' folder with R markdown files. R markdown files are meant to be run a sequential order and are numbered EDC_1 ... EDC_5. EDC_1 produces a study site map, EDC_2 - EDC_4 are used for data cleaning, integration, and summary for analysis, EDC 5 contains all data analysis and visualization (except for the map), and EDC_Supplement contains a script used to summarize parrotfish corallivory data from previously published datasets. We conducted all analyses using R v4.3.0.
+-The 'code' folder contains R markdown files numbered in sequential order from EDC_1 ... EDC_5. EDC_1 produces a study site map, EDC_2 - EDC_4 are used for data cleaning, integration, and summary for analysis, and EDC 5 contains all data analysis and visualization except for the map (note that you can run this script without running EDC_1 to EDC_4 as cleaned data used for analysis are included in the data folder). EDC_Supplement contains a script used to summarize parrotfish corallivory data from previously published datasets. We conducted all analyses using R v4.3.0.
 
--The 'data' folder includes the data used in analysis, as well as a data files produced in analysis (e.g., bootstrapped_new_scar_data.csv is produced in EDC_2, regional_fish_data.csv in EDC_4).
+-The 'data' folder includes the orginal data used in analysis, as well as data files produced in data tidying and preparation for analysis (e.g., bootstrapped_new_scar_data.csv is produced in EDC_2, regional_fish_data.csv in EDC_4).
 
 -The 'figures_tables' folder includes all .png and .pdf figures and .csv files of tables produced in scripts, as well as formatted versions of tables in .xlsx format. Additionally, it contains fish and coral icons used to produce figures, which were created by Hannah Rempel. 
 
