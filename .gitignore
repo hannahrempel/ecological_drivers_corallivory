@@ -17,6 +17,12 @@
 
 *.DS_Store 
 
+*.Sketch
+
+*.sketch
+
+*.xlsx
+
 #ignoring Rproject user folder not needed
 
 .Rproj.user
