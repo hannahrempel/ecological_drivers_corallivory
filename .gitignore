@@ -5,7 +5,7 @@
 
 #Ignoring manuscript folder
 
-/manuscript_drafts/
+/manuscript/
 
 #Ignore all word documents, pdfs, icon files (icon=Mac thing), and DS_Store files (Mac thing)
 
