@@ -1,4 +1,4 @@
-# ecological_drivers_corallivory
+# Ecological Drivers of Parrotfish Corallivory
 This repository contains all data analyses and visualization associated with the 2024 publication on 'Ecological drivers of parrotfish coral predation vary across spatial scales' by Rempel and colleagues, published in Marine Ecology Progress Series in 2024 (https://doi.org/10.3354/meps14633). We conducted all analyses using R v4.3.0, for further details see the linked Open Access manuscript.
 
 
