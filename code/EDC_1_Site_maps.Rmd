@@ -54,5 +54,5 @@ Caribbean_site_map <- ggplot(data = carib_basemap) +
 
 Caribbean_site_map
 
-ggsave(plot=Caribbean_site_map, filename=here("figures_tables/fig1_map/Caribbean_site_map.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
+ggsave(plot=Caribbean_site_map, filename=here("figures_tables/Caribbean_site_map.jpg"), width = 215, height = 110, dpi = 600, units = "mm")
 ```
