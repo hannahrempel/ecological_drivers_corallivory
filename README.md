@@ -1,11 +1,9 @@
 # Ecological Drivers of Parrotfish Corallivory
 This repository contains all data analyses and visualization associated with the 2024 publication on 'Ecological drivers of parrotfish coral predation vary across spatial scales' by Rempel and colleagues, published in Marine Ecology Progress Series in 2024 (published Open Access at https://doi.org/10.3354/meps14633). 
 
-Environment: We conducted all analyses using R v4.3.0.
-
 Overview:
 
--The 'code' folder with R markdown files. R markdown files are meant to be run a sequential order and are numbered EDC_1 ... EDC_5. EDC_1 produces a study site map, EDC_2 - EDC_4 are used for data cleaning, integration, and summary for analysis, EDC 5 contains all data analysis and visualization (except for the map), and EDC_Supplement contains a script used to summarize parrotfish corallivory data from previously published datasets.
+-The 'code' folder with R markdown files. R markdown files are meant to be run a sequential order and are numbered EDC_1 ... EDC_5. EDC_1 produces a study site map, EDC_2 - EDC_4 are used for data cleaning, integration, and summary for analysis, EDC 5 contains all data analysis and visualization (except for the map), and EDC_Supplement contains a script used to summarize parrotfish corallivory data from previously published datasets. We conducted all analyses using R v4.3.0.
 
 -The 'data' folder includes the data used in analysis, as well as a data files produced in analysis (e.g., bootstrapped_new_scar_data.csv is produced in EDC_2, regional_fish_data.csv in EDC_4).
 
