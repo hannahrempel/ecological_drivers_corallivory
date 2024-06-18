@@ -7,7 +7,7 @@ Overview:
 
 -The 'data' folder includes the orginal data used in analysis, as well as data files produced in data tidying and preparation for analysis (e.g., bootstrapped_new_scar_data.csv is produced in EDC_2, regional_fish_data.csv in EDC_4).
 
--The 'figures_tables' folder includes all .png and .pdf figures and .csv files of tables produced in scripts, as well as formatted versions of tables in .xlsx format. Additionally, it contains fish and coral icons used to produce figures, which were created by Hannah Rempel. 
+-The 'figures_tables' folder includes figures and tables produced in scripts. Additionally, it contains fish and coral icons used in the figures. 
 
 Licencing and usage:
 
