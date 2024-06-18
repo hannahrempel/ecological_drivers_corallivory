@@ -11,7 +11,7 @@ Overview:
 
 Licencing and usage:
 
--All fish and coral icons in the 'figures_tables' folder were created by Hannah Rempel in 2023 and, with attribution, are usable for non-commercial purposes under a Creative Commons license (CC BY-NC 4.0). Commercial/for-profit usage is strictly prohibited without written permission from the author.
+-All fish and coral icons in the 'figures_tables' folder were created by Hannah Rempel in 2023 and, with attribution of the author and publication, are usable for non-commercial purposes under a Creative Commons license (CC BY-NC 4.0). Commercial/for-profit usage is strictly prohibited without written permission from the author.
 
 -While all data used or produced in the analyses are available in this Github repository, the raw data are also archived through the NOAA National Centers for Environmental Information (NCEI Accession Number 0293333, https://doi.org/10.25921/j991-4469). If using the dataset, please reference the orignal publication and archived dataset.
 
