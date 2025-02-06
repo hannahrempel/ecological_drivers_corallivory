@@ -15,4 +15,4 @@ Licencing and usage:
 
 -While all data used or produced in the analyses are available in this Github repository, the raw data are also archived through the NOAA National Centers for Environmental Information (NCEI Accession Number 0293333, https://doi.org/10.25921/j991-4469). If using the dataset, please reference the orignal publication and archived dataset.
 
--All code is under a 2024 Creative Commons license (CC BY-NC 4.0).
+-All repository files are under a 2024 Creative Commons license (CC BY-NC 4.0).
