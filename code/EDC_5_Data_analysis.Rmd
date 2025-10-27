@@ -27,6 +27,8 @@ if (!require(tidyverse)) install.packages("tidyverse")
 
 packages <- c("broom.mixed", "cowplot", "DHARMa", "ggpp", "ggpubr", "ggridges", "glmmTMB", "here", "janitor", "magick", "tidyverse")
 sapply(packages, require, character.only = T)
+
+citation("rstatix")
 ```
 
 ```{r Reading in data, message = FALSE}
